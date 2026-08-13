@@ -35,6 +35,23 @@ MODULES = {
     },
     "02_python_structures": {
         "practice": ["01_practice_structures_gdz.ipynb"],
+        "practice/01_structures_tasks": [
+            "task1_benches.py",
+            "task2_finds.py",
+            "task3_coffee_shops.py",
+            "task4_expenses.py",
+            "task5_slogan.py",
+            "task6_scholarships.py",
+            "task7_truth_tables.py",
+            "task8_street_name.py",
+            "task9_address_check.py",
+            "task10_pirate_ship.py",
+            "task11_chessboard_white.py",
+            "task12_chessboard_same_color.py",
+            "task13_buildings.py",
+            "task14_secret_code.py",
+            "task15_apartment.py",
+        ],
     },
     "03_control_flow": {
         "practice": [
