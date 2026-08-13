@@ -6,95 +6,109 @@
 
 import os
 import sys
-import importlib
 
-# Список тем и соответствующих файлов для проверки
-TOPICS = {
-    'topic_01_python_basics': {
-        'files': ['task1_variables.py', 'task2_conditions.py', 'task3_loops.py', 'task4_functions.py'],
-        'functions': [
-            ('task1_variables', 'create_variables'),
-            ('task1_variables', 'calculate_age'),
-            ('task1_variables', 'string_concatenation'),
-            ('task2_conditions', 'check_age'),
-            ('task2_conditions', 'compare_numbers'),
-            ('task3_loops', 'sum_numbers'),
-            ('task3_loops', 'find_max'),
-            ('task4_functions', 'greet_user'),
-            ('task4_functions', 'power_of_two'),
-        ]
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+# Ожидаемые файлы курса по модулям (пути относительно корня репозитория)
+MODULES = {
+    "01_python_basics": {
+        "practice/01_intro_tasks": [
+            "task1_survey.py",
+            "task2_park_area.py",
+            "task3_coins.py",
+            "task4_weight_converter.py",
+            "task5_brick.py",
+            "task6_call_duration.py",
+            "task7_wifi_password.py",
+            "task8_bench_timer.py",
+            "task9_time_diff.py",
+        ],
+        "practice/02_intro_tasks": [
+            "task10_visiting_card.py",
+            "task11_cryo_age.py",
+            "task12_email_generator.py",
+            "task13_story_maker.py",
+            "task14_formula.py",
+            "task15_jumpers.py",
+        ],
     },
-    'topic_02_data_structures': {
-        'files': ['task1_list_operations.py', 'task2_dict_operations.py', 'task3_comprehensions.py'],
-        'functions': [
-            ('task1_list_operations', 'reverse_list'),
-            ('task1_list_operations', 'find_duplicates'),
-            ('task2_dict_operations', 'merge_dicts'),
-            ('task2_dict_operations', 'invert_dict'),
-            ('task3_comprehensions', 'square_numbers'),
-            ('task3_comprehensions', 'filter_even'),
-        ]
+    "02_python_structures": {
+        "practice": ["01_practice_structures_gdz.ipynb"],
     },
-    # Добавьте остальные темы по аналогии
+    "03_control_flow": {
+        "practice": [
+            "01_practice_control_flow_gdz.ipynb",
+            "02_practice_control_flow_gdz.ipynb",
+        ],
+    },
+    "04_paradigms": {
+        "practice": [
+            "01_practice_functions_gdz.ipynb",
+            "02_practice_functions_test_gdz_.ipynb",
+            "03_practice_OOP_gdz.ipynb",
+            "04_practice_itarator&generator_gdz.ipynb",
+        ],
+    },
+    "05_api_osm": {
+        "practice": ["01_API&osmnx_gdz.ipynb"],
+    },
+    "06_data_analysis": {
+        "practice": [
+            "01_numpy_practice_gdz.ipynb",
+            "02_Pandas_practice.ipynb",
+            "03_analysis_task.ipynb",
+            "04_geopandas_osmnx_practice.ipynb",
+            "05_titanic_exam.ipynb",
+        ],
+    },
+    "07_visualization": {
+        "practice": [
+            "01_visualization_practice.ipynb",
+            "02_titanic_visulization.ipynb",
+        ],
+    },
+    "08_final_project": {
+        ".": ["01_covid_analysis.ipynb"],
+    },
 }
 
-def check_file_exists(topic_path, filename):
-    """Проверяет существование файла"""
-    full_path = os.path.join(topic_path, filename)
-    if not os.path.exists(full_path):
-        print(f"❌ Файл {filename} не найден в {topic_path}")
-        return False
-    print(f"✅ Файл {filename} найден")
-    return True
 
-def check_function_exists(module_name, function_name, topic_path):
-    """Проверяет наличие функции в модуле"""
-    try:
-        sys.path.insert(0, topic_path)
-        module = importlib.import_module(module_name)
-        if hasattr(module, function_name):
-            print(f"✅ Функция {function_name} найдена в {module_name}")
-            return True
-        else:
-            print(f"❌ Функция {function_name} не найдена в {module_name}")
-            return False
-    except ImportError:
-        print(f"❌ Модуль {module_name} не найден в {topic_path}")
-        return False
-    finally:
-        sys.path.pop(0)
+def check_file_exists(filepath):
+    """Проверяет существование файла"""
+    if os.path.exists(filepath):
+        print(f"✅ {filepath}")
+        return True
+    print(f"❌ {filepath} не найден")
+    return False
+
 
 def validate_all():
     """Запускает все проверки"""
     print("=" * 60)
     print("🔍 Проверка заданий перед отправкой")
     print("=" * 60)
-    
+
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     errors = 0
-    
-    for topic, config in TOPICS.items():
-        print(f"\n📁 {topic.replace('_', ' ').title()}")
-        topic_path = os.path.join(topic, 'practice')
-        
-        # Проверяем файлы
-        for file in config['files']:
-            if not check_file_exists(topic_path, file):
-                errors += 1
-        
-        # Проверяем функции
-        for module_name, func_name in config['functions']:
-            if not check_function_exists(module_name, func_name, topic_path):
-                errors += 1
-    
-    # Итог
+
+    for module, subdirs in MODULES.items():
+        print(f"\n📁 {module}")
+        for subdir, files in subdirs.items():
+            for filename in files:
+                full_path = os.path.join(root, module, subdir, filename)
+                if not check_file_exists(full_path):
+                    errors += 1
+
     print("\n" + "=" * 60)
     if errors == 0:
         print("🎉 ВСЕ ПРОВЕРКИ ПРОЙДЕНЫ! Можно пушить.")
     else:
         print(f"❌ Найдено {errors} ошибок. Исправьте перед пушем.")
     print("=" * 60)
-    
+
     return errors == 0
+
 
 if __name__ == "__main__":
     sys.exit(0 if validate_all() else 1)

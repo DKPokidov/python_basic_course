@@ -13,3 +13,10 @@
 """
 
 # НАПИШИТЕ ВАШ КОД ЗДЕСЬ
+number = int(input("Введите трёхзначное число: "))
+
+hundreds = number // 100
+tens = (number // 10) % 10
+ones = number % 10
+
+print(f"{hundreds}.{tens}.{ones}")

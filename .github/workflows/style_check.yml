@@ -26,8 +26,8 @@ jobs:
     
     - name: Check with flake8
       run: |
-        flake8 topic_*/practice/ --count --max-complexity=10 --statistics
+        flake8 0*/practice/ --count --max-complexity=10 --statistics
     
     - name: Check formatting with black
       run: |
-        black --check topic_*/practice/ || true  # Не падает, а предупреждает
+        black --check 0*/practice/ || true  # Не падает, а предупреждает

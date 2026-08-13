@@ -21,3 +21,18 @@
 """
 
 # НАПИШИТЕ ВАШ КОД ЗДЕСЬ
+value, unit = input("Введите вес и единицу измерения (например, '10 кг'): ").split()
+value = float(value)
+
+conversion = {
+    "кг": 1,
+    "г": 0.001,
+    "фунт": 0.40951241,
+    "пуд": 16,
+    "ц": 100,
+    "т": 1000,
+}
+
+result = value * conversion[unit]
+
+print(f"{value} {unit} = {result:.6f} кг")

@@ -1,7 +1,12 @@
 jupyter
 numpy
 pandas
+geopandas
 matplotlib
 seaborn
 osmnx
 requests
+pytest
+pytest-json-report
+flake8
+black

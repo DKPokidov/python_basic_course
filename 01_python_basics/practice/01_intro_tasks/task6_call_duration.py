@@ -16,3 +16,9 @@
 """
 
 # НАПИШИТЕ ВАШ КОД ЗДЕСЬ
+balance_before = float(input("Баланс до разговора (руб): "))
+balance_after = float(input("Баланс после разговора (руб): "))
+
+minutes = (balance_before - balance_after) / 2.5
+
+print(f"Разговор длился {int(minutes)} минут")
