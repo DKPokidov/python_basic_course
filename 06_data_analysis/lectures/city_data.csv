@@ -1,0 +1,6 @@
+id;type;name;district;capacity;coordinates;accessibility;services
+101;school;Гимназия №5;Центральный;850;[55.751244, 37.618423];{'parking': True, 'elevator': False, 'ramp': True};['дошкольная_группа', 'спортзал', 'столовая']
+102;hospital;Городская больница №2;Южный;320;[55.749231, 37.620111];{'parking': True, 'elevator': True, 'ramp': True};['травмпункт', 'стационар', 'диагностика']
+103;kindergarten;Детский сад №15 «Солнышко»;Центральный;120;[55.7521, 37.6195];{'parking': False, 'elevator': False, 'ramp': True};['ясельная_группа', 'логопед', 'бассейн', 'продлёнка']
+104;school;Средняя школа №8;Западный;600;[55.745, 37.63];{'parking': True, 'elevator': True, 'ramp': False};['библиотека', 'актовый_зал', 'столовая']
+105;kindergarten;Детский сад №22 «Радуга»;Южный;90;[55.75, 37.625];{'parking': True, 'elevator': False, 'ramp': True};['ясельная_группа', 'музыкальный_зал', 'продлёнка']

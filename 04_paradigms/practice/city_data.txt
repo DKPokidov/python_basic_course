@@ -1,0 +1,77 @@
+{
+  "city": "Новоград",
+  "year": 2024,
+  "objects": [
+    {
+      "id": 101,
+      "type": "school",
+      "name": "Гимназия №5",
+      "district": "Центральный",
+      "capacity": 850,
+      "coordinates": [55.751244, 37.618423],
+      "accessibility": {
+        "parking": true,
+        "elevator": false,
+        "ramp": true
+      },
+      "services": ["дошкольная_группа", "спортзал", "столовая"]
+    },
+    {
+      "id": 102,
+      "type": "hospital",
+      "name": "Городская больница №2",
+      "district": "Южный",
+      "capacity": 320,
+      "coordinates": [55.749231, 37.620111],
+      "accessibility": {
+        "parking": true,
+        "elevator": true,
+        "ramp": true
+      },
+      "services": ["травмпункт", "стационар", "диагностика"]
+    },
+    {
+      "id": 103,
+      "type": "kindergarten",
+      "name": "Детский сад №15 «Солнышко»",
+      "district": "Центральный",
+      "capacity": 120,
+      "coordinates": [55.7521, 37.6195],
+      "accessibility": {
+        "parking": false,
+        "elevator": false,
+        "ramp": true
+      },
+      "services": ["ясельная_группа", "логопед", "бассейн", "продлёнка"]
+    },
+    {
+      "id": 104,
+      "type": "school",
+      "name": "Средняя школа №8",
+      "district": "Западный",
+      "capacity": 600,
+      "coordinates": [55.745000, 37.630000],
+      "accessibility": {
+        "parking": true,
+        "elevator": true,
+        "ramp": false
+      },
+      "services": ["библиотека", "актовый_зал", "столовая"]
+    },
+    {
+      "id": 105,
+      "type": "kindergarten",
+      "name": "Детский сад №22 «Радуга»",
+      "district": "Южный",
+      "capacity": 90,
+      "coordinates": [55.750000, 37.625000],
+      "accessibility": {
+        "parking": true,
+        "elevator": false,
+        "ramp": true
+      },
+      "services": ["ясельная_группа", "музыкальный_зал", "продлёнка"]
+    }
+  ]
+}
+
