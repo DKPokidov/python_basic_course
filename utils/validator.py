@@ -58,6 +58,28 @@ MODULES = {
             "01_practice_control_flow_gdz.ipynb",
             "02_practice_control_flow_gdz.ipynb",
         ],
+        "practice/01_control_flow_tasks": [
+            "task1_building_category.py",
+            "task2_floors_limit.py",
+            "task3_green_zones.py",
+            "task4_attractions.py",
+            "task5_routes.py",
+            "task6_streets.py",
+            "task7_green_areas.py",
+            "task8_dense_districts.py",
+            "task9_green_balance.py",
+            "task10_city_growth.py",
+        ],
+        "practice/02_control_flow_tasks": [
+            "task5_routes.py",
+            "task6_streets.py",
+            "task7_green_areas.py",
+            "task8_dense_districts.py",
+            "task9_green_balance.py",
+            "task10_city_growth.py",
+            "task11_stop_load.py",
+            "task12_quarters.py",
+        ],
     },
     "04_paradigms": {
         "practice": [

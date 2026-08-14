@@ -47,5 +47,9 @@ def get_student_file(module_name, filename):
         return os.path.join(base_dir, '01_python_basics', 'practice', '02_intro_tasks', filename)
     elif module_name == 'module_03':
         return os.path.join(base_dir, '02_python_structures', 'practice', '01_structures_tasks', filename)
+    elif module_name == 'module_04':
+        return os.path.join(base_dir, '03_control_flow', 'practice', '01_control_flow_tasks', filename)
+    elif module_name == 'module_05':
+        return os.path.join(base_dir, '03_control_flow', 'practice', '02_control_flow_tasks', filename)
     else:
         return os.path.join(base_dir, module_name, 'practice', filename)
