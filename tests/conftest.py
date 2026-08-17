@@ -51,5 +51,13 @@ def get_student_file(module_name, filename):
         return os.path.join(base_dir, '03_control_flow', 'practice', '01_control_flow_tasks', filename)
     elif module_name == 'module_05':
         return os.path.join(base_dir, '03_control_flow', 'practice', '02_control_flow_tasks', filename)
+    elif module_name == 'module_06':
+        return os.path.join(base_dir, '04_paradigms', 'practice', '01_functions_tasks', filename)
+    elif module_name == 'module_07':
+        return os.path.join(base_dir, '04_paradigms', 'practice', '02_functions_test_tasks', filename)
+    elif module_name == 'module_08':
+        return os.path.join(base_dir, '04_paradigms', 'practice', '03_OOP_tasks', filename)
+    elif module_name == 'module_09':
+        return os.path.join(base_dir, '04_paradigms', 'practice', '04_iterator_generator_tasks', filename)
     else:
         return os.path.join(base_dir, module_name, 'practice', filename)
