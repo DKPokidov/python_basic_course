@@ -90,7 +90,12 @@ def send_message(url, message):
         payload = {"text": message}
         if chat_id:
             payload["chat_id"] = chat_id
+        else:
+            print("⚠️ TELEGRAM_CHAT_ID не задан — chat_id не передан")
         response = requests.post(url, json=payload, timeout=15)
+        if not response.ok:
+            from requests import HTTPError
+            raise HTTPError(f"{response.status_code} {response.reason}: {response.text}")
         response.raise_for_status()
         print("✅ Отчёт отправлен в webhook")
         return True
