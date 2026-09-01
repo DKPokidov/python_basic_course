@@ -1,4 +1,4 @@
-# module_02_data_structures/practice/task13_story_maker.py
+﻿# module_02_data_structures/practice/task13_story_maker.py
 """
 Задание 13: Сочинитель сказок
 
@@ -25,27 +25,3 @@
 Воронеж его встретил Ворон, который сказал: "Привет, дружище!"
 "Привет!" — и с тех пор Дедди стал самым ученым хомяком в мире!
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 01_python_basics/practice/02_intro_tasks/task13_story_maker.py
-
-print("Привет! Давай создадим самую безумную историю про хомяка!\n")
-
-name = input("1. Введите имя хомяка: ")
-print(f"\nЖил-был хомяк по имени {name}")
-
-food = input("\n2. Что он любил есть? ")
-profession = input("3. Кем он мечтал стать? ")
-print(f"\n{name} очень любил есть {food} и мечтал стать {profession}")
-
-skill = input("\n4. Чему он научился? ")
-place = input("5. Куда он отправился? ")
-print(f"\nОднажды {name} научился {skill} и отправился в {place}")
-
-character = input("\n6. Кто его там встретил? ")
-quote = input(f"7. Что {character} сказал? ")
-print(f"\nВ {place} его встретил {character}, который сказал: \"{quote}\"")
-
-sentence = input("\n8. Что хомяк ответил? ")
-adjective = input("9. Каким он стал? ")
-print(f'\n"{sentence}" — и с тех пор {name} стал самым {adjective} хомяком в мире!')

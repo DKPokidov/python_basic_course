@@ -1,4 +1,4 @@
-"""
+﻿"""
 Задание 1: Проверка категории здания
 
 Программа запрашивает тип здания (например, «школа», «торговый центр», «жилой дом»)
@@ -9,23 +9,3 @@
 * «жилой дом», «апартаменты» → «Жилое здание»;
 * всё остальное → «Иное сооружение».
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 03_control_flow/practice/01_control_flow_tasks/task1_building_category.py
-
-building = input("Введите тип здания: ").lower()
-
-education_list = ["школа", "детский сад", "университет"]
-shop_list = ["торговый центр", "магазин"]
-appartment_list = ["жилой дом", "апартаменты"]
-
-if building in education_list:
-    category = "Образовательное учреждение"
-elif building in shop_list:
-    category = "Торговое помещение"
-elif building in appartment_list:
-    category = "Жилое здание"
-else:
-    category = "Иное сооружение"
-
-print(f"Категория: {category}")

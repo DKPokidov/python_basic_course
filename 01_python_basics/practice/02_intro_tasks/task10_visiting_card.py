@@ -1,4 +1,4 @@
-# module_02_data_structures/practice/task10_visiting_card.py
+﻿# module_02_data_structures/practice/task10_visiting_card.py
 """
 Задание 10: Простая визитка
 
@@ -18,12 +18,3 @@
 Введите вашу фамилию: Петров
 Пользователь: Венчурный инвестор и криптоблогер Иван Петров
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 01_python_basics/practice/02_intro_tasks/task10_visiting_card.py
-
-position = input("Введите вашу должность: ")
-first_name = input("Введите ваше имя: ")
-last_name = input("Введите вашу фамилию: ")
-
-print(f"Пользователь: {position} {first_name} {last_name}")

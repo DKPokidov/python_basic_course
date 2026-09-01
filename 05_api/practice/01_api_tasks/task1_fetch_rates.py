@@ -1,4 +1,4 @@
-# module_05_api/practice/01_api_tasks/task1_fetch_rates.py
+﻿# module_05_api/practice/01_api_tasks/task1_fetch_rates.py
 """
 Задание 1. Получение курсов валют с сайта ЦБ РФ
 
@@ -24,35 +24,3 @@ API ЦБ РФ возвращает курсы валют на текущий д�
     import xmltodict
     data = xmltodict.parse(response.content)
 """
-
-import requests
-import xmltodict
-
-CBR_URL = "https://www.cbr.ru/scripts/XML_daily.asp"
-
-
-def fetch_rates(url=CBR_URL):
-    """
-    Выполняет GET-запрос к API ЦБ РФ и возвращает распарсенный ответ.
-
-    Параметры:
-        url (str): адрес API (по умолчанию CBR_URL).
-
-    Требования:
-        1. Отправьте запрос requests.get(url, timeout=10).
-        2. Вызовите response.raise_for_status() — при ошибке HTTP
-           будет выброшено исключение.
-        3. Преобразуйте response.content в словарь с помощью xmltodict.parse.
-        4. Верните полученный словарь.
-
-    Если при запросе произошла ошибка (requests.exceptions.RequestException),
-    верните None. Ошибки парсинга XML (xmltodict.expat.ExpatError)
-    также обработайте и верните None.
-    """
-    # НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        return xmltodict.parse(response.content)
-    except (requests.exceptions.RequestException, xmltodict.expat.ExpatError):
-        return None

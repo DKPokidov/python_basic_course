@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task3_loops.py
+﻿# module_01_python_basics/practice/task3_loops.py
 """
 Задание 3: Счет мелких денег
 
@@ -17,16 +17,3 @@
 Сколько монет по 1 копейке? 4
 0 руб. 89 коп.
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-coins_50 = int(input("Сколько монет по 50 копеек? "))
-coins_10 = int(input("Сколько монет по 10 копеек? "))
-coins_5 = int(input("Сколько монет по 5 копеек? "))
-coins_1 = int(input("Сколько монет по 1 копейке? "))
-
-total_kopecks = coins_50 * 50 + coins_10 * 10 + coins_5 * 5 + coins_1
-
-rubles = total_kopecks // 100
-kopecks = total_kopecks % 100
-
-print(f"{rubles} руб. {kopecks} коп.")

@@ -1,4 +1,4 @@
-# module_02_data_structures/practice/task14_formula.py
+﻿# module_02_data_structures/practice/task14_formula.py
 """
 Задание 14: Злая формула
 
@@ -20,12 +20,3 @@
 
 Примечание: используйте float() для ввода чисел
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 01_python_basics/practice/02_intro_tasks/task14_formula.py
-
-m = float(input("Введите m: "))
-n = float(input("Введите n: "))
-
-result = (m * n) / (m + n) + (m - n) / (m * n)
-print(f"Ответ: {result}")

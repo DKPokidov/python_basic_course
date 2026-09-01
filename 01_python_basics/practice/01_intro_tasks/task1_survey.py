@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task1_variables.py
+﻿# module_01_python_basics/practice/task1_variables.py
 """
 Задание 1. Анкета для соцопроса
 
@@ -12,8 +12,3 @@
 Введите ваш возраст: 20
 Привет, Иван! Тебе 20 лет.
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-name = input("Введите ваше имя: ")
-age = int(input("Введите ваш возраст: "))
-print(f"Привет, {name}! Тебе {age} лет.")

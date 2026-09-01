@@ -1,4 +1,4 @@
-"""
+﻿"""
 Задание 8: Название улицы
 
 В системе градостроительного учёта длина названия улицы не должна превышать 30 символов.
@@ -8,11 +8,3 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 02_python_structures/practice/01_structures_tasks/task8_street_name.py
-
-street_name = input('Введите название улицы')
-
-is_valid = (len(street_name) <= 30) and (len(street_name) > 0)
-print(is_valid)

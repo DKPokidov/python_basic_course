@@ -1,4 +1,4 @@
-"""
+﻿"""
 Задание 14: Секретный код доступа
 
 Вы — агент спецслужбы. Вам передали зашифрованное сообщение с кодом доступа к серверу.
@@ -13,25 +13,3 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 02_python_structures/practice/01_structures_tasks/task14_secret_code.py
-
-# Ab1#xyz7 - пример для ввода, должно вывести True
-
-code = input('Введите код')
-special_chars = "#@#$%^&*"
-
-# 1. Длина ровно 8
-# 2. Есть заглавная буква: строка изменилась при переводе в нижний регистр
-# 3. Есть строчная буква: строка изменилась при переводе в верхний регистр
-# 4. Есть цифра: проверяем наличие хотя бы одной через `in`
-# 5. Ровно один спецсимвол: суммируем count для каждого символа
-# 6. Спецсимвол не на краях: не начинается и не заканчивается на спецсимвол
-has_digit = '0' in code or '1' in code or '2' in code or '3' in code or '4' in code or '5' in code or '6' in code or '7' in code or '8' in code or '9' in code
-special_count = code.count('#') + code.count('@') + code.count('$') + code.count('%') + code.count('^') + code.count('&') + code.count('*')
-not_edges = not code.startswith(('#', '@', '$', '%', '^', '&', '*')) and not code.endswith(('#', '@', '$', '%', '^', '&', '*'))
-
-is_valid = len(code) == 8 and code != code.lower() and code != code.upper() and has_digit and special_count == 1 and not_edges
-
-print(is_valid)

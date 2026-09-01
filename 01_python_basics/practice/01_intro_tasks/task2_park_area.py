@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task2_conditions.py
+﻿# module_01_python_basics/practice/task2_conditions.py
 """
 Задание 2: Помощь чиновнику
 
@@ -13,11 +13,3 @@
 Введите ширину сквера (м): 5
 Площадь озеленения: 50.0 кв.м
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-length = float(input("Введите длину сквера (м): "))
-width = float(input("Введите ширину сквера (м): "))
-
-area = length * width
-
-print(f"Площадь озеленения: {area} кв.м")

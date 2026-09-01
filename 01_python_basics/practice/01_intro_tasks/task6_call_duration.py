@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task6_money.py
+﻿# module_01_python_basics/practice/task6_money.py
 """
 Задание 6: Миша и его деньги
 
@@ -14,11 +14,3 @@
 Баланс после разговора (руб): 8
 Разговор длился 18 минут
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-balance_before = float(input("Баланс до разговора (руб): "))
-balance_after = float(input("Баланс после разговора (руб): "))
-
-minutes = (balance_before - balance_after) / 2.5
-
-print(f"Разговор длился {int(minutes)} минут")

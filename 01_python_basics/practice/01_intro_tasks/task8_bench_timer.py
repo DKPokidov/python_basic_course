@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task8_bench.py
+﻿# module_01_python_basics/practice/task8_bench.py
 """
 Задание 8: Умные скамейки
 
@@ -11,14 +11,3 @@
 Введите время в секундах: 3661
 1:01:01
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-time = int(input("Введите время в секундах: "))
-
-hours = time // 3600
-
-minutes = (time % 3600) // 60
-
-seconds = time % 60
-
-print(f"{hours}:{minutes:02d}:{seconds:02d}")

@@ -1,4 +1,4 @@
-# module_02_data_structures/practice/task11_cryo_age.py
+﻿# module_02_data_structures/practice/task11_cryo_age.py
 """
 Задание 11: Криокапсула будущего
 
@@ -13,11 +13,3 @@
 Введите год рождения: 2000
 Пациент, ваш биологический возраст: 184 лет. Добро пожаловать в 2184 год!
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 01_python_basics/practice/02_intro_tasks/task11_cryo_age.py
-
-birth_year = int(input("Введите год рождения: "))
-age = 2184 - birth_year
-
-print(f"Пациент, ваш биологический возраст: {age} лет. Добро пожаловать в 2184 год!")

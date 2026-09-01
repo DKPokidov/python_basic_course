@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task7_wifi.py
+﻿# module_01_python_basics/practice/task7_wifi.py
 """
 Задание 7: Тайный код от Wi-Fi
 
@@ -11,12 +11,3 @@
 Введите трёхзначное число: 789
 7.8.9
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-number = int(input("Введите трёхзначное число: "))
-
-hundreds = number // 100
-tens = (number // 10) % 10
-ones = number % 10
-
-print(f"{hundreds}.{tens}.{ones}")

@@ -1,4 +1,4 @@
-# module_02_data_structures/practice/task12_email_generator.py
+﻿# module_02_data_structures/practice/task12_email_generator.py
 """
 Задание 12: Генератор email-адреса
 
@@ -16,12 +16,3 @@
 Введите год поступления: 2026
 Ваш email: Алексей2026@itmo.com
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 01_python_basics/practice/02_intro_tasks/task12_email_generator.py
-
-name = input("Введите ваше имя: ")
-year = input("Введите год поступления: ")
-
-email = name + year + "@itmo.com"
-print(f"Ваш email: {email}")

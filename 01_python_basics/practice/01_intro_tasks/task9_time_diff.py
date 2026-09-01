@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task9_time.py
+﻿# module_01_python_basics/practice/task9_time.py
 """
 Задание 9: Счастливых часов не наблюдают
 
@@ -17,24 +17,3 @@
 Секунда ухода: 0
 3:30:00
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-h1 = int(input("Час прихода: "))
-m1 = int(input("Минута прихода: "))
-s1 = int(input("Секунда прихода: "))
-
-h2 = int(input("Час ухода: "))
-m2 = int(input("Минута ухода: "))
-s2 = int(input("Секунда ухода: "))
-
-start = h1 * 3600 + m1 * 60 + s1
-end = h2 * 3600 + m2 * 60 + s2
-
-# Разница с добавлением 24 часов, если нужно
-diff = (end - start) % (24 * 3600)
-
-hours = diff // 3600
-minutes = (diff % 3600) // 60
-seconds = diff % 60
-
-print(f"{hours}:{minutes:02d}:{seconds:02d}")

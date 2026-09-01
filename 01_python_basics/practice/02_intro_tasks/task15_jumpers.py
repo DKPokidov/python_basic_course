@@ -1,4 +1,4 @@
-# module_02_data_structures/practice/task15_jumpers.py
+﻿# module_02_data_structures/practice/task15_jumpers.py
 """
 Задание 15: Попрыгунчики
 
@@ -27,17 +27,3 @@
 
 Примечание: расстояние всегда положительное.
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 01_python_basics/practice/02_intro_tasks/task15_jumpers.py
-
-a = int(input("Введите координату дома А: "))
-b = int(input("Введите координату дома В: "))
-
-distance = abs(a - b)
-print(f"Расстояние: {distance}")
-
-if distance % 3 == 0:
-    print("да")
-else:
-    print("нет")

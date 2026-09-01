@@ -1,4 +1,4 @@
-"""
+﻿"""
 Задание 9: Баланс зелёных зон и застройки
 
 В городе должна соблюдаться норма: не менее 30 % площади — зелёные зоны. Программа:
@@ -13,33 +13,3 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 03_control_flow/practice/01_control_flow_tasks/task9_green_balance.py
-
-# Ввод общей площади района
-total_area = float(input("Общая площадь района (га): "))
-
-# Инициализация переменных
-built_area = 0.0
-violation_occurred = False  # Флаг: было ли нарушение нормы
-
-# Цикл ввода площадей застройки (завершается только при вводе 0)
-building_area = float(input("Площадь застройки (га): "))
-
-while building_area != 0:
-    built_area += building_area
-    green_ratio = (total_area - built_area) / total_area * 100
-
-    # Проверяем норму: если зелёных зон < 30%, ставим флаг
-    if green_ratio < 30:
-        violation_occurred = True
-
-    # Следующий ввод
-    building_area = float(input("Площадь застройки (га): "))
-
-# Вывод результата
-if violation_occurred:
-    print("Нарушение нормы зелёных зон!")
-else:
-    print("Нормы соблюдены.")

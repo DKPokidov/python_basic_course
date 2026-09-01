@@ -1,4 +1,4 @@
-"""
+﻿"""
 Задание 18: Проверка соответствия жилых зон нормативам
 
 В городе проверяют жилые кварталы на соответствие трём нормативам:
@@ -25,50 +25,3 @@
 2. Проверить, соблюдаются ли все три норматива.
 3. Вывести название квартала и результат: 'Соответствует' или 'Не соответствует'.
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-# 03_control_flow/practice/02_control_flow_tasks/task18_quarters.py
-
-quarters = [
-    {
-        "district": "Северный",
-        "area_ha": 10,
-        "houses": 75,
-        "green_area_ha": 3,
-        "school_dist_m": 700
-    },
-    {
-        "district": "Южный",
-        "area_ha": 5,
-        "houses": 50,
-        "green_area_ha": 0.8,
-        "school_dist_m": 900
-    },
-    {
-        "district": "Центральный",
-        "area_ha": 8,
-        "houses": 60,
-        "green_area_ha": 2,
-        "school_dist_m": 500
-    }
-]
-
-for quarter in quarters:
-    # 1. Вычисляем плотность застройки (дома на гектар)
-    density = quarter["houses"] / quarter["area_ha"]
-
-    # 2. Вычисляем долю зелени в процентах
-    green_percent = (quarter["green_area_ha"] / quarter["area_ha"]) * 100
-
-    # 3. Проверяем все три норматива
-    norm1 = density <= 8           # плотность застройки ≤ 8 домов/га
-    norm2 = green_percent >= 20    # зелень ≥ 20%
-    norm3 = quarter["school_dist_m"] <= 800  # школа ≤ 800 м
-
-    # Если все три условия выполнены — соответствует
-    if norm1 and norm2 and norm3:
-        result = "Соответствует"
-    else:
-        result = "Не соответствует"
-
-    print(f"{quarter['district']}: {result}")

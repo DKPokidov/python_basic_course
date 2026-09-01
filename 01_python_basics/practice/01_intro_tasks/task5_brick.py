@@ -1,4 +1,4 @@
-# module_01_python_basics/practice/task5_geometry.py
+﻿# module_01_python_basics/practice/task5_geometry.py
 """
 Задание 5: Кирпич
 
@@ -23,20 +23,3 @@
 Масса: 3.31 кг
 Количество кирпичей в 1 м³: 512
 """
-
-# НАПИШИТЕ ВАШ КОД ЗДЕСЬ
-length = float(input("Введите длину кирпича (см): "))
-width = float(input("Введите ширину кирпича (см): "))
-height = float(input("Введите высоту кирпича (см): "))
-
-volume = length * width * height
-surface_area = 2 * (length * width + width * height + length * height)
-edge_sum = 4 * (length + width + height)
-mass = volume / 1_000_000 * 1700
-bricks_per_cubic_meter = int(1_000_000 / volume)
-
-print(f"Объём: {volume} см³")
-print(f"Площадь поверхности: {surface_area} см²")
-print(f"Сумма рёбер: {edge_sum} см")
-print(f"Масса: {mass:.2f} кг")
-print(f"Количество кирпичей в 1 м³: {bricks_per_cubic_meter}")
