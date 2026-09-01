@@ -17,6 +17,27 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
+    - name: Select tests for changed tasks
+      id: select
+      run: |
+        git fetch origin "${{ github.base_ref }}" --depth=1
+        CHANGED=$(git diff --name-only "origin/${{ github.base_ref }}" HEAD -- '0*/practice/')
+        echo "Изменённые файлы заданий:"
+        echo "$CHANGED"
+        TESTS=""
+        for f in $CHANGED; do
+          base=$(basename "$f")
+          t=$(find tests -type f -name "test_$base" | head -n 1)
+          if [ -n "$t" ]; then
+            TESTS="$TESTS $t"
+          else
+            echo "⚠️ для $f тест не найден"
+          fi
+        done
+        TESTS=$(echo "$TESTS" | xargs)
+        echo "Выбранные тесты: $TESTS"
+        echo "test_files=$TESTS" >> "$GITHUB_OUTPUT"
+    
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v5
       with:
@@ -30,7 +51,13 @@ jobs:
     - name: Run tests with pytest
       id: tests
       run: |
-        pytest tests/ -v --json-report --json-report-file=test_results.json
+        TESTS="${{ steps.select.outputs.test_files }}"
+        if [ -z "$TESTS" ]; then
+          echo "Изменённых заданий нет — тесты не запускаются."
+          echo "{\"summary\":{},\"tests\":[]}" > test_results.json
+        else
+          pytest $TESTS -v --json-report --json-report-file=test_results.json
+        fi
     
     - name: Print task summary
       if: always()  # Печатаем сводку даже если тесты упали
