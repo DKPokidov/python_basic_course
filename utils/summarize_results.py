@@ -41,7 +41,8 @@ def task_key(nodeid):
     return module_dir, task_file
 
 
-def summarize(results):
+def group_by_task(results):
+    """Группирует тесты по файлу задания. Возвращает dict {(модуль, файл): {числа}}."""
     groups = {}
     for test in results.get("tests", []):
         key = task_key(test.get("nodeid", ""))
@@ -51,7 +52,29 @@ def summarize(results):
         group = groups.setdefault(key, {"total": 0, "passed": 0, "failed": 0, "skipped": 0})
         group["total"] += 1
         group[outcome if outcome in ("passed", "failed", "skipped") else "failed"] += 1
+    return groups
 
+
+def summary_lines(results):
+    """Возвращает список строк сводки по задачам (для вывода и для webhook)."""
+    groups = group_by_task(results)
+    if not groups:
+        return ["ℹ️ Нет результатов по задачам."]
+
+    lines = ["📋 Сводка по задачам"]
+    solved = 0
+    for (module_dir, task_file), stats in sorted(groups.items()):
+        ok = stats["failed"] == 0
+        if ok:
+            solved += 1
+        mark = "✅" if ok else "❌"
+        lines.append(f"{mark} {module_dir}/{task_file} — {stats['passed']}/{stats['total']}")
+    lines.append(f"Решено задач: {solved} из {len(groups)}")
+    return lines
+
+
+def summarize(results):
+    groups = group_by_task(results)
     if not groups:
         print("ℹ️ Нет результатов по задачам.")
         return
@@ -60,19 +83,10 @@ def summarize(results):
     print("📋 Сводка по задачам")
     print("=" * 60)
 
-    solved = 0
-    for (module_dir, task_file), stats in sorted(groups.items()):
-        ok = stats["failed"] == 0
-        if ok:
-            solved += 1
-        mark = "✅" if ok else "❌"
-        print(
-            f"{mark} {module_dir}/{task_file} — "
-            f"{stats['passed']}/{stats['total']}"
-        )
+    for line in summary_lines(results)[1:]:
+        print(line)
 
     print("-" * 60)
-    print(f"Решено задач: {solved} из {len(groups)}")
 
     fail_cases = [
         test["nodeid"] for test in results.get("tests", [])

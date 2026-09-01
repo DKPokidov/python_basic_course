@@ -22,6 +22,11 @@ try:
 except ImportError:
     requests = None
 
+try:
+    from summarize_results import summary_lines
+except ImportError:
+    summary_lines = None
+
 RESULTS_FILE = "test_results.json"
 
 
@@ -58,6 +63,10 @@ def format_message(results):
         f" | Ошибок: {errors} | Пропущено: {skipped}",
     ]
 
+    if summary_lines is not None:
+        lines.append("")
+        lines.extend(summary_lines(results))
+
     failed_tests = [
         test.get("nodeid", "?")
         for test in results.get("tests", [])
@@ -77,7 +86,11 @@ def send_message(url, message):
         )
         return False
     try:
-        response = requests.post(url, json={"text": message}, timeout=15)
+        chat_id = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+        payload = {"text": message}
+        if chat_id:
+            payload["chat_id"] = chat_id
+        response = requests.post(url, json=payload, timeout=15)
         response.raise_for_status()
         print("✅ Отчёт отправлен в webhook")
         return True

@@ -41,6 +41,7 @@ jobs:
       if: always()  # Отправляем даже если тесты упали
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         GITHUB_USERNAME: ${{ github.actor }}
         GITHUB_REPO: ${{ github.repository }}
       run: |
