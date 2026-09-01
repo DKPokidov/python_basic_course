@@ -21,7 +21,7 @@ jobs:
       id: select
       run: |
         git fetch origin "${{ github.base_ref }}" --depth=1
-        CHANGED=$(git diff --name-only "origin/${{ github.base_ref }}" HEAD -- '0*/practice/')
+        CHANGED=$(git diff --name-only "origin/${{ github.base_ref }}" HEAD -- '0_*/practice/**')
         echo "Изменённые файлы заданий:"
         echo "$CHANGED"
         TESTS=""
