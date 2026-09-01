@@ -65,7 +65,11 @@ def format_message(results):
 
     if summary_lines is not None:
         lines.append("")
-        lines.extend(summary_lines(results))
+        summary = summary_lines(results)
+        # Лимит Telegram: 4096 символов. Оставляем заголовок + до 40 задач + итог.
+        if len(summary) > 42:
+            summary = summary[:42] + [f"... и ещё {len(summary) - 42} задач"]
+        lines.extend(summary)
 
     failed_tests = [
         test.get("nodeid", "?")
@@ -74,9 +78,12 @@ def format_message(results):
     ]
     if failed_tests:
         lines.append("Упавшие тесты:")
-        lines.extend(f"- {nodeid}" for nodeid in failed_tests[:10])
+        lines.extend(f"- {nodeid}" for nodeid in failed_tests[:5])
+        if len(failed_tests) > 5:
+            lines.append(f"... и ещё {len(failed_tests) - 5} тестов")
 
-    return "\n".join(lines)
+    message = "\n".join(lines)
+    return message[:4000]  # страховка от превышения лимита Telegram
 
 
 def send_message(url, message):
