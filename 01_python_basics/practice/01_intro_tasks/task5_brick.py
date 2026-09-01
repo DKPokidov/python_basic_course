@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task5_geometry.py
+# module_01_python_basics/practice/task5_geometry.py
 """
 Задание 5: Кирпич
 

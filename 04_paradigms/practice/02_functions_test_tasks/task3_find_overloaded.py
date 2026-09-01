@@ -1,4 +1,4 @@
-﻿"""
+"""
 Задание 3: Поиск перегруженных объектов
 
 Функция find_overloaded(data, threshold) находит объекты, где capacity > threshold.

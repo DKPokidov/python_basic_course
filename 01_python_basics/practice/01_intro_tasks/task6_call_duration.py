@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task6_money.py
+# module_01_python_basics/practice/task6_money.py
 """
 Задание 6: Миша и его деньги
 

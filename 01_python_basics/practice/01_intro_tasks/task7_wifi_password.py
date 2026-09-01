@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task7_wifi.py
+# module_01_python_basics/practice/task7_wifi.py
 """
 Задание 7: Тайный код от Wi-Fi
 

@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task4_functions.py
+# module_01_python_basics/practice/task4_functions.py
 """
 Задание 4: Международный весооборот
 

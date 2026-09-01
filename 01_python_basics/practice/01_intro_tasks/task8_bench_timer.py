@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task8_bench.py
+# module_01_python_basics/practice/task8_bench.py
 """
 Задание 8: Умные скамейки
 

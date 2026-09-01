@@ -1,4 +1,4 @@
-﻿# module_02_data_structures/practice/task12_email_generator.py
+# module_02_data_structures/practice/task12_email_generator.py
 """
 Задание 12: Генератор email-адреса
 

@@ -1,4 +1,4 @@
-﻿# module_02_data_structures/practice/task15_jumpers.py
+# module_02_data_structures/practice/task15_jumpers.py
 """
 Задание 15: Попрыгунчики
 

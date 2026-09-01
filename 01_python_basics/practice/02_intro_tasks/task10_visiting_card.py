@@ -1,4 +1,4 @@
-﻿# module_02_data_structures/practice/task10_visiting_card.py
+# module_02_data_structures/practice/task10_visiting_card.py
 """
 Задание 10: Простая визитка
 

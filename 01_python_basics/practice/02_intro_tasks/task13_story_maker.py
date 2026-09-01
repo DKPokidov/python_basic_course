@@ -1,4 +1,4 @@
-﻿# module_02_data_structures/practice/task13_story_maker.py
+# module_02_data_structures/practice/task13_story_maker.py
 """
 Задание 13: Сочинитель сказок
 

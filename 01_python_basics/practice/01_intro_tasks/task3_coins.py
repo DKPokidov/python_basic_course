@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task3_loops.py
+# module_01_python_basics/practice/task3_loops.py
 """
 Задание 3: Счет мелких денег
 

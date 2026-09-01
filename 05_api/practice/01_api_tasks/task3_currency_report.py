@@ -1,4 +1,4 @@
-﻿# module_05_api/practice/01_api_tasks/task3_currency_report.py
+# module_05_api/practice/01_api_tasks/task3_currency_report.py
 """
 Задание 3. Отчёт и конвертация валют
 

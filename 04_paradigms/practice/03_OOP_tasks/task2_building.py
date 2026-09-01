@@ -1,4 +1,4 @@
-﻿"""
+"""
 Задание 2: Здание
 
 Создайте класс Building с атрибутами: name, height, year_built, building_type.

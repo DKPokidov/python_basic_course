@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task1_variables.py
+# module_01_python_basics/practice/task1_variables.py
 """
 Задание 1. Анкета для соцопроса
 

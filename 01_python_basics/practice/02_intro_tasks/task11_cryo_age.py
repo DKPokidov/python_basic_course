@@ -1,4 +1,4 @@
-﻿# module_02_data_structures/practice/task11_cryo_age.py
+# module_02_data_structures/practice/task11_cryo_age.py
 """
 Задание 11: Криокапсула будущего
 

@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task9_time.py
+# module_01_python_basics/practice/task9_time.py
 """
 Задание 9: Счастливых часов не наблюдают
 

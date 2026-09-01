@@ -1,4 +1,4 @@
-﻿# module_05_api/practice/01_api_tasks/task4_savings.py
+# module_05_api/practice/01_api_tasks/task4_savings.py
 """
 Задание 4. Прикладная задача: планирование путешествия
 

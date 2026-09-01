@@ -1,4 +1,4 @@
-﻿# module_05_api/practice/01_api_tasks/task1_fetch_rates.py
+# module_05_api/practice/01_api_tasks/task1_fetch_rates.py
 """
 Задание 1. Получение курсов валют с сайта ЦБ РФ
 

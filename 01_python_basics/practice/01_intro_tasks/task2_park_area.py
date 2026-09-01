@@ -1,4 +1,4 @@
-﻿# module_01_python_basics/practice/task2_conditions.py
+# module_01_python_basics/practice/task2_conditions.py
 """
 Задание 2: Помощь чиновнику
 

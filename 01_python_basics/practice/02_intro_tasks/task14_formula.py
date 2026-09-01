@@ -1,4 +1,4 @@
-﻿# module_02_data_structures/practice/task14_formula.py
+# module_02_data_structures/practice/task14_formula.py
 """
 Задание 14: Злая формула
 

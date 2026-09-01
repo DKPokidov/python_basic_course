@@ -1,4 +1,4 @@
-﻿# module_05_api/practice/01_api_tasks/task2_parse_currency.py
+# module_05_api/practice/01_api_tasks/task2_parse_currency.py
 """
 Задание 2. Парсинг курсов валют
 
