@@ -32,6 +32,11 @@ jobs:
       run: |
         pytest tests/ -v --json-report --json-report-file=test_results.json
     
+    - name: Print task summary
+      if: always()  # Печатаем сводку даже если тесты упали
+      run: |
+        python utils/summarize_results.py
+    
     - name: Parse and send results
       if: always()  # Отправляем даже если тесты упали
       env:
