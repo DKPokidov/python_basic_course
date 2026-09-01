@@ -34,7 +34,6 @@ MODULES = {
         ],
     },
     "02_python_structures": {
-        "practice": ["01_practice_structures_gdz.ipynb"],
         "practice/01_structures_tasks": [
             "task1_benches.py",
             "task2_finds.py",
@@ -54,10 +53,6 @@ MODULES = {
         ],
     },
     "03_control_flow": {
-        "practice": [
-            "01_practice_control_flow_gdz.ipynb",
-            "02_practice_control_flow_gdz.ipynb",
-        ],
         "practice/01_control_flow_tasks": [
             "task1_building_category.py",
             "task2_floors_limit.py",
@@ -71,23 +66,17 @@ MODULES = {
             "task10_city_growth.py",
         ],
         "practice/02_control_flow_tasks": [
-            "task5_routes.py",
-            "task6_streets.py",
-            "task7_green_areas.py",
-            "task8_dense_districts.py",
-            "task9_green_balance.py",
-            "task10_city_growth.py",
-            "task11_stop_load.py",
-            "task12_quarters.py",
+            "task11_routes.py",
+            "task12_streets.py",
+            "task13_green_areas.py",
+            "task14_dense_districts.py",
+            "task15_green_balance.py",
+            "task16_city_growth.py",
+            "task17_stop_load.py",
+            "task18_quarters.py",
         ],
     },
     "04_paradigms": {
-        "practice": [
-            "01_practice_functions_gdz.ipynb",
-            "02_practice_functions_test_gdz_.ipynb",
-            "03_practice_OOP_gdz.ipynb",
-            "04_practice_itarator&generator_gdz.ipynb",
-        ],
         "practice/01_functions_tasks": [
             "task1_analyze_grades.py",
             "task2_bus_routes.py",
@@ -118,10 +107,18 @@ MODULES = {
             "task4_noisy_measurements.py",
         ],
     },
-    "05_api_osm": {
-        "practice": ["01_API&osmnx_gdz.ipynb"],
+    "05_api": {
+        "practice/01_api_tasks": [
+            "task1_fetch_rates.py",
+            "task2_parse_currency.py",
+            "task3_currency_report.py",
+            "task4_savings.py",
+        ],
     },
-    "06_data_analysis": {
+    "06_test assignment": {
+        ".": ["Final_labaratory_work.ipynb"],
+    },
+    "07_data_analysis": {
         "practice": [
             "01_numpy_practice_gdz.ipynb",
             "02_Pandas_practice.ipynb",
@@ -130,13 +127,16 @@ MODULES = {
             "05_titanic_exam.ipynb",
         ],
     },
-    "07_visualization": {
+    "08_geoanalysis": {
+        "Practice": ["04_okn_analysis.ipynb"],
+    },
+    "09_visualization": {
         "practice": [
             "01_visualization_practice.ipynb",
             "02_titanic_visulization.ipynb",
         ],
     },
-    "08_final_project": {
+    "10_final_project": {
         ".": ["01_covid_analysis.ipynb"],
     },
 }

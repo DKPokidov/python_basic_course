@@ -18,10 +18,12 @@
 | 2 | Неизменяемые и изменяемые типы данных | `02_python_structures/` |
 | 3 | Управляющие конструкции, работа с файлами | `03_control_flow/` |
 | 4 | Парадигмы программирования (функции, ООП, итераторы) | `04_paradigms/` |
-| 5 | Работа с API, модуль osmnx | `05_api_osm/` |
-| 6 | Анализ данных (NumPy, Pandas, Geopandas) | `06_data_analysis/` |
-| 7 | Визуализация (Matplotlib, Seaborn) | `07_visualization/` |
-| 8 | Итоговый проект | `08_final_project/` |
+| 5 | Работа с API | `05_api/` |
+| 6 | Итоговая лабораторная работа | `06_test assignment/` |
+| 7 | Анализ данных (NumPy, Pandas, Geopandas) | `07_data_analysis/` |
+| 8 | Геоанализ (osmnx) | `08_geoanalysis/` |
+| 9 | Визуализация (Matplotlib, Seaborn) | `09_visualization/` |
+| 10 | Итоговый проект | `10_final_project/` |
 
 ## Как работать с курсом
 
