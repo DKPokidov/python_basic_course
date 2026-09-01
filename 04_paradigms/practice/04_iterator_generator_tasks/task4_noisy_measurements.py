@@ -6,3 +6,7 @@
 value * (1 + random.uniform(-noise_level, noise_level)).
 Использует yield для каждого измерения.
 """
+
+
+def noisy_measurements(base_values, noise_level=0.1):
+    yield

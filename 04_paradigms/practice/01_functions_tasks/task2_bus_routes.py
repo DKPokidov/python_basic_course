@@ -6,3 +6,11 @@
    Вход: dict {"number": int, "length": float, "passengers": int}
 2. needs_review(load) — True если загруженность < 200
 """
+
+
+def load_per_km(route):
+    pass
+
+
+def needs_review(load):
+    pass

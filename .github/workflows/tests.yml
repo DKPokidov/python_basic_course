@@ -3,10 +3,8 @@
 name: Run Tests
 
 on:
-  push:
-    branches: [ main, master, student-test ]
   pull_request:
-    branches: [ main, master, student-test]
+    branches: [ main, master ]
 
 jobs:
   test:
@@ -32,7 +30,7 @@ jobs:
     - name: Run tests with pytest
       id: tests
       run: |
-        pytest tests/ -v --json-report --json-report-file=test_results.json || true
+        pytest tests/ -v --json-report --json-report-file=test_results.json
     
     - name: Parse and send results
       if: always()  # Отправляем даже если тесты упали

@@ -4,3 +4,7 @@
 Функция accessibility_analysis(data) подсчитывает количество объектов с ramp == True в каждом районе.
 Возвращает словарь {район: количество_доступных_объектов}.
 """
+
+
+def accessibility_analysis(data):
+    pass

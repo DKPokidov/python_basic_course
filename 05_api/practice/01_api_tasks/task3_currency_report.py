@@ -15,3 +15,19 @@
 
 Напишите функции для анализа и конвертации.
 """
+
+
+def highest_rate(rates):
+    pass
+
+
+def lowest_rate(rates):
+    pass
+
+
+def convert(rates, amount, from_code, to_code):
+    pass
+
+
+def top_expensive(rates, n):
+    pass

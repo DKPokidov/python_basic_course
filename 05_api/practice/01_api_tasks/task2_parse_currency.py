@@ -40,3 +40,11 @@
 разделителя (например, '77,2736'). Вам нужно преобразовывать их в float,
 заменяя запятую на точку: float('77,2736'.replace(',', '.')) -> 77.2736.
 """
+
+
+def get_currency_rate(data, code):
+    pass
+
+
+def get_all_rates(data):
+    pass

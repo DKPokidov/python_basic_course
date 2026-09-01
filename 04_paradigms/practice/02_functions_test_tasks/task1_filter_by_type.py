@@ -4,3 +4,7 @@
 Написать функцию filter_by_type(data, obj_type), которая принимает словарь data и строку obj_type
 (например, "school"), возвращает список названий объектов заданного типа.
 """
+
+
+def filter_by_type(data, obj_type):
+    pass

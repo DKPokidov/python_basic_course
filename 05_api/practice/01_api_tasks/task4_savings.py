@@ -18,3 +18,19 @@
 Чем ниже курс валюты, тем больше иностранной валюты можно получить
 за фиксированную сумму рублей.
 """
+
+
+def best_currency_to_travel(rates, budget):
+    pass
+
+
+def how_much_you_get(rates, budget, code):
+    pass
+
+
+def currency_trend(rates_today, rates_yesterday, code):
+    pass
+
+
+def format_rate_table(rates):
+    pass

@@ -13,3 +13,24 @@
   "Мотоцикл [brand] [model] рычит при запуске".
   info() добавляет ", с коляской" или ", без коляски".
 """
+
+
+class Vehicle:
+    def __init__(self, brand, model, year):
+        pass
+
+    def start_engine(self):
+        pass
+
+    def info(self):
+        pass
+
+
+class Car(Vehicle):
+    def __init__(self, brand, model, year, doors):
+        pass
+
+
+class Motorcycle(Vehicle):
+    def __init__(self, brand, model, year, has_sidecar):
+        pass

@@ -24,3 +24,9 @@ API ЦБ РФ возвращает курсы валют на текущий д�
     import xmltodict
     data = xmltodict.parse(response.content)
 """
+
+CBR_URL = "https://www.cbr.ru/scripts/XML_daily.asp"
+
+
+def fetch_rates(url=CBR_URL):
+    pass

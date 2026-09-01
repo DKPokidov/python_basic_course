@@ -6,3 +6,7 @@
 - Добавляет speed_kmh = round((distance_km / duration_min) * 60, 1) или 0.0 если duration_min == 0
 - Возвращает list of dicts с добавленным полем speed_kmh
 """
+
+
+def analyze_scooter_usage(data):
+    pass

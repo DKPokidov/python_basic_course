@@ -3,3 +3,7 @@
 
 Функция greetings(names) — генератор, выдаёт строки "Привет, {имя}!" для каждого имени из списка names.
 """
+
+
+def greetings(names):
+    yield
