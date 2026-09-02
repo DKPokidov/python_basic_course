@@ -14,3 +14,7 @@
 Баланс после разговора (руб): 8
 Разговор длился 18 минут
 """
+ballance_befor = float(input())
+ballance_after = float(input())
+MINUT_COST = 2.5
+print(f"Разговор длился {round((ballance_befor - ballance_after) / MINUT_COST)} минут")
