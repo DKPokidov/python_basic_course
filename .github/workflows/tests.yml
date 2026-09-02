@@ -69,7 +69,8 @@ jobs:
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        GITHUB_USERNAME: ${{ github.actor }}
         GITHUB_REPO: ${{ github.repository }}
       run: |
+        STUDENT_NAME="${GITHUB_HEAD_REF#student/}"
+        export GITHUB_USERNAME="${STUDENT_NAME:-$GITHUB_ACTOR}"
         python utils/parse_and_send_results.py
