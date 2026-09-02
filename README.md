@@ -34,9 +34,14 @@ cd python_basic_course
 ```
 
 **2. Создайте ветку для своих заданий**
+
+Название ветки — ваши **имя и фамилия латиницей** (подчёркивание вместо пробела):
+
 ```bash
-git checkout -b student/ваше_имя
+git checkout -b student/ivan_petrov
 ```
+
+> Пример: если вас зовут Иван Петров — ветка `student/ivan_petrov`. Это имя появится в отчётах о проверке ваших решений.
 
 **3. Выполняйте задания**
 - Откройте задание в VS Code или Jupyter Notebook
@@ -47,7 +52,7 @@ git checkout -b student/ваше_имя
 ```bash
 git add .
 git commit -m "Выполнены задания: модуль N"
-git push origin student/ваше_имя
+git push origin student/ivan_petrov
 ```
 
 **5. Создайте Pull Request** на GitHub из вашей ветки в `master`
@@ -75,9 +80,9 @@ Pull Request (PR) — это запрос на объединение вашей
 | Поле | Что выбрать |
 |------|-------------|
 | **base:** (слева) | `master` — основная ветка курса |
-| **compare:** (справа) | `student/ваше_имя` — ваша ветка с решениями |
+| **compare:** (справа) | `student/ivan_petrov` — ваша ветка с решениями |
 
-> Если в списке нет вашей ветки — значит вы не сделали `git push origin student/ваше_имя`. Вернитесь в терминал и выполните push.
+> Если в списке нет вашей ветки — значит вы не сделали `git push origin student/ivan_petrov`. Вернитесь в терминал и выполните push.
 
 ### Шаг 3. Заполните форму
 
@@ -97,7 +102,7 @@ Pull Request (PR) — это запрос на объединение вашей
   ```bash
   git add .
   git commit -m "Исправление: модуль N"
-  git push origin student/ваше_имя
+  git push origin student/ivan_petrov
   ```
 
 ### Как отправить исправления в уже открытый PR
@@ -109,7 +114,7 @@ Pull Request (PR) — это запрос на объединение вашей
    ```bash
    git add .
    git commit -m "Исправления после проверки"
-   git push origin student/ваше_имя
+   git push origin student/ivan_petrov
    ```
 3. Изменения автоматически появятся в уже открытом Pull Request, и тесты запустятся заново
 
