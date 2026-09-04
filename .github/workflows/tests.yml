@@ -60,12 +60,12 @@ jobs:
         fi
     
     - name: Print task summary
-      if: always()  # Печатаем сводку даже если тесты упали
+      if: always() && matrix.python-version == '3.11'  # Печатаем сводку даже если тесты упали
       run: |
         python utils/summarize_results.py
     
     - name: Parse and send results
-      if: always()  # Отправляем даже если тесты упали
+      if: always() && matrix.python-version == '3.11'  # Отправляем только один раз (одна версия Python)
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
