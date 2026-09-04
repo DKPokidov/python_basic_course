@@ -13,16 +13,30 @@
 
 class CityDistrict:
     def __init__(self, name, area_ha, population, building_types=None):
-        pass
+        self.name = name
+        self.area_ha = area_ha
+        self.population = population
+        # Если building_types не передан, создаём пустой список
+        if building_types is None:
+            self.building_types = []
+        else:
+            self.building_types = building_types
 
     def add_building_type(self, type_name):
-        pass
+        """Добавляет тип здания, если его ещё нет в списке"""
+        if type_name not in self.building_types:
+            self.building_types.append(type_name)
+        # Если тип уже есть, ничего не делаем
 
     def get_density(self):
-        pass
+        """Возвращает плотность населения (человек на гектар)"""
+        if self.area_ha == 0:
+            return 0.0  # Защита от деления на ноль
+        return self.population / self.area_ha
 
     def has_green_space(self):
-        pass
+        """Возвращает True, если 'green' есть в building_types"""
+        return 'green' in self.building_types
 
     def __str__(self):
-        pass
+        return f"Район: {self.name}, площадь: {self.area_ha} га, население: {self.population} чел."
