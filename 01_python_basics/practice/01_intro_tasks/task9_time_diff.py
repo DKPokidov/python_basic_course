@@ -17,3 +17,29 @@
 Секунда ухода: 0
 3:30:00
 """
+
+import math
+
+inList = [
+    int(input("час прихода:")),
+    int(input("минута прихода:")),
+    int(input("секунда прихода:")),
+    int(input("час ухода:")),
+    int(input("минута ухода:")),
+    int(input("секунда ухода:")),
+    ]
+
+dHours = inList[3] - inList[0]
+
+dMins = inList[4] - inList[1]
+dHours += math.floor(dMins/60)
+dMins = dMins % 60
+
+
+dSecs = inList[5] - inList[2]
+dMins += math.floor(dSecs / 60)
+dSecs = dSecs % 60
+
+print(
+    f"{math.fabs(dHours):01.0f}:{(math.fabs(dMins)):02.0f}:{math.fabs((dSecs)):02.0f}"
+)
