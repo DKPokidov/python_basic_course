@@ -36,4 +36,4 @@ elif unit == "ц":
 elif unit == "т":
     result = weight * 1000
 
-print(f"{weight} {unit} = {result} кг")
+print(f"{weight} {unit} = {result:.6f} кг")
