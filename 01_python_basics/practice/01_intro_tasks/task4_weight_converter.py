@@ -19,3 +19,18 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+
+weight, bukva = input('Введите вес и единицу измерения').strip().split()
+
+if bukva == 'кг':
+    print(f'{weight} кг')
+elif bukva == 'г':
+    print(f'{int(weight) * 10**-3} кг')
+elif bukva == 'пуд':
+    print(f'{int(weight) * 16} кг')
+elif bukva =='фунт':
+    print(f'{int(weight) * 0.40951241} кг')
+elif bukva == 'ц':
+    print(f'{int(weight) * 100} кг')
+else:
+    print(f'{int(weight) * 1000} кг')
