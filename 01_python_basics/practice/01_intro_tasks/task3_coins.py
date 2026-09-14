@@ -17,3 +17,12 @@
 Сколько монет по 1 копейке? 4
 0 руб. 89 коп.
 """
+
+monet50 = int(input("сколько пидисяток "))
+monet10 = int(input("сколко десяток "))
+monet5 = int(input("сколько пятерок "))
+monet = int(input("сколько однерок "))
+
+summa = monet50 * 50 + monet10 * 10 + monet5 * 5 + monet
+
+print(f"рублей: {summa//100}, копеек: {summa%100}")
