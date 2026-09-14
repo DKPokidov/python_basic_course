@@ -29,9 +29,10 @@
 length = float(input('Введите длину кирпича (см): '))
 width = float(input('Введите ширину кирпича (см): '))
 height = float(input('Введите высоту кирпича (см): '))
-obyom =length * width * height
+massa = length * width * height * 1700 / 1_000_000
+
 print(f'Объём: {length * width * height} см³')
 print(f'Площадь поверхности: {2 * (length * width + width * height + length * height)} см²')
 print(f'Сумма рёбер: {4 * (length + width + height)} см')
-print(f'Масса: {obyom  * 1700 / 10 ** 6} кг')
+print(f'Масса: {massa:.2f} кг')
 print(f'Количество кирпичей в 1 м³: {1000000 // (length * width * height)}')
