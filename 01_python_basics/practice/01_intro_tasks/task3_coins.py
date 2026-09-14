@@ -17,3 +17,18 @@
 Сколько монет по 1 копейке? 4
 0 руб. 89 коп.
 """
+tips_50 = int(input('Сколько монет по 50 копеек? '))
+tips_10 = int(input('Сколько монет по 10 копеек? '))
+tips_5 = int(input('Сколько монет по 5 копеек? '))
+tips_1 = int(input('Сколько монет по 1 копейке? '))
+
+total_cents = (tips_50 * 50) + (tips_10 * 10) + (tips_5 * 5) + (tips_1 * 1) 
+
+if total_cents >= 100:
+    rubles = total_cents // 100
+    cents = total_cents % 100
+    print(f'{rubles} руб. {cents} коп.')
+else:
+    print(f'0 руб. {total_cents} коп.')
+
+
