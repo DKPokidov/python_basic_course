@@ -19,3 +19,20 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+weight_input = input('Введите вес и единицу измерения (например, "10 кг"): ')
+weight, unit = weight_input.split()
+weight = float(weight)
+res = 1
+if unit == 'кг':
+    res = weight
+elif unit == 'г':
+    res = weight * 0.001
+elif unit == 'фунт':
+    res = weight * 0.40951241
+elif unit == 'пуд':
+    res = weight * 16
+elif unit == 'ц':
+    res = weight * 100
+else:
+    res = weight * 1000
+print(f'{weight} {unit} = {res:.6f} кг')
