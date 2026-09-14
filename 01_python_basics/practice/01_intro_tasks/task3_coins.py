@@ -17,3 +17,11 @@
 Сколько монет по 1 копейке? 4
 0 руб. 89 коп.
 """
+amount50 = int(input("Сколько монет по 50 копеек? "))
+amount10 = int(input("Сколько монет по 10 копеек? "))
+amount5 = int(input("Сколько монет по 5 копеек? "))
+amount1 = int(input("Сколько монет по 1 копеек? "))
+sum = (amount50*50 + amount10*10 + amount5*5 +amount1*1)/100
+sumrub = int(sum)
+sumkop = sum - sumrub
+print(f"{sumrub} руб. {sumkop} коп.")
