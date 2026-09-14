@@ -26,18 +26,17 @@
 Масса: 3.31 кг
 Количество кирпичей в 1 м³: 512
 """
-
-dlin=float(input('Введите длину кирпича (см):'))
-shir=float(input('Введите ширину кирпича (см):'))
-vis=float(input('Введите высоту кирпича (см):'))
-ob= dlin * shir * vis
-pl=2 * (dlin * shir + shir * vis + dlin * vis)
-mass= (ob * 1700)/ 10 ** 6
-
-sym=4 * (dlin + shir + vis)
-
-print(f'Объём: {ob} см³')
-print(f'Площадь поверхности: {pl} см²')
-print(f'Сумма рёбер: {sym} см')
-print(f'Масса: {mass} кг')
-print(f'Количество кирпичей в 1 м³: {10**6 // ob}')
+lenght = float(input("Введите длину кирпича (см): "))
+width = float(input("Введите ширину кирпича (см): "))
+hight = float(input("Введите высоту кирпича (см): "))
+print(f"Объём: {lenght * width * hight} см³")
+print(f"Площадь поверхности: {2 * (lenght * width + width * hight + lenght * hight)} см²")
+print(f"Сумма рёбер: {4 * (lenght + width + hight)} см")
+lenght = float(input("Введите длину кирпича (см): "))
+width = float(input("Введите ширину кирпича (см): "))
+hight = float(input("Введите высоту кирпича (см): "))
+print(f"Объём: {lenght * width * hight} см³")
+print(f"Площадь поверхности: {2 * (lenght * width + width * hight + lenght * hight)} см²")
+print(f"Сумма рёбер: {4 * (lenght + width + hight)} см")
+print(f"Масса: {(lenght * width * hight) * 1700 / 1000000} кг")
+print(f"Количество кирпичей в 1 м³: {int(1 // (lenght * width * hight / 1000000))}")
