@@ -17,3 +17,17 @@
 Секунда ухода: 0
 3:30:00
 """
+hour1, min1, sec1 = int(input("Час прихода:")), int(input("Минута прихода:")), int(input("Секунда прихода:"))
+hour2, min2, sec2 = int(input("Час ухода:")), int(input("Минута ухода:")), int(input("Секунда ухода:"))
+time = (hour2 * 3600 + min2 * 60 + sec2) - (hour1 * 3600 + min1 * 60 + sec1)
+hour3 = time//3600
+min3 = time%3600//60
+sek3 = time%60
+if min3 < 10 and sek3 < 10:
+    print(hour3, ":0", min3, ":0", sek3, sep = "")
+elif min3 < 10 and sek3 >= 10:
+    print(hour3, ":0", min3, ":", sek3, sep = "")
+elif min3 >= 10 and sek3 < 10:
+    print(hour3, ":0", min3, ":0", sek3, sep = "")
+else:
+    print(hour3, min3, sek3, sep=":")
