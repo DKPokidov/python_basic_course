@@ -17,3 +17,9 @@
 Баланс после разговора (руб): 8.0
 Разговор длился 18 минут
 """
+firstb = float(input('Введите баланс до разговора: '))
+secondb = float(input('Введите баланс после разговора: '))
+price = 2.5
+cost = firstb - secondb
+time = cost / price
+print(f'Разговор длился {time} мин.')
