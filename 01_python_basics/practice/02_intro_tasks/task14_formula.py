@@ -20,3 +20,9 @@
 
 Примечание: используйте float() для ввода чисел
 """
+m = float(input("Введите m: "))
+n = float(input("Введите n: "))
+first = (m * n) / (m + n)
+second = (m - n) / (m * n)
+result = int((first + second) * 1000) / 1000
+print(f"Ответ: {first:.3f} + {second:.3f} = {result:.3f}")
