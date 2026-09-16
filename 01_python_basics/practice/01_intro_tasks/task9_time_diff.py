@@ -28,6 +28,6 @@ if min3 < 10 and sek3 < 10:
 elif min3 < 10 and sek3 >= 10:
     print(hour3, ":0", min3, ":", sek3, sep = "")
 elif min3 >= 10 and sek3 < 10:
-    print(hour3, ":0", min3, ":0", sek3, sep = "")
+    print(hour3, ":", min3, ":0", sek3, sep = "")
 else:
     print(hour3, min3, sek3, sep=":")

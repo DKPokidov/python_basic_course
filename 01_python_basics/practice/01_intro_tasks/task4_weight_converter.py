@@ -22,16 +22,16 @@
 a, t = input("Введите вес и единицу измерения (например, '10 кг'):").strip().split()
 a = float(a)
 if t == "кг":
-    print(a, t, "=", a, "кг")
+    print(f"{a} {t} = {a:.6f} кг")
 elif t == "г":
-    print(a, t, "=", a * 0.001, "кг")
+    print(f"{a} {t} = {(a * 0.001):.6f} кг")
 elif t == "фунт":
-    print(a, t, "=", (a * 0.40951241), "кг")
+    print(f"{a} {t} = {(a * 0.40951241):.6f} кг")
 elif t == "пуд":
-    print(a, t, "=", a * 16, "кг")       
+    print(f"{a} {t} = {(a * 16):.6f} кг")       
 elif t == "ц":
-    print(a, t, "=", a * 100, "кг")       
+    print(f"{a} {t} = {(a * 100):.6f} кг")       
 elif t == "т":
-    print(a, t, "=", a * 1000, "кг")
+    print(f"{a} {t} = {(a * 1000):.6f} кг")
 else:
     print("ошибка")
