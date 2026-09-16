@@ -11,6 +11,7 @@
 Введите время в секундах: 3661
 1:01:01
 """
+
 print("Введите время в секундах: ")
 total_seconds = int(input())
 hours = total_seconds // 3600
