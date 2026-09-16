@@ -36,8 +36,8 @@ mass = (ob * 1700) / 10**6
 
 sym = 4 * (dlin + shir + vis)
 
-print(f"Объём: {ob} ")
+print(f"Масса: {mass} ")
 print(f"Площадь поверхности: {pl} ")
 print(f"Сумма рёбер: {sym} ")
-print(f"Масса: {mass} ")
+print(f"Объём: {ob} ")
 print(f"Количество кирпичей: {10**6 // ob}")
