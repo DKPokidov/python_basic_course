@@ -17,3 +17,11 @@
 Секунда ухода: 0
 3:30:00
 """
+arrival_hours = int(input("Час прихода: "))*3600
+arrival_minutes = int(input("Минута прихода: "))*60
+arrival_seconds = int(input("Секунда прихода: "))
+departure_hours = int(input("Час ухода: "))*3600
+departure_minutes = int(input("Минута ухода: "))*60
+departure_seconds = int(input("Секунда ухода: "))
+total_time = (departure_hours + departure_minutes + departure_seconds) - (arrival_hours + arrival_minutes + arrival_seconds)
+print(f'{total_time//3600}:{total_time//60%60:02}:{total_time%60:02}')

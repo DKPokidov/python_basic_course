@@ -26,17 +26,18 @@
 Масса: 3.31 кг
 Количество кирпичей в 1 м³: 512
 """
-lenght = float(input("Введите длину кирпича (см): "))
+length = float(input("Введите длину кирпича (см): "))
 width = float(input("Введите ширину кирпича (см): "))
-hight = float(input("Введите высоту кирпича (см): "))
-print(f"Объём: {lenght * width * hight} см³")
-print(f"Площадь поверхности: {2 * (lenght * width + width * hight + lenght * hight)} см²")
-print(f"Сумма рёбер: {4 * (lenght + width + hight)} см")
-lenght = float(input("Введите длину кирпича (см): "))
-width = float(input("Введите ширину кирпича (см): "))
-hight = float(input("Введите высоту кирпича (см): "))
-print(f"Объём: {lenght * width * hight} см³")
-print(f"Площадь поверхности: {2 * (lenght * width + width * hight + lenght * hight)} см²")
-print(f"Сумма рёбер: {4 * (lenght + width + hight)} см")
-print(f"Масса: {(lenght * width * hight) * 1700 / 1000000} кг")
-print(f"Количество кирпичей в 1 м³: {int(1 // (lenght * width * hight / 1000000))}")
+height = float(input("Введите высоту кирпича (см): "))
+
+volume = length * width * height
+surface_area = 2 * (length * width + width * height + length * height)
+edge_sum = 4 * (length + width + height)
+mass = volume * 1700 / 1000000
+brick_count = int(1000000 / volume)
+
+print(f"Объём: {volume} см³")
+print(f"Площадь поверхности: {surface_area} см²")
+print(f"Сумма рёбер: {edge_sum} см")
+print(f"Масса: {mass:.2f} кг")
+print(f"Количество кирпичей в 1 м³: {brick_count}")
