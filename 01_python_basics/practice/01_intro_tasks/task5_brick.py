@@ -33,5 +33,5 @@ height = float(input('Введите высоту кирпича в сантим
 print(f'Объём: {length * width * height} см³')
 print(f'Площадь поверхности: {2 * (length * width + length * height + width * height)} см²')
 print(f'Сумма рёбер: {4 * (length + width + height)} см')
-print(f'Масса: {((length * width * height) / (10 ** 6)) * 1700} кг')
+print(f'Масса: {((length * width * height) / (10 ** 6)) * 1700:.2f} кг')
 print(f'Количество кирпичей в 1 м³: {1 // ((length * width * height) / (10 ** 6))}')
