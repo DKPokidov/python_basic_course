@@ -38,7 +38,6 @@ if a > b:
 else:
     print("Расстояние:", b - a)
     if (b - a) % 3 == 0:
-            print("да")
+        print("да")
     else:
-            print("нет")
-
+        print("нет")

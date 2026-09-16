@@ -18,4 +18,4 @@
 """
 name = input("Введите ваше имя:")
 year = input("Введите год поступления:")
-print ("Ваш email: ", name, year, "@itmo.com", sep = "")
+print("Ваш email: ", name, year, "@itmo.com", sep="")
