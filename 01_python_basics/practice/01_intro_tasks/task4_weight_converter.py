@@ -21,7 +21,6 @@
 """
 weight = float(input('Введите вес: '))
 measure = input('Введите единицу измерения: ')
-
 if measure == 'г':
     print(f'{weight} {measure} = {weight * 0.001} кг')
 elif measure == 'фунт':

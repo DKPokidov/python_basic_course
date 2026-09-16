@@ -19,8 +19,7 @@
 """
 firstb = float(input('Введите баланс до разговора: '))
 secondb = float(input('Введите баланс после разговора: '))
-
 price = 2.5
 cost = firstb - secondb
-time = cost / price 
-print(f'Разговор длился {time} мин.')
+time = int(cost / price) 
+print(f'Разговор длился {time} минут')
