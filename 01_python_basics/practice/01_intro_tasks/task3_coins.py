@@ -25,4 +25,4 @@ ko2 = float(input("Сколько монет по 1 копейке? "))
 rub = k * 50 + ko * 10 + ko1 * 5 + ko2
 coins = rub // 100
 kopeek = rub % 100
-print(f"{int(coins)}руб. {int(kopeek)} коп.")
+print(f"{int(coins)} руб. {int(kopeek)} коп.")
