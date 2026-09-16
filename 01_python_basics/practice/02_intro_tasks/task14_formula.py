@@ -20,9 +20,8 @@
 
 Примечание: используйте float() для ввода чисел
 """
-print("Введите m: ")
 m = float(input())
-print("Введите n: ")
 n = float(input())
 result = (m * n) / (m + n) + (m - n) / (m * n)
-print(f"Ответ: {result:.3f}")   
+result = int(result * 1000) / 1000
+print ((f"{result:.3f}"))

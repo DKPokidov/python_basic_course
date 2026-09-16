@@ -37,4 +37,3 @@ elif unit == "ц":
 elif unit == "т":
     weight_kg = weight_value * 1000
 print(f"{weight_value} {unit} = {weight_kg:.6f} кг")
-
