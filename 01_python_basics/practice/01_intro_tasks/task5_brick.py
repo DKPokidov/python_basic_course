@@ -36,7 +36,7 @@ mass = (ob * 1700) / 10**6
 
 sym = 4 * (dlin + shir + vis)
 
-print(f"Масса: {mass,:0<5} ")
+print(f"Масса: {str(mass),:0<4} ")
 print(f"Площадь поверхности: {pl} ")
 print(f"Сумма рёбер: {sym} ")
 print(f"Объём: {ob} ")
