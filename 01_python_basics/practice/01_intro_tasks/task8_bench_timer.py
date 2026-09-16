@@ -11,3 +11,6 @@
 Введите время в секундах: 3661
 1:01:01
 """
+
+seconds = int(input("Введите время в секундах: "))
+print(f"{seconds//3600}:{str(seconds%3600//60).rjust(2,'0')}:{str(seconds%60).rjust(2,'0')}")

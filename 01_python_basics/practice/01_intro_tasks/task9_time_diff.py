@@ -17,3 +17,13 @@
 Секунда ухода: 0
 3:30:00
 """
+
+hoa = int(input("Час прихода: "))
+moa = int(input("Минута прихода: "))
+soa = int(input("Секунда прихода: "))
+hol = int(input("Час ухода: "))
+mol = int(input("Минута ухода: "))
+sol = int(input("Секунда ухода: "))
+
+seconds = (hol*3600 + mol*60 + sol) - (hoa*3600 + moa*60 + soa)
+print(f"{seconds//3600}:{str(seconds%3600//60).rjust(2,'0')}:{str(seconds%60).rjust(2,'0')}")
