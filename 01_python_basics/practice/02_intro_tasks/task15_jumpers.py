@@ -27,11 +27,12 @@
 
 Примечание: расстояние всегда положительное.
 """
-a=int(input())
-b=int(input())
-if abs(a-b)%3==0:
-    print('Расстояние:',abs(a-b))
-    print('да')
+
+a = int(input())
+b = int(input())
+if abs(a - b) % 3 == 0:
+    print("Расстояние:", abs(a - b))
+    print("да")
 else:
-    print('Расстояние:',abs(a-b))
-    print('нет')
+    print("Расстояние:", abs(a - b))
+    print("нет")

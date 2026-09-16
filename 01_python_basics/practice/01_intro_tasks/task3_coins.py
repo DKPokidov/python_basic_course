@@ -18,11 +18,11 @@
 0 руб. 89 коп.
 """
 
-k= float(input('Сколько монет по 50 копеек?'))
-ko=float(input('Сколько монет по 10 копеек?'))
-ko1= float(input('Сколько монет по 5 копеек?'))
-ko2=float(input('Сколько монет по 1 копейке? '))
-rub=k*50 + ko*10 + ko1*5 + ko2
-coins=rub//100
-kopeek=rub%100
-print(f'{coins}руб. {kopeek} коп.')
+k = float(input("Сколько монет по 50 копеек?"))
+ko = float(input("Сколько монет по 10 копеек?"))
+ko1 = float(input("Сколько монет по 5 копеек?"))
+ko2 = float(input("Сколько монет по 1 копейке? "))
+rub = k * 50 + ko * 10 + ko1 * 5 + ko2
+coins = rub // 100
+kopeek = rub % 100
+print(f"{int(coins)}руб. {int(kopeek)} коп.")

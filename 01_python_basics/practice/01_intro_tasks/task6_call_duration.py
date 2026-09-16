@@ -17,7 +17,8 @@
 Баланс после разговора (руб): 8.0
 Разговор длился 18 минут
 """
-balance=float(input('Баланс до разговора (руб):',))
-balance2=float(input('Баланс до разговора (руб):',))
-s=2.5
-print(f"Разговор длился {(balance-balance2)/s} минут")
+
+balance = float(input("Баланс до разговора (руб):",))
+balance2 = float(input("Баланс после разговора (руб):",))
+s = 2.5
+print(f"{int((balance-balance2)/s)} минут")

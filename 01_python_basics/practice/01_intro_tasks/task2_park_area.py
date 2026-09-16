@@ -17,7 +17,7 @@
 Площадь озеленения: 50.0 кв.м
 """
 
-skverd=float(input('Введите длину сквера (м):'))
-skversh=float(input('Введите ширину сквера (м):'))
-pl=(skverd * skversh)
-print(f'Площадь озеленения: {pl} кв.м')
+skverd = float(input("Введите длину сквера (м):"))
+skversh = float(input("Введите ширину сквера (м):"))
+pl = skverd * skversh
+print(f"Площадь озеленения: {pl} кв.м")
