@@ -31,6 +31,6 @@
 coordA = int(input("Введите координату дома А: "))
 coordB = int(input("Введите координату дома В: "))
 
-distance = coordB - coordA
+distance = abs(coordB - coordA)
 print(f"Расстояние: {distance}")
 print('да' if distance % 3 == 0 else 'нет')

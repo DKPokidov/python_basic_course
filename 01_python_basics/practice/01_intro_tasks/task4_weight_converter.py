@@ -30,4 +30,4 @@ coefs = {
 }
 
 weight, unit = input("Введите вес и единицу измерения (например, '10 кг'): ").split()
-print(f"{float(weight)} {unit} = {float(weight)*coefs[unit]} кг")
+print(f"{float(weight)} {unit} = {float(weight)*coefs[unit]:.6f} кг")
