@@ -23,5 +23,3 @@ five = int(input('Сколько монет по 5 копеек? '))
 one = int(input('Сколько монет по 1 копейке? '))
 rub = fifty * 50 + ten * 10 + five * 5 + one 
 print(f'{rub // 100} руб. {rub % 100} коп.')
-
-

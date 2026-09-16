@@ -23,6 +23,3 @@ elif minuts >= 10 and sekunds < 10:
     print(f'{hour}:{minuts}:0{sekunds}')
 else:
     print(f'{hour}:{minuts}:{sekunds}')
-
-
-

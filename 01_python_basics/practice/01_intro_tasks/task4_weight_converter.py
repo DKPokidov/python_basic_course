@@ -21,9 +21,10 @@
 """
 
 weight, bukva = input("Введите вес и единицу измерения (например, '10 кг'): ").strip().split()
+weight = float(weight)
 
 if bukva == 'кг':
-    print(f'{weight} кг = {weight} кг')
+    print(f'{weight} кг = {weight:.6f} кг')
 elif bukva == 'г':
     print(f'{float(weight)} г = {(float(weight) * 10**-3):.6f} кг')
 elif bukva == 'пуд':
