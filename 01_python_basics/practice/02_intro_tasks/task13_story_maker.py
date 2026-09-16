@@ -2,8 +2,8 @@
 """
 Задание 13: Сочинитель сказок
 
-Вы очень любите своего младшего брата. 
-Родители поручили вам читать ему сказки на ночь. 
+Вы очень любите своего младшего брата.
+Родители поручили вам читать ему сказки на ночь.
 Напишите программу, которая создаёт забавную историю с пропусками.
 
 Программа должна последовательно:
@@ -25,3 +25,19 @@
 Воронеж его встретил Ворон, который сказал: "Привет, дружище!"
 "Привет!" — и с тех пор Дедди стал самым ученым хомяком в мире!
 """
+
+hamster_name = input()
+favorite_food = input()
+profession = input()
+skill = input()
+city = input()
+character = input()
+character_phrase = input()
+hamster_response = input()
+adjective = input()
+story = f"""Жил-был хомяк по имени {hamster_name}
+{hamster_name} очень любил есть {favorite_food} и мечтал стать {profession}
+Однажды {hamster_name} научился {skill} и отправился в {city}
+{city} его встретил {character}, который сказал: "{character_phrase}"
+"{hamster_response}" — и с тех пор {hamster_name} стал самым {adjective} хомяком в мире!"""
+print(story)
