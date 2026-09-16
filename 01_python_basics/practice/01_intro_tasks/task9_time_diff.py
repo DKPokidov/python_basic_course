@@ -19,9 +19,9 @@
 """
 hours1 = int(input('Час прихода: '))
 minuts1 = int(input('Секунда прихода: '))
-sek1  = int(input('Секунда прихода: '))
+sek1 = int(input('Секунда прихода: '))
 hours2 = int(input('Час ухода: '))
 minuts2 = int(input('Минута ухода: '))
-sek2  = int(input('Секунда ухода: '))
-razn = (sek2 + minuts2*60 + hours2*3600) - (sek1 + minuts1*60 + hours1*3600)
-print(f'{razn // 3600}:{((razn % 3600) // 60):02d}:{(razn % 60):02d}' )
+sek2 = int(input('Секунда ухода: '))
+razn = (sek2 + minuts2 * 60 + hours2 * 3600) - (sek1 + minuts1 * 60 + hours1 * 3600)
+print(f'{razn // 3600}:{((razn % 3600) // 60):02d}:{(razn % 60):02d}')
