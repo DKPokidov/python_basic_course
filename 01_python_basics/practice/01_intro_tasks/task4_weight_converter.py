@@ -25,10 +25,10 @@ weight = float(weight)
 
 if bukva == 'кг':
     print(f'{weight} кг = {weight:.6f} кг')
-elif bukva == 'г':
-    print(f'{float(weight)} г = {(float(weight) * 10**-3):.6f} кг')
 elif bukva == 'пуд':
     print(f'{float(weight)} пуд = {(float(weight) * 16):.6f} кг')
+elif bukva == 'г':
+    print(f'{float(weight)} г = {(float(weight) * 10**-3):.6f} кг')
 elif bukva == 'фунт':
     print(f'{float(weight)} фунт = {(float(weight) * 0.40951241):.6f} кг')
 elif bukva == 'ц':

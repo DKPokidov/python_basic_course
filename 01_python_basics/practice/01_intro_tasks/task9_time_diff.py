@@ -17,8 +17,8 @@
 Секунда ухода: 0
 3:30:00
 """
-hours1 = int(input('Час прихода: '))
-minuts1 = int(input('Секунда прихода: '))
+hours1 = int(input("Час прихода: "))
+minuts1 = int(input('Минута прихода: '))
 sek1 = int(input('Секунда прихода: '))
 hours2 = int(input('Час ухода: '))
 minuts2 = int(input('Минута ухода: '))

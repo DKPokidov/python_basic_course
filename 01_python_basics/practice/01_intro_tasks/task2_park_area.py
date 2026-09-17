@@ -17,5 +17,5 @@
 Площадь озеленения: 50.0 кв.м
 """
 length = float(input("Введите длину сквера (м): "))
-shirina = float(input("Введите ширину сквера (м): "))
-print(f'Площадь озеленения: {length * shirina} кв.м')
+width = float(input("Введите ширину сквера (м): "))
+print(f'Площадь озеленения: {length * width} кв.м')
