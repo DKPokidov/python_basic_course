@@ -21,4 +21,4 @@
 dolzn = input('Введите вашу должность: ')
 name = input('Введите ваше имя: ')
 lastname = input('Введите вашу фамилию: ')
-print(f'{dolzn} {name} {lastname}')
+print(f'Пользователь: {dolzn} {name} {lastname}')

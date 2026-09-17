@@ -22,4 +22,5 @@
 """
 m = float(input('Введите m: '))
 n = float(input('Введите n: '))
-print(f'Ответ: {((m * n) / (m + n)):.3f} + {((m - n) / (m * n)):.3f} = {((m * n) / (m + n) + (m - n) / (m * n)):.3f}')
+result = int(((m * n) / (m + n) + (m - n) / (m * n)) * 1000) / 1000
+print(f'{result:.3f}')
