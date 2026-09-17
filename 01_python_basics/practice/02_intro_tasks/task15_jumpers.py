@@ -27,3 +27,14 @@
 
 Примечание: расстояние всегда положительное.
 """
+homeA=int(input('Введите координату дома А:'))
+homeB=int(input('Введите координату дома В:'))
+if homeA >= homeB :
+    rast = homeA - homeB
+if homeA < homeB :
+    rast = homeB - homeA
+print(f'Расстояние: {rast}')
+if rast%3==0:
+    print('да')
+else:
+    print('нет')

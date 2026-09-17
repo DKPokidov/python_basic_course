@@ -20,3 +20,7 @@
 
 Примечание: используйте float() для ввода чисел
 """
+m=float(input('Введите m:'))
+n=float(input('Введите n:'))
+result= str((m * n) / (m + n) + (m - n) / (m * n)) [:5]
+print(f'{result}')
