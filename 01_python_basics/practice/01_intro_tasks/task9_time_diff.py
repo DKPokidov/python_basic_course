@@ -29,4 +29,4 @@ diff = sec2 - sec1
 hours = diff // 3600
 minutes = (diff - hours * 3600) // 60
 seconds = diff - (hours * 3600 + minutes * 60)
-print(f'{hours}: {minutes:02d}: {seconds:02d}')
+print(f'{hours}:{minutes:02d}:{seconds:02d}', sep="")

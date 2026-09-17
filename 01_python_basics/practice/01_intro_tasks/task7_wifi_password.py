@@ -16,4 +16,4 @@ a = abc // 100
 b = (abc - a * 100) // 10
 c = abc - (a * 100 + b * 10)
 
-print(f'{a}. {b}. {c}')
+print(f'{a}.{b}.{c}')
