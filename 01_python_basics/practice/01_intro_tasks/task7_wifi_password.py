@@ -11,3 +11,9 @@
 Введите трёхзначное число: 789
 7.8.9
 """
+start = int(input('Введите трёхзначное число: '))
+sot = int(str(start)[0])
+des = int(str(start)[1])
+ed = start % 10
+
+print(f'{sot}.{des}.{ed}')

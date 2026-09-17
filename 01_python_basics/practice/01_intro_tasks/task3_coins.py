@@ -30,5 +30,3 @@ if total_cents >= 100:
     print(f'{rubles} руб. {cents} коп.')
 else:
     print(f'0 руб. {total_cents} коп.')
-
-
