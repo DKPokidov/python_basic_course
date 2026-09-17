@@ -23,7 +23,7 @@ ten = int(input('Введите количество монет по 10 копе
 five = int(input('Введите количество монет по 5 копеек: '))
 one = int(input('Введите количество монет по 1 копейке:'))
 
-sum = fifty + ten + five + one
+sum = fifty * 50 + ten * 10 + five * 5 + one 
 rub = sum // 100
 kop = sum % 100
 print(f'{rub} руб. {kop} коп.')
