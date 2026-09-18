@@ -26,14 +26,14 @@ weight, measure = weight_measure.split()
 weight = float(weight)
 
 if measure == 'г':
-    print(f'{weight} {measure} = {weight * 0.001} кг')
+    print(f'{weight} {measure} = {weight * 0.001:.6f} кг')
 elif measure == 'фунт':
-    print(f'{weight} {measure} = {weight * 0.40951241} кг')
+    print(f'{weight} {measure} = {weight * 0.40951241:.6f} кг')
 elif measure == 'пуд':
-    print(f'{weight} {measure} = {weight * 16}')
+    print(f'{weight} {measure} = {weight * 16:.6f} кг')
 elif measure == 'ц':
-    print(f'{weight} {measure} = {weight * 100}')
+    print(f'{weight} {measure} = {weight * 100:.6f}')
 elif measure == 'т':
-    print(f'{weight} {measure} = {weight * 1000}')
+    print(f'{weight} {measure} = {weight * 1000:.6f} кг')
 elif measure == 'кг':
     print(f'{weight:.6f} {measure}') 
