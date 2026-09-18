@@ -31,13 +31,13 @@ width = float(input('Введите ширину кирпича (см): '))
 height = float(input('Введите высоту кирпича (см): '))
 cap = long * width * height
 print('Объём:', cap, 'см³')
-area = 2 * (long*width + width*height + long*height)
+area = 2 * (long * width + width * height + long * height)
 print('Площадь поверхности:', area, 'см²')
 sr = 4 * (long + width + height)
 print('Сумма рёбер:', sr, 'см')
 weight = cap * 0.0017
 print('Масса:', f"{weight:.2f}", 'кг')
 for i in range(10000):
-    if i * cap > 1000000 : 
-      print('Количество кирпичей в 1 м³:', i-1)
-      break
+    if i * cap > 1000000: 
+        print('Количество кирпичей в 1 м³:', i - 1)
+        break
