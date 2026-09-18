@@ -25,7 +25,7 @@ min2=int(input('Минута ухода:'))
 sek2=int(input('Секунда ухода:'))
 vremya1 = chas1 * 3600 + min1 * 60 + sek1
 vremya2 = chas2 * 3600 + min2 * 60 + sek2
-if vremya2 > vremya1:
+if vremya2 >= vremya1:
     vremya = vremya2 - vremya1
     
 if vremya1 > vremya2:
@@ -38,4 +38,4 @@ if min<10:
     min='0'+str(min)
 if sek<10:
     sek='0'+str(sek)
-print(f'{chas} : {min} : {sek}')
+print(f'{chas}:{min}:{sek}')

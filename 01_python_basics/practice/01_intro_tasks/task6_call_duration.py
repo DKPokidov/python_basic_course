@@ -20,5 +20,5 @@
 do=float(input('Баланс до разговора (руб):'))
 posle=float(input('Баланс после разговора (руб):'))
 rub=do - posle
-min= rub// 2.5
-print(f'Разговор длился {min} минут')
+min= int(rub// 2.5)
+print(f'{min} минут')
