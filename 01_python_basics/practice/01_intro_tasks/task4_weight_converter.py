@@ -23,14 +23,14 @@ data = str(input("Введите вес и единицу измерения (н
 weight, ed = data.split()
 weight = float(weight)
 if ed == 'кг': 
-    print(weight, ed, '=', weight, ed)
+    print(weight, ed, '=', f"{weight:.6f}", ed)
 if ed == 'г': 
-    print(weight, ed, '=', weight*0.001, 'кг')
+    print(weight, ed, '=', f"{weight * 0.001:.6f}", 'кг')
 if ed == 'фунт': 
-    print(weight, ed, '=', weight*0.40951241, 'кг')
+    print(weight, ed, '=', f"{weight * 0.40951241:.6f}", 'кг')
 if ed == 'пуд': 
-    print(weight, ed, '=', weight*16, 'кг')
+    print(weight, ed, '=', f"{weight * 16:.6f}", 'кг')
 if ed == 'ц': 
-    print(weight, ed, '=', weight*100, 'кг')
+    print(weight, ed, '=', f"{weight * 100:.6f}", 'кг')
 if ed == 'т': 
-    print(weight, ed, '=', weight*1000, 'кг')
+    print(weight, ed, '=', f"{weight * 1000:.6f}", 'кг')
