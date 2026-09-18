@@ -19,9 +19,8 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
-weight = float(input ('Введите вес: '))
-measure = input('Введите единицу измерения: ')
-
+inp = input("Введите вес и единицу измерения (например, '10 кг'):").split()
+weight, measure = float(inp[0]), inp[1]
 if measure == 'г':
     print(f'{weight} {measure} = {weight * 0.001} кг')
 elif measure == 'фунт':
