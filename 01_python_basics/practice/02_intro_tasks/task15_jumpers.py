@@ -31,5 +31,7 @@ a = int(input('Введите координату дома А: '))
 b = int(input('Введите координату дома В: '))
 way = abs(a - b)
 print('Расстояние:', way)
-if way % 3 == 0: print('да')
-else: print('нет')
+if way % 3 == 0: 
+    print('да')
+else: 
+    print('нет')
