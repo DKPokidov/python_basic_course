@@ -11,3 +11,8 @@
 Введите трёхзначное число: 789
 7.8.9
 """
+number = str(input('Введите трёхзначное число: '))
+hundred = number[0]
+ten = number[1]
+one = number[2]
+print(hundred, ten, one, sep='.')
