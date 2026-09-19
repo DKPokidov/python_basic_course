@@ -17,3 +17,19 @@
 Секунда ухода: 0
 3:30:00
 """
+st_h = int(input('Введите время: '))
+st_m = int(input('Введите время: '))
+st_s = int(input('Введите время: '))
+f_h = int(input('Введите время: '))
+f_m = int(input('Введите время: '))
+f_s = int(input('Введите время: '))
+
+total_in = st_h * 3600 + st_m * 60 + st_s
+total_out = f_h * 3600 + f_m * 60 + f_s
+
+diff = total_out - total_in
+h_diff = diff // 3600
+m_diff = (diff % 3600) // 60
+s_diff = diff % 60
+
+print(f'{h_diff}:{m_diff:02d}:{s_diff:02d}')
