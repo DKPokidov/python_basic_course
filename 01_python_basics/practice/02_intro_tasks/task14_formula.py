@@ -23,7 +23,5 @@
 m = float(input('Введите m: '))
 n = float(input('Введите n: '))
 result = (m * n) / (m + n) + (m - n) / (m * n)
-first_part = (m * n) / (m + n)
-second_part = (m - n) / (m * n)
-print('Ответ: {first_part:.3f} + {second_part:.3f} = {result:.3f}')
-
+result = int(result * 1000) / 1000
+print(f'{result:.3f}')
