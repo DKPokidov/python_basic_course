@@ -19,17 +19,19 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
-inp = input("Введите вес и единицу измерения (например, '10 кг'):").split()
-weight, measure = float(inp[0]), inp[1]
-if measure == 'г':
-    print(f'{weight} {measure} = {weight * 0.001} кг')
-elif measure == 'фунт':
-    print(f'{weight} {measure} = {weight * 0.40951241} кг')
-elif measure == 'пуд':
-    print(f'{weight} {measure} = {weight * 16}')
-elif measure == 'ц':
-    print(f'{weight} {measure} = {weight * 100}')
-elif measure == 'т':
-    print(f'{weight} {measure} = {weight * 1000}')
-elif measure ==  'кг':  
-     print(f'{weight} {measure}')
+a, t = input("Введите вес и единицу измерения (например, '10 кг'):").strip().split()
+a = float(a)
+if t == "кг":
+    print(f"{a} {t} = {a:.6f} кг")
+elif t == "г":
+    print(f"{a} {t} = {(a * 0.001):.6f} кг")
+elif t == "фунт":
+    print(f"{a} {t} = {(a * 0.40951241):.6f} кг")
+elif t == "пуд":
+    print(f"{a} {t} = {(a * 16):.6f} кг")       
+elif t == "ц":
+    print(f"{a} {t} = {(a * 100):.6f} кг")       
+elif t == "т":
+    print(f"{a} {t} = {(a * 1000):.6f} кг")
+else:
+    print("ошибка")
