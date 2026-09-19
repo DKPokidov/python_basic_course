@@ -34,7 +34,7 @@ if house_A > house_B:
     diff = house_A - house_B
 else:
     diff = house_B - house_A
-if diff % 3 == 0 and diff != 0:
+if diff != 0 and diff % 3 == 0:
     print(f'Расстояние: {diff}')
     print('да')
 else:
