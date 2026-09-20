@@ -11,3 +11,7 @@
 Введите время в секундах: 3661
 1:01:01
 """
+time_sec = int(input("Введите время в секундах: "))
+time_min = time_sec // 60
+time_hours = time_min // 60 
+print(f"{time_hours}:{time_min % 60 :02}:{time_sec % 60 :02}")

@@ -25,3 +25,17 @@
 Воронеж его встретил Ворон, который сказал: "Привет, дружище!"
 "Привет!" — и с тех пор Дедди стал самым ученым хомяком в мире!
 """
+name = input()
+food = input()
+profession = input()
+skill = input() 
+city = input()
+character = input()
+phrase = input()
+answer = input()
+adj = input()
+print(f'Жил-был хомяк по имени {name}')
+print(f'{name} очень любил есть {food} и мечтал стать {profession}') 
+print(f'Однажды {name} научился {skill} над хомяками и отправился в {city}')
+print(f'{city} его встретил {character}, который сказал: "{phrase}"')
+print(f'"{answer}" — и с тех пор Дедди стал {adj} {profession} хомяком в мире!')

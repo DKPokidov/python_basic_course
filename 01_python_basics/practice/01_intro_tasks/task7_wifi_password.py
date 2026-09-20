@@ -13,6 +13,6 @@
 """
 num = int(input("Введите трёхзначное число:"))
 num1 = num%10
-num2 = num%100/10
+num2 = num%100//10
 num3 = num//100
 print(f"{num3}.{num2}.{num1}")
