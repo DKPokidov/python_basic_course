@@ -23,7 +23,7 @@
 ves = input('Введите вес и единицу измерения (например, 10 кг): ')
 znach, ed = ves.split()
 if ed == 'кг':
-    print(f'{int(znach):.1f} {ed} = {znach:.6f} {ed}')
+    print(f'{int(znach):.1f} {ed} = {float(znach):.6f} {ed}')
 if ed == 'г':
     print(f'{int(znach):.1f} {ed} = {float(znach)/1000:.6f} кг')
 if ed == 'фунт':
