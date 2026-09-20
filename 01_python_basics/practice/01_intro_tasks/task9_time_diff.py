@@ -30,9 +30,9 @@ time = t2 - t1
 hours = time//3600
 minutes = (time-hours*3600) // 60
 sec = time - hours*3600 - minutes*60
-if minutes<10:
+if minutes < 10:
     minutes = '0' + str(minutes)
-if sec<10:
+if sec < 10:
     sec = '0' + str(sec)
 print(f'{hours}:{minutes}:{sec}')
 
