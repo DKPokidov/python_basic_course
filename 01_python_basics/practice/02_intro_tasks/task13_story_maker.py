@@ -39,4 +39,5 @@ print(f"Жил-был хомяк по имени {name}")
 print(f"{name} очень любил есть {food} и мечтал стать {profession}")
 print(f"Однажды {name} научился {skill} и отправился в {city}")
 print(f'{city} его встретил {character}, который сказал: "{phrase}"')
-print(f'"{answer}" — и с тех пор {name} стал {adj} хомяком в мире!')
+print(f'"{answer}" — и с тех пор {name} стал самым {adj} хомяком в мире!')
+

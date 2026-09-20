@@ -22,7 +22,7 @@
 
 weight, unit = input("Введите вес и единицу измерения (например, 10 кг):").split()
 if unit == "кг":
-    res = weight
+    res = float(weight)
 elif unit == "г":
     res = float(weight) * 0.001
 elif unit == "фунт":
@@ -33,4 +33,4 @@ elif unit == "ц":
     res = float(weight) * 100
 else:
     res = float(weight) * 1000
-print(f"{weight} {unit} = {res} кг")
+print(f"{float(weight)} {unit} = {res:.6f} кг")
