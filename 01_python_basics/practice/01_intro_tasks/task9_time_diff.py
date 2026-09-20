@@ -17,3 +17,19 @@
 Секунда ухода: 0
 3:30:00
 """
+hours0 = int(input("Час прихода: "))
+mins0 = int(input("Минута прихода: "))
+sec0 = int(input("Секунда прихода: "))
+hours1 = int(input("Час ухода: "))
+mins1 = int(input("Минута ухода: "))
+sec1 = int(input("Секунда ухода: "))
+hours_total = hours1-hours0
+mins_total = mins1-mins0
+sec_total = sec1 - sec0
+if sec_total < 0 :
+    mins_total = mins_total - 1 
+    sec_total = 60 + sec_total
+if mins_total < 0 :
+    hours_total = hours_total - 1
+    mins_total = 60 + mins_total
+print(f"{hours_total}:{mins_total :02}:{sec_total :02}")

@@ -21,8 +21,21 @@
 Введите ширину кирпича (см): 12.0
 Введите высоту кирпича (см): 6.5
 Объём: 1950.0 см³
-Площадь поверхности: 1081.0 см²
+Объём: 1950.0 см³1081.0 см²
 Сумма рёбер: 174.0 см
 Масса: 3.31 кг
 Количество кирпичей в 1 м³: 512
 """
+lenght = float(input("Введите длину кирпича (см): "))
+width = float(input("Введите ширину кирпича (см): "))
+height = float(input("Введите высоту кирпича (см): "))
+volume=lenght*width*height
+area=2 * (lenght*width + width*height + lenght*height)
+sum_rebers=4 * (lenght + width + height)
+mass=volume/1000000*1700
+bricks=1000000/volume
+print(f'Объём: {volume} см³')
+print(f'Площадь поверхности: {area} см²')
+print(f'Сумма рёбер: {sum_rebers} см')
+print(f'Масса: {(round(mass, 2)):.2f} кг')
+print(f'Количество кирпичей в 1 м³: {int(bricks)}')
