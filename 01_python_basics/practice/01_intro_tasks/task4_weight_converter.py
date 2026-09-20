@@ -39,7 +39,7 @@ elif measure == 'кг':
     print(f'{weight:.6f} {measure}') 
 '''
 
-value, unit = input('Введите вес и единицу измерения (например, "10 кг"): ').split()
+value, unit = input().split()
 value = float(value)
 
 conversion_factors = {
@@ -48,9 +48,9 @@ conversion_factors = {
     "пуд": 16,
     "г": 0.001,
     "фунт": 0.40951241,
-    "ц": 100
+    
 }
 
-kilograms = value * conversion_factors
+kilograms = value * conversion_factors[unit]
 
-print(f"{value:.1f}  = {kilograms:.6f} кг")
+print(f"{value:.1f} {unit} = {kilograms:.6f} кг")
