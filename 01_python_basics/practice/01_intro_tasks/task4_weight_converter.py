@@ -23,4 +23,5 @@
 weight, unit_o_m = input("Введите вес и единицу измерения (например, '10 кг'): ").split()
 weight = float(weight)
 table = {"кг": 1, "г": 0.001, "фунт": 0.40951241, "пуд": 16, "ц": 100, "т": 1000}
-print(f"{weight} {unit_o_m} = {weight * table[unit_o_m]}")
+print(f"{weight} {unit_o_m} = {(weight * table[unit_o_m]):.6f} кг")
+

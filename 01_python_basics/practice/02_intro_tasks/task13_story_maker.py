@@ -31,10 +31,9 @@ universal = ["имя: ", "любимая еда: ", "профессия: ", "н�
              "прилагательное: "]
 for i in universal:
     elements.append(input(f"{i}"))
-print(f"""
-Жил-был хомяк по имени {elements[0]}
-{elements[0]} очень любил есть {elements[1]} и мечтал стать {elements[2]}
-Однажды {elements[0]} научился {elements[3]} и отправился в {elements[4]}
-{elements[4]} его встретил {elements[5]}, который сказал: {elements[6]}
-{elements[7]} — и с тех пор {elements[0]} стал {elements[8]} {elements[2]} хомяком в мире!
-""")
+d = [f"Жил-был хомяк по имени {elements[0]}", f"{elements[0]} очень любил есть {elements[1]} и мечтал стать {elements[2]}",
+f"Однажды {elements[0]} научился {elements[3]} и отправился в {elements[4]}",
+f"{elements[4]} его встретил {elements[5]}, который сказал: {elements[6]}",
+f"{elements[7]} — и с тех пор {elements[0]} стал {elements[8]} хомяком в мире!"]
+for i in d:
+    print(i)

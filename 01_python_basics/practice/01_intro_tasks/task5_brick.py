@@ -34,5 +34,7 @@ area = 2 * (lenght * width + width * height + height * lenght)
 sum_of_dimensions = 4 * (lenght + width + height)
 mass = volume/(10**6) * 1700
 quantity = 10**6//volume
-print(f"Объём: {volume} см³", f"Площадь поверхности: {area} см²", f"Сумма рёбер: {sum_of_dimensions} см", f"Масса: {mass} кг", \
-      f"Количество кирпичей в 1 м³: {quantity}", sep="\n")
+d = [f"Объём: {volume} см³", f"Площадь поверхности: {area} см²", f"Сумма рёбер: {sum_of_dimensions} см", f"Масса: {mass} кг", \
+      f"Количество кирпичей в 1 м³: {quantity}"]
+for i in d:
+    print(i)

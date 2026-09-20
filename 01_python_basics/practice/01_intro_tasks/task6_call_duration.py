@@ -20,4 +20,4 @@
 
 before = float(input("Баланс до разговора (руб): "))
 after = float(input("Баланс после разговора (руб): "))
-print(f"Разговор длился int({(before - after)//2.5}) минут")
+print(f"Разговор длился {int((before - after)//2.5)} минут")
