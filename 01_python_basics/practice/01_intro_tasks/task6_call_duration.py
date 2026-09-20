@@ -20,5 +20,5 @@
 
 do = float(input("Баланс до разговора (руб): "))
 posle = float(input("Баланс после разговора (руб): "))
-time = (do-posle)/2.5
+time = (do-posle) / 2.5
 print(f"Разговор длился {time} минут")

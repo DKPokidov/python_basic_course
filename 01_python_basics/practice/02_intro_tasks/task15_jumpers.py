@@ -36,4 +36,3 @@ if S % 3 == 0:
     print('да')
 else:
     print('нет')
-    

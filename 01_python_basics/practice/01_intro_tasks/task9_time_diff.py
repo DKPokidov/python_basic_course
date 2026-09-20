@@ -24,15 +24,14 @@ sec1 = int(input('Секунда прихода: '))
 hour2 = int(input('Час ухода: '))
 min2 = int(input('Минута ухода: '))
 sec2 = int(input('Секунда ухода: '))
-t2 = hour2*3600 + min2*60 + sec2
-t1 = hour1*3600 + min1*60 + sec1
+t2 = hour2 * 3600 + min2 * 60 + sec2
+t1 = hour1 * 3600 + min1 * 60 + sec1
 time = t2 - t1
-hours = time//3600
-minutes = (time-hours*3600) // 60
-sec = time - hours*3600 - minutes*60
+hours = time // 3600
+minutes = (time - hours * 3600) // 60
+sec = time - hours * 3600 - minutes * 60
 if minutes < 10:
     minutes = '0' + str(minutes)
 if sec < 10:
     sec = '0' + str(sec)
 print(f'{hours}:{minutes}:{sec}')
-

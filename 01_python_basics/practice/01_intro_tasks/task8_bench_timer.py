@@ -13,9 +13,9 @@
 """
 
 time = int(input('Введите время в секундах: '))
-hours = time//3600
+hours = time // 3600
 minutes = (time-hours*3600) // 60
-sec = time - hours*3600 - minutes*60
+sec = time - hours * 3600 - minutes * 60
 if minutes < 10:
     minutes = '0' + str(minutes)
 if sec < 10:
