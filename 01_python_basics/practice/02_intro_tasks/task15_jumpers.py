@@ -27,3 +27,9 @@
 
 Примечание: расстояние всегда положительное.
 """
+rasstoyanie = abs(int(input("Введите координату дома А:"))-int(input("Введите координату дома В:")))
+print(f'Расстояние: {rasstoyanie}')
+if rasstoyanie % 3 == 0:
+    print('да')
+else:
+    print('нет')
