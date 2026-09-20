@@ -51,6 +51,6 @@ conversion_factors = {
     "ц": 100
 }
 
-kilograms = value * conversion_factors[unit]
+kilograms = value * conversion_factors
 
-print(f"{value:.1f} {unit} = {kilograms:.6f} кг")
+print(f"{value:.1f}  = {kilograms:.6f} кг")
