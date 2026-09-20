@@ -23,4 +23,4 @@
 m = float(input("Введите m: "))
 n = float(input("Введите n: "))
 result = (m * n) / (m + n) + (m - n) / (m * n)
-print(f"Ответ: {round((m * n) / (m + n), 3)} + {round ((m - n) / (m * n), 3)} = {round(result, 3)}")
+print(f"Ответ: {round((m * n) / (m + n), 4)} + {round ((m - n) / (m * n), 4)} = {round(result, 4)}")

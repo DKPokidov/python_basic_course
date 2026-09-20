@@ -37,5 +37,5 @@ bricks=1000000/volume
 print(f'Объём: {volume} см³')
 print(f'Площадь поверхности: {area} см²')
 print(f'Сумма рёбер: {sum_rebers} см')
-print(f'Масса: {round(mass, 2)} кг')
+print(f'Масса: {(round(mass, 2)):.2f} кг')
 print(f'Количество кирпичей в 1 м³: {int(bricks)}')
