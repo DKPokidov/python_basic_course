@@ -17,3 +17,6 @@
 Баланс после разговора (руб): 8.0
 Разговор длился 18 минут
 """
+balance_before = float(input("баланс до разговора: "))
+balance_after = float(input("баланс после разговора: ")) 
+print(f"Разговор длился {int(((balance_before - balance_after) / 2.5))} минут")
