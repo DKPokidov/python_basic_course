@@ -26,9 +26,9 @@
 Масса: 3.31 кг
 Количество кирпичей в 1 м³: 512
 """
-lenght=float(input('введите длину кирпича (см):'))
-width=float(input('введите ширину кирпича (см):'))
-hight=float(input('введите высоту кирпича (см):'))
+lenght=float(input('введите длину кирпича (см): '))
+width=float(input('введите ширину кирпича (см): '))
+hight=float(input('введите высоту кирпича (см): '))
 volume=lenght*width*hight
 area=2 * (lenght*width + width*hight + lenght*hight)
 sum_rebers=4 * (lenght + width + hight)

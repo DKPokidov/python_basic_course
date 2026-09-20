@@ -19,4 +19,4 @@
 lenght=float(input('Введите длину сквера в метрах: '))
 width=float(input('Введите ширину сквера в метрах: '))
 area=lenght*width
-print(f'Площадь озеленения: {area} кв.м')
+print(f'Площадь озеленения: {area} кв.м ')

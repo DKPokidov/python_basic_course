@@ -11,3 +11,8 @@
 Введите время в секундах: 3661
 1:01:01
 """
+time = int(input('Введите время в секундах: '))
+hours = time//3600
+minutes = str(((time%3600)//60)).zfill(2)
+sec = str((time%60)).zfill(2)
+print(f'{hours}:{minutes}:{sec}')
