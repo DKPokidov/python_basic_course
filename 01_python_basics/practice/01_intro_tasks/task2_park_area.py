@@ -19,4 +19,4 @@
 
 length = float(input("введите длину: "))
 width = float(input("введите ширину: "))
-print(f"площадь озеленения: {length*width}")
+print(f"Площадь озеленения: {length*width} кв.м")

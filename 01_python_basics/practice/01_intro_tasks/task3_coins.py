@@ -25,4 +25,4 @@ monet = int(input("сколько однерок "))
 
 summa = monet50 * 50 + monet10 * 10 + monet5 * 5 + monet
 
-print(f"рублей: {summa//100}, копеек: {summa%100}")
+print(f"{summa // 100} руб. {summa % 100} коп.")

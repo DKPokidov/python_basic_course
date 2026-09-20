@@ -19,3 +19,20 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+
+
+weight, metric = input("Введите вес и единицу измерения: ").split()
+weight = float(weight)
+if metric == "кг":
+    coef = 1
+elif metric == "т":
+    coef = 1000
+elif metric == "фунт":
+    coef = 0.40951241
+elif metric == "пуд":
+    coef = 16
+elif metric == "ц":
+    coef = 100
+elif metric == "г":
+    coef = 0.001
+print(f"{weight} {metric} = {coef * weight:.6f} кг")

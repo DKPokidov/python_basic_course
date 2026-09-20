@@ -19,4 +19,4 @@
 """
 balance_before = float(input("баланс до разговора: "))
 balance_after = float(input("баланс после разговора: ")) 
-print(f"Разговор длился {((balance_before - balance_after) // 2.5)} минут")
+print(f"Разговор длился {int(((balance_before - balance_after) / 2.5))} минут")

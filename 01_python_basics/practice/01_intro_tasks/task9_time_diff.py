@@ -17,3 +17,16 @@
 Секунда ухода: 0
 3:30:00
 """
+
+hour1 = int(input("Час прихода: "))
+minute1 = int(input("Минута прихода: "))
+second1 = int(input("Секунда прихода: "))
+
+hour2 = int(input("Час ухода: "))
+minute2 = int(input("Минута ухода: "))
+second2 = int(input("Секунда ухода: "))
+
+prishel = int(hour1 * 3600 + minute1 * 60 + second1)
+ushel = int(hour2 * 3600 + minute2 * 60 + second2) 
+dif = (ushel - prishel) %(24*60*60)
+print(f"{dif//3600}:{dif//60%60:02d}:{dif%60:02d}")
