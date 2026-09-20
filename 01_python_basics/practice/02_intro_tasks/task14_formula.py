@@ -20,3 +20,8 @@
 
 Примечание: используйте float() для ввода чисел
 """
+m = float(input("Введите m:"))
+n = float(input("Введите n:"))
+num1 = (m * n) / (m + n)
+num2 = (m - n) / (m * n)
+print(f"Ответ: {num1} + {num2} = {num1+num2}")
