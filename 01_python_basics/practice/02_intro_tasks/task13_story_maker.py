@@ -40,4 +40,3 @@ print(f"{name} очень любил есть {food} и мечтал стать 
 print(f"Однажды {name} научился {skill} и отправился в {city}")
 print(f'{city} его встретил {character}, который сказал: "{phrase}"')
 print(f'"{answer}" — и с тех пор {name} стал самым {adj} хомяком в мире!')
-
