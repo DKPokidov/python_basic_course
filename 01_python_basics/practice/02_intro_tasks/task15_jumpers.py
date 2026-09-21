@@ -33,5 +33,7 @@ import math
 aDistance = int(input("координата А: "))
 bDistance = int(input("координата В: "))
 
-print(f"Растояние: {(math.fabs(bDistance - aDistance)):01.0f}")
-print(f"{"да "if (math.fabs(bDistance - aDistance) % 3 == 0) else "нет"}")
+a = "да" if (math.fabs(bDistance - aDistance) % 3 == 0) else "нет"
+
+print(f"Растояние: {(math.fabs(bDistance - aDistance)):01.0f}\n{a}")
+
