@@ -25,4 +25,4 @@ kopeyki1 = int(input("сколько монет по 1 копейке: "))
 
 totalsum = kopeyki50 * 50 + kopeyki10 * 10 + kopeyki5 * 5 + kopeyki1
 
-print(totalsum // 100, "руб. ", totalsum % 100, "коп.")
+print(totalsum // 100, "руб.", totalsum % 100, "коп.")

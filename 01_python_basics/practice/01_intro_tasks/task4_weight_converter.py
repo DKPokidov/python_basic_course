@@ -23,7 +23,7 @@
 userInput = input("Введите вес и единицу измерения (например, '10 кг'): ")
 
 coefficient = 0
-numPart =  float(userInput.split(" ")[0])
+numPart = float(userInput.split(" ")[0])
 unitPart = userInput.split(" ")[1]
 
 match unitPart:
@@ -43,4 +43,4 @@ match unitPart:
         print("Error")
         exit
 
-print(userInput, " = ", numPart * coefficient, "кг")
+print(userInput, "=", f"{numPart * coefficient:.6f}", "кг")

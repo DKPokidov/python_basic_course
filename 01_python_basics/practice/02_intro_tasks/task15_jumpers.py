@@ -40,4 +40,3 @@ if length % 3 == 0:
     print("да")
 else:
     print("нет")
-    
