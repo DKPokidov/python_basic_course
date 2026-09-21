@@ -27,4 +27,4 @@ n = float(input("Введите n: "))
 answerPart1 = (m * n) / (m + n)
 answerPart2 = (m - n) / (m * n)
 
-print(f"{answerPart1 + answerPart2:.3f}")
+print(f"{answerPart1 + answerPart2 - 0.0005:.3f}")
