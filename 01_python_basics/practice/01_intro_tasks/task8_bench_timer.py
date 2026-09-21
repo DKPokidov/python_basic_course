@@ -14,6 +14,6 @@
 
 initial = int(input("Введите время в секундах: "))
 hours = initial // 3600
-minutes = initial % 3600//60
+minutes = initial % 3600 // 60
 seconds = initial % 60
 print(f"{hours}:" + ["", "0"][minutes < 10] + str(minutes) + ":" + (["", "0"][seconds < 10] + str(seconds)))

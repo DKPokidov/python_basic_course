@@ -32,9 +32,9 @@ height = float(input("Введите высоту кирпича (см): "))
 volume = lenght * width * height
 area = 2 * (lenght * width + width * height + height * lenght)
 sum_of_dimensions = 4 * (lenght + width + height)
-mass = volume/(10**6) * 1700
-quantity = 10**6//volume
-d = [f"Объём: {volume:.2f} см³", f"Площадь поверхности: {area:.2f}", f"Сумма рёбер: {sum_of_dimensions:.2f} см", f"Масса: {mass:.2f} кг", \
+mass = volume/(10 ** 6) * 1700
+quantity = (10 ** 6) // volume
+d = [f"Объём: {volume:.2f} см³", f"Площадь поверхности: {area:.2f}", f"Сумма рёбер: {sum_of_dimensions:.2f} см", f"Масса: {mass:.2f} кг",
       f"Количество кирпичей в 1 м³: {quantity}"]
 for i in d:
     print(i)

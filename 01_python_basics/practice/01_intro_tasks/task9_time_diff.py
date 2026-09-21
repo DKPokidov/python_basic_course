@@ -28,6 +28,6 @@ pure_1 = arrival_hour * 3600 + arrival_minute * 60 + arrival_second
 pure_2 = departure_hour * 3600 + departure_minute * 60 + departure_second
 initial = pure_2 - pure_1
 hours = initial // 3600
-minutes = initial % 3600//60
+minutes = initial % 3600 // 60
 seconds = initial % 60
 print(f"{hours}:" + ["", "0"][minutes < 10] + str(minutes) + ":" + (["", "0"][seconds < 10] + str(seconds)))
