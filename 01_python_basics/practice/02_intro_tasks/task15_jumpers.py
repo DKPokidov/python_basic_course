@@ -32,9 +32,12 @@ houseA = int(input("Введите координату дома А: "))
 houseB = int(input("Введите координату дома В: "))
 
 length = houseB - houseA
+if length < 0:
+    length = -length
 
 print("Расстояние:", length)
 if length % 3 == 0:
     print("да")
 else:
     print("нет")
+    

@@ -14,4 +14,5 @@
 
 userInput = input("Введите трёхзначное число: ")
 result = userInput[0] + "." + userInput[1] + "." + userInput[2]
+
 print(result)

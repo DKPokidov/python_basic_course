@@ -21,9 +21,11 @@
 """
 
 userInput = input("Введите вес и единицу измерения (например, '10 кг'): ")
+
 coefficient = 0
 numPart =  float(userInput.split(" ")[0])
 unitPart = userInput.split(" ")[1]
+
 match unitPart:
     case "кг":
         coefficient = 1
