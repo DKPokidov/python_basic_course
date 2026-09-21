@@ -18,4 +18,4 @@
 """
 height = float(input('Введите длину сквера (м): '))
 weight = float(input('Введите ширину сквера (м): '))
-print(f'Площадь озеленения: {height*weight} кв.м')
+print(f'Площадь озеленения: {height * weight} кв.м')

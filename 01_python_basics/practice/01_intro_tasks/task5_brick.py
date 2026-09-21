@@ -29,5 +29,8 @@
 length = float(input('Введите длину кирпича (см): '))
 width = float(input('Введите ширину кирпича (см): '))
 height = float(input('Введите высоту кирпича (см): '))
-print(f'Объём: {length*width*height} см³ \nПлощадь поверхности: {2*(height*width + width*length + height*length)} см² \n'
-      f'Сумма ребер: {4*(height+length+width)} см \nМасса: {length*width*height*1700/(10**6)} кг \nКоличество кирпичей в 1 м³: {int(10**6/(height*width*length))}')
+print(f'Объём: {length * width * height} см³')
+print(f'Площадь поверхности: {2 * (height*width + width*length + height*length)} см²')
+print(f'Сумма ребер: {4 * (height + length + width)} см')
+print(f'Масса: {length * width * height * 1700 / (10 ** 6)} кг')
+print(f'Количество кирпичей в 1 м³: {int(10 ** 6 / (height * width * length))}')

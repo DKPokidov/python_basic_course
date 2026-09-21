@@ -25,5 +25,5 @@ minut_out = int(input('Минута ухода: '))
 sec_out = int(input('Секунда ухода: '))
 tim_arrive = hour_arrive*60*60 + minut_arrive*60 + sec_arrive
 tim_out = hour_out*60*60 + minut_out*60 + sec_out
-tim = tim_out-tim_arrive
-print(f'{tim//(60*60)}:{(tim%(60*60))//60:02d}:{tim%60:02d}')
+tim = tim_out - tim_arrive
+print(f'{tim // (60 * 60)}:{(tim % (60 * 60)) // 60:02d}:{tim % 60:02d}')
