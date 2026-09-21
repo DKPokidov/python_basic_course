@@ -17,3 +17,17 @@
 Секунда ухода: 0
 3:30:00
 """
+
+h = int(input('Час прихода:'))
+m = int(input('Минута прихода:'))
+s = int(input('Секунда прихода:'))
+h2 = int(input('Час ухода:'))
+m2 = int(input('Минута ухода:'))
+s2 = int(input('Секунда ухода:'))
+start = h * 3600 + m * 60 + s
+end = h2 * 3600 + m2 * 60 + s2
+r = abs(start - end)
+hours = r // 3600
+minutes = (r % 3600) // 60
+seconds = r % 60
+print(f'{hours}:{minutes}:{seconds}')

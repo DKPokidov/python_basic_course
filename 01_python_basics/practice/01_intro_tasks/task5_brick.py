@@ -27,11 +27,11 @@
 Количество кирпичей в 1 м³: 512
 """
 
-dlin=float(input('Введите длину кирпича (см):'))
+dl=float(input('Введите длину кирпича (см):'))
 shir=float(input('Введите ширину кирпича (см):'))
 vis=float(input('Введите высоту кирпича (см):'))
 ob= dlin * shir * vis
-pl=2 * (dlin * shir + shir * vis + dlin * vis)
+pl=2 * (dl * shir + shir * vis + dlin * vis)
 mass= (ob * 1700)/ 10 ** 6
 
 sym=4 * (dlin + shir + vis)
