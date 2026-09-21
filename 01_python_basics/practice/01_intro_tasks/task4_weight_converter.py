@@ -43,4 +43,4 @@ match unitPart:
         print("Error")
         exit
 
-print(userInput, "=", f"{numPart * coefficient:.6f}", "кг")
+print(numPart, unitPart, "=", f"{numPart * coefficient:.6f}", "кг")
