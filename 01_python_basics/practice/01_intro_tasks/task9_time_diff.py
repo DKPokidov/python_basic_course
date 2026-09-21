@@ -17,3 +17,14 @@
 Секунда ухода: 0
 3:30:00
 """
+came_hour = int(input('Час прихода: '))
+came_minute = int(input('Минута прихода: '))
+came_second = int(input('Секунда прихода: '))
+go_hour = int(input('Час ухода: '))
+go_minute = int(input('Минута ухода: '))
+go_second = int(input('Секунда ухода: '))
+came_time = came_hour * 3600 + came_minute * 60 + came_second
+go_time = go_hour * 3600 + go_minute * 60 + go_second
+time = go_time - came_time
+print (f'{time // 3600}:{((time % 3600)// 60):02d}:{(time % 60):02d}')
+
