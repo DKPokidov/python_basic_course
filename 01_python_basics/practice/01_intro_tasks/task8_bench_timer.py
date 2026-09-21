@@ -11,3 +11,11 @@
 Введите время в секундах: 3661
 1:01:01
 """
+
+userInput = int(input("Введите время в секундах: "))
+hours = userInput // 3600
+userInput %= 3600
+minutes = userInput // 60
+userInput %= 60
+
+print(hours, f"{minutes:02d}", f"{userInput:02d}", sep=":")

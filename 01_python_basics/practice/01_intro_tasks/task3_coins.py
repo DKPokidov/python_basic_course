@@ -17,3 +17,12 @@
 Сколько монет по 1 копейке? 4
 0 руб. 89 коп.
 """
+
+kopeyki50 = int(input("сколько монет по 50 копеек: "))
+kopeyki10 = int(input("сколько монет по 10 копеек: "))
+kopeyki5 = int(input("сколько монет по 5 копеек: "))
+kopeyki1 = int(input("сколько монет по 1 копейке: "))
+
+totalsum = kopeyki50 * 50 + kopeyki10 * 10 + kopeyki5 * 5 + kopeyki1
+
+print(totalsum // 100, "руб. ", totalsum % 100, "коп.")
