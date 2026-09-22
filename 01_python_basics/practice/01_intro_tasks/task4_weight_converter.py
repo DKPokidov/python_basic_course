@@ -38,8 +38,8 @@ dict_weightConv = {
 
 try:
 
-    final = float(inData.split(" ")[0]) * dict_weightConv[ inData.split(" ")[1] ]
-    print(f"{float(inData.split(" ")[0])} {inData.split(" ")[1]} = {final:.6f} кг")
+    final = float(inData.split(' ')[0]) * dict_weightConv[ inData.split(' ')[1] ]
+    print(f"{float(inData.split(' ')[0])} {inData.split(' ')[1]} = {final:.6f} кг")
 
 except KeyError:
     print("единица измерения не поддерживается")
