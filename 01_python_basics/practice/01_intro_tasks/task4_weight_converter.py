@@ -19,3 +19,29 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+
+from decimal import Decimal, ROUND_HALF_UP
+
+
+
+inData = input("введите вес & единицу измерения (например, '10 кг')")
+
+
+dict_weightConv = {
+    'кг' : 1,
+    'г': 0.001,
+    'фунт': 0.40951241,
+    'пуд': 16,
+    'ц': 100,
+    'т': 1000,
+    }
+
+try:
+
+    final = float(inData.split(' ')[0]) * dict_weightConv[ inData.split(' ')[1] ]
+    print(f"{float(inData.split(' ')[0])} {inData.split(' ')[1]} = {final:.6f} кг")
+
+except KeyError:
+    print("единица измерения не поддерживается")
+except ValueError:
+    print("по формату пишите")
