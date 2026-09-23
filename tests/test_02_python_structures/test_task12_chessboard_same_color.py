@@ -1,13 +1,13 @@
 # tests/test_02_python_structures/test_task12_chessboard_same_color.py
 """
-Тесты для задания 12: Шахматная доска — клетки одного цвета
+Тесты для задания 12: Шахматная доска. Опять
 """
 
 from tests.test_02_python_structures.conftest import run_student_code, get_module03_file
 
 
 class TestTask12ChessboardSameColor:
-    """Тесты для задания 12: Шахматная доска — клетки одного цвета"""
+    """Тесты для задания 12: Шахматная доска. Опять"""
 
     student_file = get_module03_file('task12_chessboard_same_color.py')
 

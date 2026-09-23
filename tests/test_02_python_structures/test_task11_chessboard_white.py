@@ -1,13 +1,13 @@
 # tests/test_02_python_structures/test_task11_chessboard_white.py
 """
-Тесты для задания 11: Шахматная доска — проверка белого поля
+Тесты для задания 11: Шахматная доска
 """
 
 from tests.test_02_python_structures.conftest import run_student_code, get_module03_file
 
 
 class TestTask11ChessboardWhite:
-    """Тесты для задания 11: Шахматная доска — проверка белого поля"""
+    """Тесты для задания 11: Шахматная доска"""
 
     student_file = get_module03_file('task11_chessboard_white.py')
 

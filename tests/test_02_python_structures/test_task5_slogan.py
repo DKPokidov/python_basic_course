@@ -1,13 +1,13 @@
 # tests/test_02_python_structures/test_task5_slogan.py
 """
-Тесты для задания 5: Генератор слоганов
+Тесты для задания 5: Генератор урбанистических слоганов
 """
 
 from tests.test_02_python_structures.conftest import run_student_code, get_module03_file
 
 
 class TestTask5Slogan:
-    """Тесты для задания 5: Генератор слоганов"""
+    """Тесты для задания 5: Генератор урбанистических слоганов"""
 
     student_file = get_module03_file('task5_slogan.py')
 
