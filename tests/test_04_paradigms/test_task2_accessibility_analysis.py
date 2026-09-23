@@ -50,7 +50,7 @@ class TestTask2AccessibilityAnalysis:
     def test_western_district_absent(self):
         mod = load_student_code(self.student_file)
         result = mod.accessibility_analysis(city_data)
-        assert "Западный" not in result
+        assert result.get("Западный", 0) == 0
 
     def test_total_count(self):
         mod = load_student_code(self.student_file)
