@@ -23,6 +23,21 @@ API ЦБ РФ возвращает курсы валют на текущий д�
 Подсказка: для работы с XML используйте библиотеку xmltodict
     import xmltodict
     data = xmltodict.parse(response.content)
+
+Напишите функцию fetch_rates(url=CBR_URL), которая:
+
+1. Выполняет GET-запрос с таймаутом 10 секунд:
+    response = requests.get(url, timeout=10)
+
+2. Проверяет статус ответа через response.raise_for_status().
+   Если запрос завершился с ошибкой (исключение requests.exceptions.HTTPError),
+   функция возвращает None.
+
+3. При успешном запросе преобразует тело ответа в словарь и возвращает его:
+    return xmltodict.parse(response.content)
+
+То есть функция возвращает полностью распарсенный словарь вида
+    {'ValCurs': {'@Date': '...', 'Valute': {...или список...}}}
 """
 
 CBR_URL = "https://www.cbr.ru/scripts/XML_daily.asp"
