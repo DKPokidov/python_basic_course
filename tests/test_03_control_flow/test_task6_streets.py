@@ -13,4 +13,4 @@ class TestTask6Streets:
 
     def test_city_count(self):
         output = run_student_code(self.student_file, [])
-        assert "Городов с длинной дорог большей, чем 400 = 3" in output
+        assert "Количество городов: 3" in output
