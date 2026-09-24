@@ -20,3 +20,12 @@
 
 Примечание: используйте float() для ввода чисел
 """
+m = float(input('Введите m: '))
+n = float(input('Введите n: '))
+a = (m * n) / (m + n)
+b = (m - n) / (m * n)
+if b < 0:
+    answer = a - abs(b)
+else:
+    answer = a + b
+print('Ответ:', f"{a:.3f}", '+', f"{b:.3f}", '=', str(answer)[:5])
