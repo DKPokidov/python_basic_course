@@ -19,3 +19,28 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+
+userInput = input("Введите вес и единицу измерения (например, '10 кг'): ")
+
+coefficient = 0
+numPart = float(userInput.split(" ")[0])
+unitPart = userInput.split(" ")[1]
+
+match unitPart:
+    case "кг":
+        coefficient = 1
+    case "г":
+        coefficient = 0.001
+    case "фунт":
+        coefficient = 0.40951241
+    case "пуд":
+        coefficient = 16
+    case "ц":
+        coefficient = 100
+    case "т":
+        coefficient = 1000
+    case _:
+        print("Error")
+        exit
+
+print(numPart, unitPart, "=", f"{numPart * coefficient:.6f}", "кг")

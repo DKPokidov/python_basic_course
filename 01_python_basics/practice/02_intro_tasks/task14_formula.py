@@ -20,3 +20,11 @@
 
 Примечание: используйте float() для ввода чисел
 """
+
+m = float(input("Введите m: "))
+n = float(input("Введите n: "))
+
+answerPart1 = (m * n) / (m + n)
+answerPart2 = (m - n) / (m * n)
+
+print(f"{answerPart1 + answerPart2 - 0.0005:.3f}")

@@ -11,3 +11,8 @@
 Введите трёхзначное число: 789
 7.8.9
 """
+
+userInput = input("Введите трёхзначное число: ")
+result = userInput[0] + "." + userInput[1] + "." + userInput[2]
+
+print(result)

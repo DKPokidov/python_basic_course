@@ -17,3 +17,22 @@
 Секунда ухода: 0
 3:30:00
 """
+
+hourCame = int(input("Час прихода: "))
+minuteCame = int(input("Минута прихода: "))
+secondCame = int(input("Секунда прихода: "))
+hourLeft = int(input("Час ухода: "))
+minuteLeft = int(input("Минута ухода: "))
+secondLeft = int(input("Секунда ухода: "))
+
+timestampCame = hourCame * 3600 + minuteCame * 60 + secondCame
+timestampLeft = hourLeft * 3600 + minuteLeft * 60 + secondLeft
+
+timeSpent = timestampLeft - timestampCame
+
+hoursSpent = timeSpent // 3600
+timeSpent %= 3600
+minutesSpent = timeSpent // 60
+timeSpent %= 60
+
+print(hoursSpent, f"{minutesSpent:02d}", f"{timeSpent:02d}", sep=":")

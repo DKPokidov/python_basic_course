@@ -25,3 +25,19 @@
 Воронеж его встретил Ворон, который сказал: "Привет, дружище!"
 "Привет!" — и с тех пор Дедди стал самым ученым хомяком в мире!
 """
+
+hamsterName = input("Введите имя хомяка: ")
+favouriteFood = input("Введите любимую еду: ")
+job = input("Введите профессию: ")
+skill = input("Введите навык: ")
+city = input("Введите город: ")
+character = input("Введите имя персонажа: ")
+characterPhrase = input("Введите фразу  персонажа: ")
+hamsterAnswer = input("Введите ответ хомяка: ")
+adjective = input("Введите прилагательное: ")
+
+print(f"Жил-был хомяк по имени {hamsterName}")
+print(f"{hamsterName} очень любил есть {favouriteFood} и мечтал стать {job}")
+print(f"Однажды {hamsterName} научился {skill} и отправился в {city}")
+print(f"В {city} его встретил {character}, который сказал: \"{characterPhrase}\"")
+print(f"\"{hamsterAnswer}\" — и с тех пор {hamsterName} стал самым {adjective} хомяком в мире!")

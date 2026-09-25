@@ -17,3 +17,8 @@
 Баланс после разговора (руб): 8.0
 Разговор длился 18 минут
 """
+
+balanceBefore = float(input("Баланс до разговора (руб): "))
+balanceAfter = float(input("Баланс после разговора (руб): "))
+
+print("Разговор длился", int((balanceBefore - balanceAfter) / 2.5), "минут")
