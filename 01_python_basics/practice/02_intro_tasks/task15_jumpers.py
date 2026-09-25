@@ -27,3 +27,13 @@
 
 Примечание: расстояние всегда положительное.
 """
+koord_A = int(input('Введите коородинату дома А:'))
+koord_B = int(input('Введите коородинату дома B:'))
+
+distance = abs(koord_A - koord_B)
+print(f'Расстояние: {distance}')
+
+if distance % 3 == 0:
+        print('да')
+else:
+        print('нет')
