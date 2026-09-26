@@ -1,13 +1,13 @@
 # tests/test_02_python_structures/test_task6_scholarships.py
 """
-Тесты для задания 6: Стипендии студентов
+Тесты для задания 6: Статистика по стипендиям
 """
 
 from tests.test_02_python_structures.conftest import run_student_code, get_module03_file
 
 
 class TestTask6Scholarships:
-    """Тесты для задания 6: Стипендии студентов"""
+    """Тесты для задания 6: Статистика по стипендиям"""
 
     student_file = get_module03_file('task6_scholarships.py')
 
