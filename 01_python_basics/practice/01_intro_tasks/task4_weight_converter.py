@@ -19,3 +19,22 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+weight = input("Введите вес и единицу измерения (например, '10 кг'): ")
+parts = weight.split()
+lot = float(parts[0])
+rate =  parts[1]
+if rate == 'кг' :
+    lot_1 = lot * 1
+elif rate == 'г' :
+    lot_1 = lot * 0.001
+elif rate == 'фунт' :
+    lot_1 = lot * 0.40951241
+elif rate == 'пуд' :
+    lot_1 = lot * 16
+elif rate == 'ц' :
+    lot_1 = lot * 100
+elif rate == 'т' :
+    lot_1 = lot * 1000
+
+print(f'{lot} {rate} = {lot_1} кг')
+
