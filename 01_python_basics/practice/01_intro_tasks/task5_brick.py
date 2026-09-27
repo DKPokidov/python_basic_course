@@ -26,3 +26,26 @@
 Масса: 3.31 кг
 Количество кирпичей в 1 м³: 512
 """
+
+
+
+def dataAbout(a, b, c):
+      volume = a * b * c
+      print(f"Объём: {volume} см³")
+      print(f"Площадь поверхности: {2 * a * b + 2 * b * c + 2 * a * c} см²")
+      print(f"Сумма ребёр: {4 * (a + b + c)} см")
+      print(f"Масса: {(volume * 1700 * 0.01 * 0.01 * 0.01):.2f} кг")
+      print(f"Количество кирпичей в 1 м³: { int(1 / (volume * 0.01 * 0.01 * 0.01)) }")   
+
+
+def makeBrick():
+      bLength = float(input("длина кирпича (см): "))
+      bWidth = float(input("ширина кирпича (см): "))
+      bHeight = float(input("высота кирпича (см): "))
+      return [bLength, bWidth, bHeight]
+
+
+brickTest = makeBrick()
+dataAbout(brickTest[0], brickTest[1], brickTest[2])
+
+    
