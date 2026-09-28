@@ -23,3 +23,18 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+trati = (0, 0, 0, 0)
+trati2 = list(trati)
+for i in range(4):
+    trati2[i] = float(input(f'Введите сумму траты {i + 1} '))
+summa = 0
+for j in trati2:
+    summa += j
+flag = 0
+schet = 0
+for k in trati2:
+    if k > flag:
+        flag = k
+        schet += 1
+print(f'Общая сумма: {summa}')
+print(f'Самая большая трата: {flag} {categories[schet - 1]}')

@@ -14,3 +14,22 @@
 """
 
 students = {"Иван": 15000, "Мария": 18000, "Петр": 12000, "Анна": 12000, "Ольга": 15000}
+maxi = 0
+for i in students:
+    if students[i] > maxi:
+        maxi = students[i]
+print(f'Максимальная стипендия: {maxi}')
+mini = 10000000000
+for j in students:
+    if students[j] < mini:
+        mini = students[j]
+print(f'Минимальная стипендия: {mini}')
+summa = 0
+for k in students:
+    summa += students[k]
+print(f'Общая сумма стипендий: {summa}')
+massiv = []
+for i in students:
+    massiv.append(students[i])
+print(f'множество уникальных размеров стипендий: {set(massiv)}')
+print(f'список всех студентов в алфавитном порядке: {sorted(list(students.keys()))}')
