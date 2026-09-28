@@ -14,4 +14,4 @@ number = input("Номер ")
 name = input("Название ")
 index = input("Индекс ")
 
-print((number == str(abs(int(number)))) and (all(filter(lambda x: not x.isdigit(), name))) and (len(index) == 6 and all(filter(lambda x: x.isdigit(), index))))
+print((int(number) > 0 and float(number) == int(number)) and not any(filter(lambda x: x.isdigit(), name)) and (len(index) == 6 and all(filter(lambda x: x.isdigit(), index))))

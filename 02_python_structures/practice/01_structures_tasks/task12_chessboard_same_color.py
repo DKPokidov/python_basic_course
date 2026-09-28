@@ -11,4 +11,4 @@ x1, y1 и x2, y2 и проверяет истинность высказыван
 """
 
 x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
-print(bool((x1 + y1 + x2 + y2 + 1) % 2))
+print(f'Клетки одинакового цвета: {bool((x1 + y1 + x2 + y2 + 1) % 2)}')

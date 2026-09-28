@@ -10,4 +10,4 @@
 """
 
 x, y = int(input('X ')), int(input('Y '))
-print((x + y) % 2 == 0)
+print(f'Поле белое: {(x + y) % 2 != 0}')
