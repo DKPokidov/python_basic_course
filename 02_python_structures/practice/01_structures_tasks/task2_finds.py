@@ -15,7 +15,7 @@ today = {"беспроводные Sony", "Samsung Buds", "старые сове
 
 b = yesterday & today
 c = today - yesterday
-d = len(yesterday)+len(today)-len(b)
-print(f'1. Находили оба дня: {b}')
-print(f'2. Только сегодня: {c}')
-print(f'3. Всего уникальных моделей: {d}')
+d = len(yesterday) + len(today) - len(b)
+print(f"1. Находили оба дня: {b}")
+print(f"2. Только сегодня: {c}")
+print(f"3. Всего уникальных моделей: {d}")

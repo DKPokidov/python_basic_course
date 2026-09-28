@@ -14,7 +14,7 @@
 starts = ["Инновационный", "Экологичный", "Передовой", "Комфортный"]
 middles = ["городской", "зелёный", "арт", "умный"]
 ends = ["ландшафт", "двор", "пространство", "квартал"]
-a=int(input())
-b=int(input())
-c=int(input())
-print(f'{starts[a]} {middles[b]} {ends[c]}')
+a = int(input())
+b = int(input())
+c = int(input())
+print(f"{starts[a]} {middles[b]} {ends[c]}")

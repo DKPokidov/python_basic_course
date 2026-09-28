@@ -23,11 +23,11 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
-a=float(input(f'Введите сумму траты 1: '))
-b=float(input(f'Введите сумму траты 2: '))
-c=float(input(f'Введите сумму траты 3: '))
-d=float(input(f'Введите сумму траты 4: '))
+a = float(input(f"Введите сумму траты 1: "))
+b = float(input(f"Введите сумму траты 2: "))
+c = float(input(f"Введите сумму траты 3: "))
+d = float(input(f"Введите сумму траты 4: "))
 tr = (a, b, c, d)
 vs = sum(tr)
-print(f'Общая сумма: {vs}')
-print(f'Самая большая трата: {max(tr)} {categories[tr.index(max(tr))]}')
+print(f"Общая сумма: {vs}")
+print(f"Самая большая трата: {max(tr)} {categories[tr.index(max(tr))]}")
