@@ -14,3 +14,10 @@
 starts = ["Инновационный", "Экологичный", "Передовой", "Комфортный"]
 middles = ["городской", "зелёный", "арт", "умный"]
 ends = ["ландшафт", "двор", "пространство", "квартал"]
+
+starts_index = int(input('Введите индекс начала фразы: '))
+middles_index = int(input('Введите индекс середины фразы: '))
+ends_index = int(input('Введите индекс конца фразы: '))
+
+slogan = starts[starts_index] + ' ' + middles[middles_index] + ' ' + ends[ends_index]
+print(f'Ваш слоган: {slogan}')

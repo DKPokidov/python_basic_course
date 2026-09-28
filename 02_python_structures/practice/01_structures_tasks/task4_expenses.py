@@ -23,3 +23,15 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+products = float(input('Введите сумму траты 1: '))
+transport = float(input('Введите сумму траты 2: '))
+entertainment = float(input('Введите сумму траты 3: '))
+connection = float(input('Введите сумму траты 4: '))
+
+sum = products + transport + entertainment + connection
+categories_dict = {
+   'продукты': products, 'транспорт': transport, 'развлечения': entertainment, 'связь': connection 
+}
+max_expense = max(categories_dict, key = categories_dict.get)
+print(f'Общая сумма: {sum}')
+print(f'Самая большая трата: {categories_dict.get(max_expense)} {max_expense}')
