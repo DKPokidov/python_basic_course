@@ -38,5 +38,5 @@ elif rate == 'ц' :
 elif rate == 'т' :
     lot_1 = lot * 1000
 
-print(f'{lot} {rate} = {lot_1} кг')
+print(f'{lot} {rate} = {lot_1:.6f} кг')
 
