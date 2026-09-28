@@ -13,3 +13,12 @@
 """
 
 benches = ["Скамейка Раздумий у Политеха", "Лавка Знаний у Кронверкского", "Пень Свободы у Вокзала"]
+
+benches.append("Банка Просветления у Кронверка")
+benchAmount = len(benches)
+
+for i in range(benchAmount - 1):
+   print(benches[i], ",", sep="", end=" ")
+print(benches[benchAmount - 1])
+
+print("Всего скамеек:", benchAmount)

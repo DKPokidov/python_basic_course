@@ -13,3 +13,7 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+
+location, surfaceTotal, surfaceKitchen, isWithBalcony = input("Введите название района: "), int(input("Введите площадь квартиры: ")), int(input("Введите площадь кухни: ")), bool(int(input("Введите количество балконов: ")) > 0)
+
+print(((location == "Центральный" and surfaceTotal >= 70) or (surfaceTotal >= 120)) and surfaceKitchen >= 20 and isWithBalcony)

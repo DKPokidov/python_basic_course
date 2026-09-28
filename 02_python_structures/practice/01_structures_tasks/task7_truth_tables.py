@@ -7,3 +7,11 @@
 2. Дизъюнкция (or — логическое сложение)
 3. Инверсия (not — логическое отрицание)
 """
+
+andTable = ((0, 0), (0, 1))
+orTable = ((0, 1), (1, 1))
+notTable = (1, 0)
+
+print(andTable)
+print(orTable)
+print(notTable)
