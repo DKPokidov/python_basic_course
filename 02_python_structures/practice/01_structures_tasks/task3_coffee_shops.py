@@ -8,7 +8,7 @@
 1. Добавьте новую кофейню "Бессонный урбанист" с рейтингом 8
 2. Увеличьте рейтинг "Цифербурга" на 1 (он стал ещё лучше!)
 3. Выведите лучшую кофейню строкой вида:
-   Лучшая кофейня: Цифербург с рейтингом 10
+    Лучшая кофейня: Цифербург с рейтингом 10
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
@@ -20,8 +20,8 @@ bestName = "Цифербург"
 bestRating = shops[bestName]
 
 for i in shops:
-   if shops[i] > bestRating:
-      bestName = i
-      bestRating = shops[i]
+    if shops[i] > bestRating:
+        bestName = i
+        bestRating = shops[i]
 
 print("Лучшая кофейня:", bestName, "с рейтингом", bestRating)
