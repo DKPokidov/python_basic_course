@@ -13,3 +13,15 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+
+area = int(input("Площадь "))
+district = input("Район ")
+kit_area = int(input("Площадь кухни "))
+balc = input("Балкон ")
+
+result = {
+    True: 'Квартира подходит',
+    False: 'Квартира не подходит'
+}
+
+print(result[(area >= 120 or area >= 70 and district == 'Центральный') and kit_area >= 20 and balc == 'да'])
