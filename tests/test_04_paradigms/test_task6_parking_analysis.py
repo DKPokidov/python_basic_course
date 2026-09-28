@@ -14,13 +14,11 @@ class TestTask6ParkingAnalysis:
     def test_high_load_parkings(self, monkeypatch, tmp_path):
         deep_dir = tmp_path / "a" / "b"
         deep_dir.mkdir(parents=True)
-        data_dir = tmp_path / "data"
-        data_dir.mkdir()
         parkings_content = "название_парковки;вместимость;занято\nПарковка_1;100;90\nПарковка_2;200;150\nПарковка_3;50;50\n"
-        (data_dir / "parkings.txt").write_text(parkings_content, encoding="utf-8")
+        (deep_dir / "parkings.txt").write_text(parkings_content, encoding="utf-8")
         monkeypatch.chdir(deep_dir)
         run_student_code(self.student_file, [])
-        output_file = data_dir / "high_load_parkings.txt"
+        output_file = deep_dir / "high_load_parkings.txt"
         assert output_file.exists()
         content = output_file.read_text(encoding="utf-8")
         assert "название_парковки;вместимость;занято;занятость_%" in content
@@ -31,13 +29,11 @@ class TestTask6ParkingAnalysis:
     def test_no_high_load(self, monkeypatch, tmp_path):
         deep_dir = tmp_path / "a" / "b"
         deep_dir.mkdir(parents=True)
-        data_dir = tmp_path / "data"
-        data_dir.mkdir()
         parkings_content = "название_парковки;вместимость;занято\nПарковка_1;100;50\nПарковка_2;200;100\n"
-        (data_dir / "parkings.txt").write_text(parkings_content, encoding="utf-8")
+        (deep_dir / "parkings.txt").write_text(parkings_content, encoding="utf-8")
         monkeypatch.chdir(deep_dir)
         run_student_code(self.student_file, [])
-        output_file = data_dir / "high_load_parkings.txt"
+        output_file = deep_dir / "high_load_parkings.txt"
         assert output_file.exists()
         content = output_file.read_text(encoding="utf-8")
         lines = content.strip().split("\n")
