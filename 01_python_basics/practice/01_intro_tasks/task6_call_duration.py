@@ -17,3 +17,9 @@
 Баланс после разговора (руб): 8.0
 Разговор длился 18 минут
 """
+start_bal = float(input('Баланс до разговора (руб): '))
+finish_bal = float(input('Баланс после разговора (руб): '))
+
+cost_of_call = start_bal - finish_bal
+duration = cost_of_call // 2.5
+print(f'Разговор длился {int(duration)} минут')

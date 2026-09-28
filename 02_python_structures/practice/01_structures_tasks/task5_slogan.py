@@ -14,3 +14,11 @@
 starts = ["Инновационный", "Экологичный", "Передовой", "Комфортный"]
 middles = ["городской", "зелёный", "арт", "умный"]
 ends = ["ландшафт", "двор", "пространство", "квартал"]
+
+ind_sl_1 = int(input())
+ind_sl_2 = int(input())
+ind_sl_3 = int(input())
+
+total = starts[ind_sl_1] + " " + middles[ind_sl_2] + " " + ends[ind_sl_3]
+
+print(total)
