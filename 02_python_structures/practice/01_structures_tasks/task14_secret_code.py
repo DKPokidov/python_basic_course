@@ -13,3 +13,12 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+
+code = input()
+spec = '@#$%^&*'
+print(len(code) == 8 and 
+      any(filter(lambda x: x.isalpha() and x.isupper(), code)) and
+      any(filter(lambda x: x.isalpha() and x.islower(), code)) and
+      any(filter(lambda x: x.isdigit(), code)) and
+      sum(map(lambda x: code.count(x), spec)) == 1 and
+      code[0] not in spec and code[-1] not in spec)

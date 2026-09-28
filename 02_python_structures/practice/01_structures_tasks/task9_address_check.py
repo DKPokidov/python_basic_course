@@ -9,3 +9,9 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+
+number = input("Номер ")
+name = input("Название ")
+index = input("Индекс ")
+
+print((number == str(abs(int(number)))) and (all(filter(lambda x: not x.isdigit(), name))) and (len(index) == 6 and all(filter(lambda x: x.isdigit(), index))))
