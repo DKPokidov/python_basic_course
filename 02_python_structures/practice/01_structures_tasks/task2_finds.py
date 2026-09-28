@@ -10,7 +10,6 @@
 3. Всего уникальных моделей: 5
 """
 
-from enum import unique
 yesterday = {"беспроводные Sony", "AirPods", "JBL"}
 today = {"беспроводные Sony", "Samsung Buds", "старые советские"}
 

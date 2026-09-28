@@ -24,8 +24,8 @@
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
 
-spending = (float(input("Введите сумму траты 1: ")), float(input("Введите сумму траты 2: ")),
-                                                float(input("Введите сумму траты 3: ")), float(input("Введите сумму траты 4: ")))
+spending = (float(input("Введите сумму траты 1: ")), float(input("Введите сумму траты 2: ")), 
+float(input("Введите сумму траты 3: ")), float(input("Введите сумму траты 4: ")))
 
 print("Общая сумма:", sum(spending))
 print("Самая большая трата:", max(spending), categories[spending.index(max(spending))])

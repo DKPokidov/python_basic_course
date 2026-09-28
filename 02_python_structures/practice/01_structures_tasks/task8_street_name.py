@@ -11,4 +11,4 @@
 
 streetName = input("Введите название улицы: ")
 
-print(0 < len(streetName) <= 30 )
+print(0 < len(streetName) <= 30)
