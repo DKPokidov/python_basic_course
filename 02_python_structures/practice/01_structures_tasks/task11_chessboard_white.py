@@ -22,6 +22,6 @@
 x = int(input())
 y = int(input())
 if x % 2 == 0 and y % 2 == 0 or x % 2 != 0 and y % 2 != 0:
-    print('Поле белое:', False)
+    print("Поле белое:", False)
 else:
-    print('Поле белое:', True)
+    print("Поле белое:", True)
