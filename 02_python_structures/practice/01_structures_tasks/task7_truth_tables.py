@@ -7,6 +7,7 @@
 2. Дизъюнкция (or — логическое сложение)
 3. Инверсия (not — логическое отрицание)
 """
+
 print("False and True = False")
 print("True and False = False")
 print("False and False = False")

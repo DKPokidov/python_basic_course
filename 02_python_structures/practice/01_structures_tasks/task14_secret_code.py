@@ -13,12 +13,22 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
-a=input()
-y=a
-a=set(a)
-s=set('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-s1=set('abcdefghijklmnopqrstuvwxyz')
-s2=set('0123456789')
-s3=set('#@#$%^&*')
-prov=(len(y)==8 and a&s and a&s1 and a&s2 and len(a&s3)==1 and y[0] not in s3 and y[-1] not in s3)
+y = input()
+a = set(y)
+
+s = set("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+s1 = set("abcdefghijklmnopqrstuvwxyz")
+s2 = set("0123456789")
+s3 = set("#@#$%^&*")
+
+prov = (
+    len(y) == 8
+    and bool(a & s)
+    and bool(a & s1)
+    and bool(a & s2)
+    and len(a & s3) == 1
+    and y[0] not in s3
+    and y[-1] not in s3
+)
+
 print(prov)

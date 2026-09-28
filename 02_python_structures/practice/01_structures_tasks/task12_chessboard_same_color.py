@@ -15,4 +15,4 @@ y = int(input())
 x1 = int(input())
 y1 = int(input())
 r = (x + y) % 2 == (x1 + y1) % 2
-print(r)
+print('Клетки одинакового цвета:', r)
