@@ -1,11 +1,28 @@
 """
 Задание 4: Типы зданий
 
+Кадастровую базу города расширяют: кроме общих сведений о здании нужно
+хранить его специфику — число квартир в жилом доме, этажей в офисном
+здании, магазинов в торговом центре. У каждого типа здания свой финальный
+отчёт в get_info(). Используйте наследование, чтобы не повторять общую
+логику базового класса Building.
+
 Создайте подклассы класса Building:
-- ResidentialBuilding — атрибут number_of_apartments, тип "жилой"
-- OfficeBuilding — атрибут number_of_floors, тип "офисный"
-- ShoppingCenter — атрибут number_of_shops, тип "торговый"
-Переопределите метод get_info() для каждого подкласса, добавив информацию о дополнительном атрибуте.
+- ResidentialBuilding(name, height, year_built, number_of_apartments) —
+  атрибут number_of_apartments, тип "жилой";
+- OfficeBuilding(name, height, year_built, number_of_floors) —
+  атрибут number_of_floors, тип "офисный";
+- ShoppingCenter(name, height, year_built, number_of_shops) —
+  атрибут number_of_shops, тип "торговый".
+
+Базовый метод Building.get_info() возвращает строку:
+
+    Здание {name}, {type}, построено в {year_built}, высота {height} м
+
+Переопределите get_info() в каждом подклассе, добавив в конец базовой строки:
+- ResidentialBuilding: , квартир: {number_of_apartments}
+- OfficeBuilding: , этажей: {number_of_floors}
+- ShoppingCenter: , магазинов: {number_of_shops}
 """
 
 
