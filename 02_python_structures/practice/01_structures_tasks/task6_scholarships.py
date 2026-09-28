@@ -21,6 +21,7 @@ print("Минимальная стипендия:", min(students.values()))
 print("Общая сумма стипендий:", sum(students.values()))
 
 uniqueStipends = set(students.values())
+print(uniqueStipends)
 
 studentList = list(students.keys())
 studentList.sort()
