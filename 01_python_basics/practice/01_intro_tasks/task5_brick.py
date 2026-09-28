@@ -26,3 +26,22 @@
 Масса: 3.31 кг
 Количество кирпичей в 1 м³: 512
 """
+
+print("Введите длину кирпича (см): ")
+length = float(input())
+print("Введите ширину кирпича (см): ")
+width = float(input())
+print("Введите высоту кирпича (см): ")
+height = float(input())
+volume = length * width * height
+surface_area = 2 * (length * width + width * height + length * height)
+edge_sum = 4 * (length + width + height)
+# Convert volume from cm³ to m³ for mass calculation
+volume_m3 = volume / 1_000_000  # 1 m³ = 1,000,000 cm³
+mass = volume_m3 * 1700  # Density of brick is 1700 kg/m³
+bricks_per_m3 = int(1_000_000 / volume)  # Number of bricks in 1 m³
+print(f"Объём: {volume} см³")
+print(f"Площадь поверхности: {surface_area} см²")
+print(f"Сумма рёбер: {edge_sum} см")
+print(f"Масса: {mass:.2f} кг")
+print(f"Количество кирпичей в 1 м³: {bricks_per_m3}")
