@@ -19,5 +19,7 @@ buildings = (
     {"id": 4, "площадь": 1000, "этажи": 4, "тип": "жилой"},
     {"id": 5, "площадь": 900, "этажи": 5, "тип": "жилой"},
 )
-print(list(build['id'] for build in buildings if build['площадь'] >= 1000
-           and build['этажи'] >= 4 and build['тип'] == 'жилой'))
+# print(list(build['id'] for build in buildings if build['площадь'] >= 1000
+#            and build['этажи'] >= 4 and build['тип'] == 'жилой'))
+print(list(map(lambda build: build['id'], filter(lambda build: build['площадь']
+      >= 1000 and build['этажи'] >= 4 and build['тип'] == 'жилой', buildings))))
