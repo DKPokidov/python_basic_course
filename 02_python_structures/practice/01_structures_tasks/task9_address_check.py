@@ -9,9 +9,9 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
-a=input("Введите адрес в формате 'улица, дом, индекс': ")
+a=input("Введите адрес в формате 'дом, улица, индекс': ")
 b=a.split(", ")
-if b[0].isdigit() or not b[1].isdigit() or len(b[2])!=6 or not b[2].isdigit():
-    print("Адрес некорректен")
+if b[1].isdigit() or not b[0].isdigit() or len(b[2])!=6 or not b[2].isdigit():
+    print(False)
 else:
-    print("Адрес корректен")
+    print(True)
