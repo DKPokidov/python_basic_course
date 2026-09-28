@@ -16,4 +16,4 @@ x2, y2 = int(input("Ввелите номер столбика второй кл
 firstColor = (x1 + y1) % 2
 secondColor = (x2 + y2) % 2
 
-print(bool(firstColor * secondColor))
+print("Клетки одинакового цвета:", bool(firstColor * secondColor))
