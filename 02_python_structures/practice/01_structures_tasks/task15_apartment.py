@@ -19,10 +19,6 @@ b = input()
 c = input()
 d = input()
 kv = a, b, c, d
-o = (
-    (int(a) >= 120 or (int(a) >= 70 and b == "Центральный"))
-    and int(c) >= 20
-    and d == "да"
-)
+o = ((int(a) >= 120 or (int(a) >= 70 and b == "Центральный")) and int(c) >= 20 and d == "да")
 otv = ["Квартира не подходит", "Квартира подходит"]
 print(otv[o])
