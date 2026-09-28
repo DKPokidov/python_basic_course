@@ -15,5 +15,5 @@
 """
 
 surfaceTotal, location, surfaceKitchen, isWithBalcony = int(input("Введите площадь квартиры: ")), input("Введите название района: "), int(input("Введите площадь кухни: ")), (input("Есть ли балкон: ") == "да")
-
-print(((location == "Центральный" and surfaceTotal >= 70) or (surfaceTotal >= 120)) and surfaceKitchen >= 20 and isWithBalcony)
+isSuitable = ((location == "Центральный" and surfaceTotal >= 70) or (surfaceTotal >= 120)) and surfaceKitchen >= 20 and isWithBalcony
+print(isSuitable * "Квартира подходит" + (not isSuitable) * "Квартира не подходит")
