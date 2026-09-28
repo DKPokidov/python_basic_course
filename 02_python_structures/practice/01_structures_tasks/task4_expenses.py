@@ -23,3 +23,7 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+wastes = (float(input('Введите сумму траты 1: ')), float(input('Введите сумму траты 2: ')),
+           float(input('Введите сумму траты 3: ')), float(input('Введите сумму траты 4: ')))
+print(f'Общая сумма: {sum(wastes)}')
+print(f'Самая большая трата: {max(wastes)} {categories[wastes.index(max(wastes))]}')
