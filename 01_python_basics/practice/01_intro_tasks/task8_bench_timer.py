@@ -11,8 +11,15 @@
 Введите время в секундах: 3661
 1:01:01
 """
-fr = int(input('Введите время в секундах:'))
-hours = fr // 3600
-minutes = (fr % 3600) // 60
-secs = fr % 6
-print(f'{hours}:{minutes}:{secs}')
+t = int(input("Введите время в секундах:"))
+hour = t // 3600
+minute = t % 3600 // 60
+sek = t % 60
+if minute < 10 and sek < 10:
+    print(hour, ":0", minute, ":0", sek, sep="")
+elif minute < 10 and sek >= 10:
+    print(hour, ":0", minute, ":", sek, sep="")
+elif minute >= 10 and sek < 10:
+    print(hour, ":0", minute, ":0", sek, sep="")
+else:
+    print(hour, minute, sek, sep=":")

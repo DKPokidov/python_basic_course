@@ -27,12 +27,17 @@
 
 Примечание: расстояние всегда положительное.
 """
-a = int(input("Введите координату дома А: "))
-b = int(input("Введите координату дома В: "))
-distance = abs(a - b)
-if distance % 3 == 0:
-    result = "да"
+a = int(input("Введите координату дома А:"))
+b = int(input("Введите координату дома B:"))
+if a > b:
+    print("Расстояние:", a - b)
+    if (a - b) % 3 == 0:
+        print("да")
+    else:
+        print("нет")
 else:
-    result = "нет"
-print(f"Расстояние: {distance}")
-print(result)
+    print("Расстояние:", b - a)
+    if (b - a) % 3 == 0:
+        print("да")
+    else:
+        print("нет")
