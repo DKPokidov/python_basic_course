@@ -15,13 +15,7 @@ c = input()
 d = input()
 b = [a, c, d]
 
-if (
-    b[0].isdigit()
-    and int(b[0]) > 0
-    and not any(i.isdigit() for i in b[1])
-    and len(b[2]) == 6
-    and b[2].isdigit()
-):
+if ( b[0].isdigit() and int(b[0]) > 0 and not any(i.isdigit() for i in b[1]) and len(b[2]) == 6 and b[2].isdigit()):
     print(True)
 else:
     print(False)
