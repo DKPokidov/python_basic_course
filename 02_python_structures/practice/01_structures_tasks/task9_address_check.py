@@ -11,7 +11,7 @@
 """
 a=input("Введите адрес в формате 'дом, улица, индекс': ")
 b=a.split(", ")
-if b[1].isdigit() or not b[0].isdigit() or len(b[2])!=6 or not b[2].isdigit():
-    print(False)
-else:
+if b[0].isdigit() and int(b[0])>0 and not any(i.isdigit() for i in b[1]) and len(b[2])==6 and b[2].isdigit():
     print(True)
+else:
+    print(False)
