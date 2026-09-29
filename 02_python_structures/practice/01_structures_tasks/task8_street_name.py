@@ -8,3 +8,8 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+name = str(input())
+if len(name) <= 30 and name != "":
+    print("True")
+else:
+    print("False")

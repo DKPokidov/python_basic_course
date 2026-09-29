@@ -13,3 +13,14 @@
 
 Внимание: оператор If использовать запрещается.
 """
+
+dict_pirate = {
+    True : "Осторожно пираты!",
+    False : "Корабль не опасен!",
+    
+}
+color = input("Введите цвет флага: ")
+painting = input("Введите рисунок на флаге: ")
+danger = (color == "черный") and (painting == "череп" or painting == "")
+
+print(dict_pirate[danger])

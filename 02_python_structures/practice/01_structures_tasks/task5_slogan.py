@@ -14,3 +14,9 @@
 starts = ["Инновационный", "Экологичный", "Передовой", "Комфортный"]
 middles = ["городской", "зелёный", "арт", "умный"]
 ends = ["ландшафт", "двор", "пространство", "квартал"]
+
+num_st = int(input())
+num_mid = int(input())
+num_end = int(input())
+
+print( starts[num_st] + " " + middles[num_mid] + " " + ends[num_end])
