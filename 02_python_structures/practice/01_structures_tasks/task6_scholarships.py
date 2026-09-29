@@ -14,3 +14,19 @@
 """
 
 students = {"Иван": 15000, "Мария": 18000, "Петр": 12000, "Анна": 12000, "Ольга": 15000}
+
+max_stip = max(students.values())
+min_stip = min(students.values())
+
+print(f'Максимальная стипендия: {max_stip}')
+print(f'Минимальная стипендия: {min_stip}')
+
+summary = sum(students.values())
+print(f'Общая сумма стипендий: {summary}')
+
+unique_stip = set(students.values())
+print(unique_stip)
+
+list_of_students = set(students.keys())
+sorted_list_of_students = sorted(list_of_students)
+print(list(sorted_list_of_students))
