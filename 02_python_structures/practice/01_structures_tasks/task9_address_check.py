@@ -11,5 +11,12 @@
 """
 house_number = input('Введите номер вашего дома: ')
 street = input('Введите вашу улицу: ')
-house_index = input('Введите ваш индекс')
+house_index = input('Введите ваш индекс: ')
 
+if house_number.isdigit() :
+    if house_index.isdigit():
+        if len(house_index) == 6:
+            if street.replace(' ', '').replace('-', '').isalpha():
+                print(True)
+else:
+    print(False)
