@@ -20,7 +20,7 @@ buildings = (
     {"id": 5, "площадь": 900, "этажи": 5, "тип": "жилой"},
 )
 
-answer =[] 
+answer = [] 
 
 for building in buildings:
     if building["площадь"] >= 1000 and building["этажи"] >= 4 and building["тип"] == "жилой": 

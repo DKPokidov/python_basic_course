@@ -23,11 +23,4 @@ symbols = set('@#$%^&*')
 code = str(input('Введите код: '))
 code_set = set(code)
 
-print(len(code_set) == 8 
-      and len(lowers & code_set) > 0 
-      and len(uppers & code_set) > 0 
-      and len(digits & code_set) > 0  
-      and len(symbols & code_set) == 1 
-      and (code[0] not in symbols) 
-      and (code[-1] not in symbols)
-)
+print(len(code_set) == 8 and len(lowers & code_set) > 0 and len(uppers & code_set) > 0 and len(digits & code_set) > 0 and len(symbols & code_set) == 1 and (code[0] not in symbols) and (code[-1] not in symbols))
