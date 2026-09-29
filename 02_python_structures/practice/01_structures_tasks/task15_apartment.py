@@ -13,3 +13,14 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+dict_answers = {
+    True : "Квартира подходит",
+    False : "Квартира не подходит"
+
+}
+area_apart = int(input("Введите площадь квартиры(в кв. метрах): "))
+district = input("Введите район: ")
+area_kitch = int(input("Введите площадь кухни: "))
+balcon = input("Наличие балкона (да/нет): ")
+is_approved = ((area_apart >= 120 ) or (area_apart >= 70 and district == "Центральный")) and area_kitch >= 20 and balcon == "да"
+print(dict_answers[is_approved])
