@@ -12,3 +12,12 @@
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
+shops["Бессонный урбанист"] = 8
+shops["Цифербург"] = 10
+max_value = 0
+for shop_value in shops.values():
+    if shop_value > max_value:
+        max_value = shop_value
+for key, value in shops.items():
+    if value == max_value:
+        print(f'Лучшая кофейня: {key} с рейтингом {value}')
