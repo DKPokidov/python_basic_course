@@ -23,3 +23,14 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+purchase_1 = float(input('Введите сумму траты 1: '))
+purchase_2 = float(input('Введите сумму траты 2: '))
+purchase_3 = float(input('Введите сумму траты 3: '))
+purchase_4 = float(input('Введите сумму траты 4: '))
+purchases_tuple = (purchase_1, purchase_2, purchase_3, purchase_4)
+sum_purchases = sum(purchases_tuple)
+print(f'Общая сумма: {sum_purchases}')
+max_purchase = max(purchases_tuple)
+for purchase in range(len(purchases_tuple)):
+    if purchases_tuple[purchase] == max_purchase:
+        print(f'Самая большая трата: {max_purchase} {categories[purchase]}')

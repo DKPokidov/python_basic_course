@@ -13,3 +13,21 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+
+import string
+lowers = set(string.ascii_lowercase)
+uppers = set(string.ascii_uppercase)
+digits = set(string.digits)
+symbols = set('@#$%^&*')
+
+code = str(input('Введите код: '))
+code_set = set(code)
+
+print(len(code_set) == 8 
+      and len(lowers & code_set) > 0 
+      and len(uppers & code_set) > 0 
+      and len(digits & code_set) > 0  
+      and len(symbols & code_set) == 1 
+      and (code[0] not in symbols) 
+      and (code[-1] not in symbols)
+)
