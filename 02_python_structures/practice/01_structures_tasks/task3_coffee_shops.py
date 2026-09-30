@@ -12,3 +12,16 @@
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
+
+shops.update({"Бессонный урбанист": 8})
+shops["Цифербург"] += 1
+
+bestName = "Цифербург"
+bestRating = shops[bestName]
+
+for i in shops:
+   if shops[i] > bestRating:
+      bestName = i
+      bestRating = shops[i]
+
+print("Лучшая кофейня:", bestName, "с рейтингом", bestRating)
