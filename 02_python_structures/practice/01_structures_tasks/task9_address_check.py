@@ -9,3 +9,18 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+house = input('Введите номер дома: ')
+street = input('Введите название улицы: ')
+index = input("Введите индекс: ")
+flag = 0
+if house.isdigit():
+    flag = 1
+for i in '0123456789':
+    if i in street:
+        flag += 1
+if len(index) == 6 and index.isdigit():
+    flag += 1
+if flag == 2:
+    print("Правильный адрес")
+else:
+    print("Неправильный адрес")
