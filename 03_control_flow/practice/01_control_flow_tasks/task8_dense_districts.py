@@ -29,3 +29,11 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+
+denseDistricts = []
+
+for i in districts:
+    if i[2] / i[1] > 5:
+        denseDistricts.append(i[0])
+
+print("Плотно заселённые районы:", denseDistricts)
