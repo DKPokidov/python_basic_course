@@ -12,3 +12,14 @@
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
+shops.update({"Бессонный урбанист": 8})
+shops["Цифербург"] += 1
+keys = []
+values = []
+for key, value in shops.items():
+    keys.append(key)
+    values.append(value)
+max_value = max(values)
+for key, value in shops.items():
+    if value == max_value:
+        print(f"Лучшая кофейня: {key} с рейтингом {value}")
