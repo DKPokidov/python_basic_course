@@ -13,14 +13,17 @@ house = input('Введите номер дома: ')
 street = input('Введите название улицы: ')
 index = input("Введите индекс: ")
 flag = 0
-if house.isdigit():
-    flag = 1
+correct = True
+if house.isdigit() and int(house) > 0:
+    flag += 1
 for i in '0123456789':
     if i in street:
-        flag += 1
+        correct = False
+if correct:
+    flag += 1
 if len(index) == 6 and index.isdigit():
     flag += 1
-if flag == 2:
-    print("Правильный адрес")
+if flag == 3:
+    print("True")
 else:
-    print("Неправильный адрес")
+    print("False")

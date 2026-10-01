@@ -18,7 +18,9 @@ city = input('Введите район ')
 kitchen = int(input('Введите площадь кухни '))
 balkon = input('Наличие балкона ')
 room = (
-    ploshad >= 120 or (ploshad >= 70 and city == 'Центральный')
+    (
+        ploshad >= 120 or (ploshad >= 70 and city == 'Центральный')
+    )
     and kitchen >= 20
     and balkon == 'да'
 )

@@ -16,5 +16,5 @@
 color = input('цвет флага — ')
 draw = input('рисунок на флаге — ')
 pirate = (color == "черный" and (draw == "" or draw == "череп"))
-message = ['Корабль не опасен!', 'Осторожно пираты!']
+message = ['Корабль не опасен!', "Осторожно пираты!"]
 print(message[pirate])
