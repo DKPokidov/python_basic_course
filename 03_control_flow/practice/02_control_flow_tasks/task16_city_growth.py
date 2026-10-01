@@ -32,7 +32,7 @@ for i in range(30):
     print(f"Год {2025 + i}: население {population} тыс. чел.")
     if population >= 1000:
         print(f"Город достиг миллиона жителей в {2025 + i} году!")
-        flag  = True
+        flag = True
         break
 
 if not flag:
