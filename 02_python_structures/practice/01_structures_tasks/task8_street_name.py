@@ -8,3 +8,9 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+
+street = input()
+if len(street) <= 30 and len(street) != 0:
+    print(True)
+else:
+    print(False)

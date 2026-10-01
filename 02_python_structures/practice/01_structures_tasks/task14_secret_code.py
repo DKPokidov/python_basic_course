@@ -13,3 +13,20 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+
+import string
+
+alphabet_capital = list(string.ascii_uppercase)
+alphabet_lower = list(string.ascii_lowercase)
+numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+line = input("Введите код доступа:")
+conditions = [
+    len(line) == 8,
+    any([i for i in alphabet_capital if i in line]),
+    any([i for i in alphabet_lower if i in line]),
+    any([i for i in numbers if i in line]),
+    line[0] not in "#@#$%^&*",
+    line[-1] not in "#@#$%^&*",
+    sum([line.count(elem) for elem in "#@$%^&*"]) == 1,
+]
+print(all(conditions))
