@@ -18,4 +18,4 @@ zoneInput = input().lower()
 zoneLimit = 5 if zoneInput == "историческая" else 20
 storeysInput = int(input())
 
-print("Допустимо" if storeysInput < zoneLimit else "Превышение нормы!")
+print("Допустимо" if storeysInput <= zoneLimit else "Превышение нормы!")
