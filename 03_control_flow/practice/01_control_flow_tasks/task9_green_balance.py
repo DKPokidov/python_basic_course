@@ -13,3 +13,17 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+
+totalArea = float(input())
+sumOfGrey = 0.0
+
+while True:
+   newInput = float(input())
+   if newInput == 0:
+      break
+   sumOfGrey += newInput
+   if (totalArea - sumOfGrey) / totalArea < 0.3:
+      print("Нарушение нормы зелёных зон!")
+      exit()
+
+print("Нормы соблюдены")

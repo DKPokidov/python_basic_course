@@ -23,3 +23,11 @@ attractions = {
     "Исаакиевский собор": (59.9339, 30.3138),
     "Казанский собор": (59.9346, 30.3247),
 }
+
+userInput = input()
+
+coordinates = attractions.get(userInput)
+if coordinates is not None:
+    print(f"Координаты: широта {coordinates[0]}, долгота {coordinates[1]}")
+else:
+    print("Достопримечательность не найдена")

@@ -13,3 +13,9 @@
 3. С помощью ветвления проверяет, соответствует ли этажность норме.
 4. Выводит: «Допустимо» или «Превышение нормы!».
 """
+
+zoneInput = input().lower()
+zoneLimit = 5 if zoneInput == "историческая" else 20
+storeysInput = int(input())
+
+print("Допустимо" if storeysInput < zoneLimit else "Превышение нормы!")
