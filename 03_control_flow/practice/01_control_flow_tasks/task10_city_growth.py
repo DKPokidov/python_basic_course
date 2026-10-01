@@ -24,7 +24,6 @@
 «За 30 лет город не достиг миллиона жителей.».
 """
 
-from enum import Flag
 population = int(input())
 flag = False
 

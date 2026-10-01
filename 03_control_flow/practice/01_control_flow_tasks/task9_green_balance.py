@@ -29,4 +29,4 @@ while True:
         break
 
 if not flag:
-print("Нормы соблюдены")
+    print("Нормы соблюдены")
