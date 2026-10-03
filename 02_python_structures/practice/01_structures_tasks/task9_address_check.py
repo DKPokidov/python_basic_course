@@ -9,3 +9,14 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+dom = int(input())
+street = str(input())
+index = int(input())
+flag = True
+for char in street:
+    if char in "1234567890":
+        flag = False
+if dom > 0 and flag and len(str(index)) == 6:
+    print(True)
+else:
+    print(False)
