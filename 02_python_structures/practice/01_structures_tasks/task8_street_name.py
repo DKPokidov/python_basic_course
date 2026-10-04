@@ -8,3 +8,6 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+
+name = input()
+print([bool(False), bool(True)][(name != "") and (len(name) <= 30)])

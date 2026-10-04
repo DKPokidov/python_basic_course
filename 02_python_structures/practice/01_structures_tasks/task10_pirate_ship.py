@@ -13,3 +13,8 @@
 
 Внимание: оператор If использовать запрещается.
 """
+
+flag_colour = input()
+flag_design = input()
+print(["Корабль не опасен!", "Осторожно пираты!"][(flag_colour == "черный") and ((flag_design == "") or (flag_design == "череп"))])
+
