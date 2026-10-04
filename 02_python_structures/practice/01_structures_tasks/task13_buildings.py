@@ -19,3 +19,5 @@ buildings = (
     {"id": 4, "площадь": 1000, "этажи": 4, "тип": "жилой"},
     {"id": 5, "площадь": 900, "этажи": 5, "тип": "жилой"},
 )
+result = list(map(lambda b: b['id'], filter(lambda b: b['площадь'] >= 1000 and b['этажи'] >= 4 and b['тип'] == 'жилой', buildings)))
+print(result)
