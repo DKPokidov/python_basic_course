@@ -12,3 +12,7 @@
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
+shops["Бессонный урбанист"] = 8
+shops["Цифербург"] += 1
+desirable = max([[shops[i], i] for i in shops])
+print(f"Лучшая кофейня: {desirable[1]} с рейтингом {desirable[0]}")
