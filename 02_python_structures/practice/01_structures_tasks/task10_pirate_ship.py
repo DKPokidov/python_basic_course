@@ -13,3 +13,15 @@
 
 Внимание: оператор If использовать запрещается.
 """
+
+color = input()
+picture = input()
+
+is_pirate = color == 'черный' and picture in ('череп', '')
+
+messages = {
+    True: 'Осторожно пираты!',
+    False: 'Корабль не опасен!'
+}
+
+print(messages[is_pirate])

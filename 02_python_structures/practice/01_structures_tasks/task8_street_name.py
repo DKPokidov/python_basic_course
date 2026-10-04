@@ -8,3 +8,10 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+
+stroka = input()
+
+if len(stroka) <= 30 and len(stroka) > 0:
+    print(True)
+else:
+    print(False)
