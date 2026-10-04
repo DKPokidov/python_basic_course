@@ -12,3 +12,8 @@
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
+
+shops.update({'Цифербург': 10 , 'Бессонный урбанист': 8})
+the_best_shop = max(shops, key = shops.get)
+
+print(f'Лучшая кофейня: {the_best_shop} с рейтингом {shops.get(the_best_shop)}')
