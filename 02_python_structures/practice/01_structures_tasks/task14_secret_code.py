@@ -13,3 +13,6 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+code = input("Введите код доступа: ")
+specialSymbols = ('#', '@', '$', '%', '^', '&', '*')
+print((len(code) == 8) and not (code.isnumeric()) and not (code.islower()) and not (code.isupper()) and sum(1 for char in code if char in specialSymbols) == 1 and (code[0] not in specialSymbols) and (code[-1] not in specialSymbols))

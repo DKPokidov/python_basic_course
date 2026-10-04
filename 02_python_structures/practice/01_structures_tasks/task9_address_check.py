@@ -9,3 +9,11 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+number = float(input('Введите номер дома: '))
+street = str(input('Введите название улицы: '))
+index = str(input('Введите индекс: '))
+
+if number > 0 and int(number) == number and ' ' not in street and len(index) == 6:
+    print(True)
+else:
+    print(False)
