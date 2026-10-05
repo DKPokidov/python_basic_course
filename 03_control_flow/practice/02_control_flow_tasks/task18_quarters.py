@@ -32,8 +32,39 @@
 """
 
 quarters = [
-    {"district": "Северный", "area_ha": 50, "houses": 300, "green_area_ha": 12.0, "school_dist_m": 600},
-    {"district": "Южный", "area_ha": 25, "houses": 250, "green_area_ha": 4.0, "school_dist_m": 500},
-    {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
-    {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
+    {
+        "district": "Северный",
+        "area_ha": 50,
+        "houses": 300,
+        "green_area_ha": 12.0,
+        "school_dist_m": 600,
+    },
+    {
+        "district": "Южный",
+        "area_ha": 25,
+        "houses": 250,
+        "green_area_ha": 4.0,
+        "school_dist_m": 500,
+    },
+    {
+        "district": "Центральный",
+        "area_ha": 30,
+        "houses": 210,
+        "green_area_ha": 7.0,
+        "school_dist_m": 700,
+    },
+    {
+        "district": "Западный",
+        "area_ha": 40,
+        "houses": 240,
+        "green_area_ha": 6.0,
+        "school_dist_m": 1200,
+    },
 ]
+for i in quarters:
+    pl = i["houses"] / i["area_ha"]
+    zel = i["green_area_ha"] / i["area_ha"] * 100
+    if pl <= 8 and zel >= 20 and i["school_dist_m"] <= 800:
+        print(f"{i['district']}: Соответствует")
+    else:
+        print(f"{i['district']}: Не соответствует")
