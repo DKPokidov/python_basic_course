@@ -12,3 +12,23 @@
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
+
+shops['Бессонный урбанист'] = 8
+
+try:
+   shops["Цифербург"] += 1
+except KeyError:
+   print("dne")
+
+
+def backlink(dict_: dict):
+   return { k:(k, v) for k, v in dict_.items() }
+
+def maxfromdict(dict_: dict):
+   return max(backlink(shops).values(), key=(lambda x: x[1]))
+
+
+
+print(
+   f"Лучшая кофейня: {maxfromdict(shops)[0]} с рейтингом {maxfromdict(shops)[1]}"
+)

@@ -14,3 +14,10 @@
 starts = ["Инновационный", "Экологичный", "Передовой", "Комфортный"]
 middles = ["городской", "зелёный", "арт", "умный"]
 ends = ["ландшафт", "двор", "пространство", "квартал"]
+
+try:
+    print(
+        f'{starts[int(input())]} {middles[int(input())]} {ends[int(input())]}'
+    )
+except IndexError:
+    print('dne')

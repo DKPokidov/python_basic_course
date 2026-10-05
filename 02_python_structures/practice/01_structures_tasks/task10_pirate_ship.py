@@ -13,3 +13,17 @@
 
 Внимание: оператор If использовать запрещается.
 """
+
+def getdata():
+    inputs = []
+    for i in range(2):
+        inputs.append(input())
+
+    return inputs
+
+inputs_ = getdata()
+boolval = (inputs_[0] == 'черный') * (inputs_[1] == 'череп' or inputs_[1] == '')
+
+toprint = "Осторожно пираты!" * (boolval) + "Корабль не опасен!" * (not boolval)
+
+print(toprint)

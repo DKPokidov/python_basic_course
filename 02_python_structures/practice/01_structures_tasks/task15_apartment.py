@@ -13,3 +13,25 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+
+def check_flat():
+    inputs = []
+    for i in range(4):
+        try:
+            k = input()
+            inputs.append(int(k))
+        except ValueError:
+            inputs.append(str(k))
+
+
+    return (
+        ((inputs[0] >= 120) or ((inputs[0] >= 70) and (inputs[1] == 'Центральный'))) and (inputs[2] >= 20) and (inputs[3] == 'да')
+    )
+
+def main():
+    b1 = check_flat()
+    toprint = "Квартира не подходит" * (not b1) + "Квартира подходит" * (b1)
+    print(toprint)
+
+
+main()
