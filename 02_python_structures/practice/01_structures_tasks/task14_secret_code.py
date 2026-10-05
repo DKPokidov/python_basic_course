@@ -21,11 +21,11 @@ lower = set("abcdefghijklmnopqrstuvwxyz")
 digits = set("0123456789")
 special = set("#@#$%^&*")
 print(
-    len(code) == 8 and
-    bool(set(code) & upper) and
-    bool(set(code) & lower) and
-    bool(set(code) & digits) and
-    len(set(code) & special) == 1 and
-    code[0] not in special and
-    code[-1] not in special
+    len(code) == 8
+    and bool(set(code) & upper)
+    and bool(set(code) & lower)
+    and bool(set(code) & digits)
+    and len(set(code) & special) == 1
+    and code[0] not in special
+    and code[-1] not in special
 )
