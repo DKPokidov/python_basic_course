@@ -22,3 +22,11 @@ routes = {
     2: ("Беговая", "Новокрестовская"),
     3: ("Сенная площадь", "Московская"),
 }
+
+route = int(input())
+if route in routes.keys():
+    point_a, point_b = routes[route]
+    print(f"Маршрут {route}: от Станция метро «{point_a}» до Станция метро «{point_b}»")
+else:
+    print("Маршрут не найден")
+
