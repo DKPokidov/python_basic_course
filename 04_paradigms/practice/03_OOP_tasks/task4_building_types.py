@@ -55,6 +55,7 @@ class ResidentialBuilding(Building):
     def get_info(self):
         return f"Здание {self.name}, {self.type}, построено в {self.year_built}, высота {self.height} м, квартир: {self.number_of_apartments}"
 
+
 class OfficeBuilding(Building):
     number_of_floors = 0
 
@@ -67,6 +68,7 @@ class OfficeBuilding(Building):
 
     def get_info(self):
         return f"Здание {self.name}, {self.type}, построено в {self.year_built}, высота {self.height} м, этажей: {self.number_of_floors}"
+
 
 class ShoppingCenter(Building):
     number_of_shops = 0
