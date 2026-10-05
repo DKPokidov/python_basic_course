@@ -20,4 +20,10 @@
 
 
 def services_stats(data):
-    pass
+    uniqueServices = {}
+    for object_ in data["objects"]:
+        if object_["type"] not in uniqueServices:
+            uniqueServices.__setitem__(object_["type"], set())
+        uniqueServices[object_["type"]] = uniqueServices[object_["type"]].union(set(object_["services"]))
+
+    return uniqueServices

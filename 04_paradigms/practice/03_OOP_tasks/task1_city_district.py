@@ -19,17 +19,28 @@ name, area_ha, population, building_types (список строк, по умо�
 
 
 class CityDistrict:
+
+    name = ""
+    area_ha = 0
+    population = 0
+    building_types = []
+
     def __init__(self, name, area_ha, population, building_types=None):
-        pass
+        self.name = name
+        self.area_ha = area_ha
+        self.population = population
+        if building_types is not None:
+            self.building_types.extend(building_types)
 
     def add_building_type(self, type_name):
-        pass
+        if type_name not in self.building_types:
+            self.building_types.append(type_name)
 
     def get_density(self):
-        pass
+        return self.population / self.area_ha
 
     def has_green_space(self):
-        pass
+        return True if "green" in self.building_types else False
 
     def __str__(self):
-        pass
+        return f"Район: {self.name}, площадь: {self.area_ha} га, население: {self.population} чел."
