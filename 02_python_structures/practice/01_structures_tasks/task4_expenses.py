@@ -23,3 +23,17 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+list_expenses = [] 
+
+for k in range(len(categories)):
+   list_expenses.append(
+      float(input(f'Введите сумму траты {k + 1}: '))
+   )
+
+max_t = max(enumerate(list_expenses), key=(lambda x: x[1]))
+
+print(f'Общая сумма: {sum(list_expenses)}')
+
+print(
+   f"Самая большая трата: {max_t[1]} {categories[max_t[0]]}"
+)

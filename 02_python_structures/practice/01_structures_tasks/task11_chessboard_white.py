@@ -8,3 +8,17 @@
 Программа получает на вход целые числа x, y в диапазоне от 1 до 8 и проверяет
 истинность высказывания «это поле белое».
 """
+
+
+def check_check(x, y):
+
+    if x not in range(1, 9) or y not in range(1, 9):
+        raise ValueError(f"нету  клеток {(x, y)} на шахматной доске")
+    
+    return (x + y) % 2 == 1
+
+
+print(
+    f'Поле белое: {check_check(int(input()), int(input()))}'
+)
+

@@ -9,3 +9,10 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+
+def check_adress(house_num, st_name, index):
+    return (
+        (int(house_num) > 0) and len(set(st_name) & set('0123456789')) == 0 and len(index) == 6
+    )
+
+print(check_adress(input(), input(), input()))

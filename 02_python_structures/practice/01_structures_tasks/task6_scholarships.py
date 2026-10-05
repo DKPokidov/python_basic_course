@@ -14,3 +14,18 @@
 """
 
 students = {"Иван": 15000, "Мария": 18000, "Петр": 12000, "Анна": 12000, "Ольга": 15000}
+
+
+print(
+    f"Максимальная стипендия: {(max(students.items(), key=(lambda x: x[1])))[1]}"
+    )
+
+print(
+    f"Минимальная стипендия: {(min(students.items(), key=(lambda x: x[1])))[1]}"
+)
+
+print(f'Общая сумма стипендий: {sum(map(lambda x: int(x[1]), students.items()))}')
+
+print(set(map(lambda x: x[1], students.items())))
+
+print(list(sorted(map(lambda x: x[0], students.items()))))

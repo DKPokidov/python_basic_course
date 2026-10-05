@@ -19,3 +19,15 @@ buildings = (
     {"id": 4, "площадь": 1000, "этажи": 4, "тип": "жилой"},
     {"id": 5, "площадь": 900, "этажи": 5, "тип": "жилой"},
 )
+
+def checkbuilding(x: dict[str:any]):
+    return (x['тип'] == 'жилой') and x['этажи'] >= 4 and x['площадь'] >= 1000
+
+print(list(map(
+        lambda x: x['id'],
+        filter(
+        checkbuilding, buildings
+        )
+        )
+    )
+) 

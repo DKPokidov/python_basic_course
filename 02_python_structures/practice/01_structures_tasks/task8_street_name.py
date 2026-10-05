@@ -8,3 +8,8 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+
+def check_name(name: str):
+    return len(name) <= 30 and name != ''
+
+print(check_name(str(input())))
