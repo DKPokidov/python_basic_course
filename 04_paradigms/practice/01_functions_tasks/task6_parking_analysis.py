@@ -20,3 +20,16 @@
    * строки: «Парковка_1;100;90;90.0» (занятость_% — число с плавающей точкой);
    * заголовок записывается всегда, даже если подходящих парковок нет.
 """
+
+inputFile = open("parkings.txt", "r")
+resultFile = open("high_load_parkings.txt", "w")
+resultFile.write("название_парковки;вместимость;занято;занятость_%\n")
+
+for line in inputFile.readlines()[1:]:
+   lineData = line.split(";")
+   fullPercentage = int(lineData[2]) / int(lineData[1]) * 100
+   if fullPercentage > 80:
+      resultFile.write(line[:-1] + f";{fullPercentage}\n")
+
+inputFile.close()
+resultFile.close()

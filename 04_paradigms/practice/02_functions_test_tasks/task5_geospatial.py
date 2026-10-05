@@ -21,4 +21,11 @@
 
 
 def find_least_served_districts(data, n=3):
-    pass
+    districtDensities = {}
+    for object_ in data["objects"]:
+        if object_["district"] not in districtDensities: districtDensities.__setitem__(object_["district"], 0)
+        districtDensities[object_["district"]] += 1
+    districtDensities = dict(sorted(districtDensities.items()), key=lambda item: item[1])
+
+    return list(districtDensities.items())[:n]
+

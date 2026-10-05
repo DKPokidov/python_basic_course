@@ -13,14 +13,37 @@
 числа закончатся — исключение StopIteration. Реализуйте методы __iter__(),
 __next__() и __init__(self, start, end).
 """
+import math
 
+def isPrime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    limitOfCheck = int(math.sqrt(n)) + 1
+    for i in range(3, limitOfCheck, 2):
+        if n % i == 0:
+            return False
+
+    return True
 
 class PrimeIterator:
+    cursor = 0
+    end = 0
     def __init__(self, start, end):
-        pass
+        self.cursor = start
+        self.end = end
 
     def __iter__(self):
-        pass
+        return self
 
     def __next__(self):
-        pass
+        while self.cursor < self.end:
+            if isPrime(self.cursor):
+                self.cursor += 1
+                return self.cursor - 1
+            self.cursor += 1
+        raise StopIteration

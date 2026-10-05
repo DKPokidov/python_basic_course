@@ -17,14 +17,21 @@
 
 
 class District:
+    buildings = []
+    totalHeight = 0
     def __init__(self):
         pass
 
     def add_building(self, building):
-        pass
+        self.buildings.append(building)
+        self.totalHeight += building.height
 
     def get_total_height(self):
-        pass
+        return self.totalHeight
 
     def get_buildings_by_type(self, building_type):
-        pass
+        nameList = []
+        for building in self.buildings:
+            if building.type == building_type:
+                nameList.append(building.name)
+        return nameList
