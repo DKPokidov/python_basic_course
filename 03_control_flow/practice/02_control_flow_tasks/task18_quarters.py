@@ -37,3 +37,12 @@ quarters = [
     {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
     {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
 ]
+for i in quarters:
+    district = i["district"]
+    area_ha = i["area_ha"]
+    houses = i["houses"]
+    green = i["green_area_ha"]
+    school = i["school_dist_m"]
+    f = (houses/area_ha <= 8) and (green/area_ha >= 0.2) and (school <= 800)
+    answer = ["Не соответствует", "Соответствует"][f]
+    print(f"{district}: {answer}")

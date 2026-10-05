@@ -31,3 +31,13 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+categories = ["Высокая загруженность", "Средняя загруженность", "Низкая загруженность"]
+for i in stops:
+    f = 1
+    name, entering, exiting = i
+    delta = entering - exiting
+    if delta > 50:
+        f = 0
+    elif delta < 10:
+        f = 2
+    print(f"{name}: {delta}, {categories[f]}")
