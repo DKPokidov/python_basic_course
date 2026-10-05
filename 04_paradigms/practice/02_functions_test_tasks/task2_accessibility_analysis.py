@@ -22,7 +22,9 @@
 def accessibility_analysis(data):
     accessibleDistricts = {}
     for object_ in data["objects"]:
-        if object_["district"] not in accessibleDistricts: accessibleDistricts.__setitem__(object_["district"], 0)
-        if object_["accessibility"]["ramp"]: accessibleDistricts[object_["district"]] += 1
+        if object_["district"] not in accessibleDistricts:
+            accessibleDistricts.__setitem__(object_["district"], 0)
+        if object_["accessibility"]["ramp"]:
+            accessibleDistricts[object_["district"]] += 1
 
     return accessibleDistricts

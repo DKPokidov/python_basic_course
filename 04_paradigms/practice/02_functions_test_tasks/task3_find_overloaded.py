@@ -23,6 +23,8 @@ capacity > threshold. Возвращает список строк "{name} ({cap
 def find_overloaded(data, threshold):
     overloadedList = []
     for object_ in data["objects"]:
-        if object_["capacity"] > threshold:
-            overloadedList.append(f"{object_["name"]} ({object_["capacity"]} мест)")
+        capacity = object_["capacity"]
+        if capacity > threshold:
+            name = object_["name"]
+            overloadedList.append(f"{name} ({capacity} мест)")
     return overloadedList

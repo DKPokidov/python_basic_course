@@ -15,6 +15,7 @@ __next__() и __init__(self, start, end).
 """
 import math
 
+
 def isPrime(n):
     if n < 2:
         return False
@@ -30,9 +31,11 @@ def isPrime(n):
 
     return True
 
+
 class PrimeIterator:
     cursor = 0
     end = 0
+    
     def __init__(self, start, end):
         self.cursor = start
         self.end = end

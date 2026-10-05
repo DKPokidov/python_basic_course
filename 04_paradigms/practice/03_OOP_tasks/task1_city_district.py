@@ -29,7 +29,8 @@ class CityDistrict:
         self.name = name
         self.area_ha = area_ha
         self.population = population
-        if building_types is not None: self.building_types.extend(building_types)
+        if building_types is not None:
+            self.building_types.extend(building_types)
 
     def add_building_type(self, type_name):
         if type_name not in self.building_types:

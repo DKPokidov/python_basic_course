@@ -23,7 +23,6 @@
   указанной группы в порядке зачисления.
 """
 
-
 class Student:
     name = ""
     group = ""
@@ -61,5 +60,5 @@ class University:
         for student in self.students:
             if student.group == group_name:
                 studentList.append(student)
-        
+
         return studentList

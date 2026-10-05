@@ -30,7 +30,7 @@ def analyze_grades(data):
             studentGrades[i[0]].append(i[2])
         else:
             studentGrades[i[0]] = [i[2]]
-        
+
         if courseGrades.get(i[1]) is not None:
             courseGrades[i[1]].append(i[2])
         else:
@@ -40,7 +40,3 @@ def analyze_grades(data):
     averageCourseGrades = {key: sum(values) / len(values) for key, values in courseGrades.items()}
 
     return {"students_avg": averageStudentGrades, "best_course": max(averageCourseGrades, key=averageCourseGrades.get)}
-
-# inputData = [("Ivan", "ds", 2), ("Ivan", "da", 5), ("Sasha", "ds", 1)]
-
-# print(analyze_grades(inputData))

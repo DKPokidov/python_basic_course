@@ -19,6 +19,7 @@
 class District:
     buildings = []
     totalHeight = 0
+
     def __init__(self):
         pass
 

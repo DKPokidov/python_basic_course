@@ -15,8 +15,8 @@
 Используйте yield для каждого измерения.
 """
 
-
 import random
+
 
 def noisy_measurements(base_values, noise_level=0.1):
     for value in base_values:
