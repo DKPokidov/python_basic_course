@@ -19,3 +19,12 @@
 
 Например: «Район A: Высокий уровень озеленения», «Район B: Средний уровень».
 """
+
+neighbourhoods = {"Район A": 150, "Район B": 80, "Район C": 200}
+for name, square in neighbourhoods.items():
+    if square >= 150:
+        print(f"{name}: Высокий уровень озеленения")
+    elif square >= 50:
+        print(f"{name}: Средний уровень")
+    else:
+        print(f"{name}: Низкий уровень")
