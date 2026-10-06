@@ -13,3 +13,17 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+area = int(input())
+district = input().strip()
+kitchen = int(input())
+balcony = input().strip().lower()
+
+area_ok = area >= 120 or (area >= 70 and district == 'Центральный')
+suitable = area_ok and kitchen >= 20 and balcony == 'да'
+
+messages = {
+    True: 'Квартира подходит',
+    False: 'Квартира не подходит',
+}
+
+print(messages[suitable])

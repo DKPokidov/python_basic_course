@@ -31,3 +31,12 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+for stop, incoming, outgoing in stops:
+    difference = incoming - outgoing 
+    if difference > 50:
+        category = 'Высокая загруженность'
+    elif 10 <= difference <= 50:
+        category = 'Средняя загруженность'
+    else:
+        category = 'Низкая загруженность'
+    print(f'{stop}: {difference}, {category}')
