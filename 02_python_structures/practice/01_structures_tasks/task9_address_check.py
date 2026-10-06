@@ -9,3 +9,11 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+num = str(input('Введите номер дома: '))
+name = str(input('Введите улицу: '))
+index = str(input('Введите индекс: '))
+
+if int(num) > 0 and  len(index) == 6 and not any(i in '0123456789' for i in name ): 
+    print('True')
+else:
+    print('False')
