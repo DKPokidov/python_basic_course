@@ -1,13 +1,13 @@
 # tests/test_02_python_structures/test_task4_expenses.py
 """
-Тесты для задания 4: Расходы студента
+Тесты для задания 4: Анализ студенческих бюджетов
 """
 
 from tests.test_02_python_structures.conftest import run_student_code, get_module03_file
 
 
 class TestTask4Expenses:
-    """Тесты для задания 4: Расходы студента"""
+    """Тесты для задания 4: Анализ студенческих бюджетов"""
 
     student_file = get_module03_file('task4_expenses.py')
 

@@ -1,13 +1,13 @@
 # tests/test_02_python_structures/test_task3_coffee_shops.py
 """
-Тесты для задания 3: Рейтинг кофеен
+Тесты для задания 3: Рейтинг кофеен вокруг университета
 """
 
 from tests.test_02_python_structures.conftest import run_student_code, get_module03_file
 
 
 class TestTask3CoffeeShops:
-    """Тесты для задания 3: Рейтинг кофеен"""
+    """Тесты для задания 3: Рейтинг кофеен вокруг университета"""
 
     student_file = get_module03_file('task3_coffee_shops.py')
 
