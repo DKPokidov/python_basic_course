@@ -11,3 +11,10 @@
 Введите трёхзначное число: 789
 7.8.9
 """
+
+print("Введите трёхзначное число: ")
+number = input()
+hundreds = number[0]
+tens = number[1]
+units = number[2]
+print(f"{hundreds}.{tens}.{units}")
