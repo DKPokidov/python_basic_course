@@ -21,6 +21,3 @@ length = float(input("Введите длину сквера (м): "))
 width = float(input("Введите ширину сквера (м): "))
 S = length * width
 print(f"Площадь озеленения: {S} м2")
-
-
-
