@@ -31,3 +31,11 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+for stop, incoming, outcoming in stops:
+    passenger_flow = incoming - outcoming
+    if passenger_flow > 50:
+        print(f"{stop}: {passenger_flow}, Высокая загруженность")
+    elif 10 <= passenger_flow <= 50:
+        print(f"{stop}: {passenger_flow}, Средняя загруженность")
+    else:
+        print(f"{stop}: {passenger_flow}, Низкая загруженность")

@@ -32,8 +32,41 @@
 """
 
 quarters = [
-    {"district": "Северный", "area_ha": 50, "houses": 300, "green_area_ha": 12.0, "school_dist_m": 600},
-    {"district": "Южный", "area_ha": 25, "houses": 250, "green_area_ha": 4.0, "school_dist_m": 500},
-    {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
-    {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
+    {
+        "district": "Северный",
+        "area_ha": 50,
+        "houses": 300,
+        "green_area_ha": 12.0,
+        "school_dist_m": 600,
+    },
+    {
+        "district": "Южный",
+        "area_ha": 25,
+        "houses": 250,
+        "green_area_ha": 4.0,
+        "school_dist_m": 500,
+    },
+    {
+        "district": "Центральный",
+        "area_ha": 30,
+        "houses": 210,
+        "green_area_ha": 7.0,
+        "school_dist_m": 700,
+    },
+    {
+        "district": "Западный",
+        "area_ha": 40,
+        "houses": 240,
+        "green_area_ha": 6.0,
+        "school_dist_m": 1200,
+    },
 ]
+for quarter in quarters:
+    density = quarter["houses"] / quarter["area_ha"]
+    green_area = quarter["green_area_ha"] / quarter["area_ha"] * 100
+    school_dist = quarter["school_dist_m"]
+    quarter_name = quarter["district"]
+    if density <= 8 and green_area >= 20 and school_dist <= 800:
+        print(f"{quarter_name}: Соответствует")
+    else:
+        print(f"{quarter_name}: Не соответствует")
