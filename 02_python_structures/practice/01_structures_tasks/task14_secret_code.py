@@ -16,7 +16,7 @@
 
 code = input('Введите код доступа: ')
 special = '#@$%^&*'
-correct = len(code) == 8 and any(c.isupper() for c in code) and any(c.islower() for c in code)\
+correct = len(code) == 8 and any(c.isupper() for c in code) and any(c.islower() for c in code) \
       and any(c.isdigit() for c in code) and sum(w in code for w in special) == 1 \
-and (code[0] not in special) and (code[-1] not in special)
+      and (code[0] not in special) and (code[-1] not in special)
 print(correct)

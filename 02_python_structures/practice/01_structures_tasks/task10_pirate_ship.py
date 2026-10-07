@@ -20,4 +20,4 @@ pict = input('Рисунок на флаге: ')
 pirat = color == 'черный' and (pict == 'череп' or pict == '')
 
 message = ['Корабль не опасен!', 'Осторожно пираты!']
-print(message[pirate])
+print(message[pirat])

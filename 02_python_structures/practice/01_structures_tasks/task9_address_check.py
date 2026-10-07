@@ -12,5 +12,5 @@
 number = input('Введите номер дома: ')
 street = input('Введите название улицы: ')
 ind = input('Введите индекс дома: ')
-print(str(number).isdigit() and int(number) > 0 and all(str(i) not in street for i in range(0,10)) and len(ind) == 6 \
-      and ind.isdigit())
+print(str(number).isdigit() and int(number) > 0 and all(str(i) not in street for i in range(0, 10)) \
+       and len(ind) == 6 and ind.isdigit())
