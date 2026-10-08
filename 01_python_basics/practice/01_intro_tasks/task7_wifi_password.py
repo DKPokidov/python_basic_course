@@ -11,3 +11,9 @@
 Введите трёхзначное число: 789
 7.8.9
 """
+
+number = int(input('Введите трёхзначное число: '))
+n0 = str(number)[0]
+n1 = str(number)[1]
+n2 = str(number)[2]
+print(f'{n0}.{n1}.{n2}')

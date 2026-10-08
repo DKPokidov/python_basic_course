@@ -23,3 +23,16 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+money = (
+    float(input('Введите сумму траты 1: ')), 
+    float(input('Введите сумму траты 2: ')), 
+    float(input('Введите сумму траты 3: ')), 
+    float(input('Введите сумму траты 4: '))
+)
+
+summa = sum(money)
+print(f'Общая сумма: {summa}')
+big_tr = max(money)
+id = money.index(big_tr)
+category = categories[id]
+print(f'Самая большая трата: {big_tr} {category}')
