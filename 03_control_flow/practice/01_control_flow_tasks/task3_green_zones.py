@@ -32,4 +32,4 @@ for district, area in districts.items():
         print(f'{district}: Средний уровень')
     else:
         print(f'{district}: Низкий уровень')
-        
+  

@@ -35,4 +35,3 @@ for district in districts:
     if density > 5000:
         answer.append(district[0])
 print('Плотно заселённые районы:', answer)
-    

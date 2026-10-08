@@ -33,4 +33,3 @@ for district, areas in district_green_areas.items():
     for i in range(len(areas)):
         sum_area += areas[i]
     print(f'{district}: {sum_area} га')
-

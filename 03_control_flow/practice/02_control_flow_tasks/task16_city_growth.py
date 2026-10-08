@@ -26,12 +26,12 @@
 
 people = int(input('Введите население на начало 2024 года (в тыс. чел.): '))
 end = 0
-for year in range(2025,2055):
-   print(f'Год {year}: население {int(people * 1.05)} тыс. чел.')
-   people = int(people * 1.05)
-   end = year
-   if people >= 1000:
-      print(f'Город достиг миллиона жителей в {year} году!')
-      break
+for year in range(2025, 2055):
+    print(f'Год {year}: население {int(people * 1.05)} тыс. чел.')
+    people = int(people * 1.05)
+    end = year
+    if people >= 1000:
+        print(f'Город достиг миллиона жителей в {year} году!')
+        break
 if end == 2054:
-   print('За 30 лет город не достиг миллиона жителей.')
+    print('За 30 лет город не достиг миллиона жителей.')
