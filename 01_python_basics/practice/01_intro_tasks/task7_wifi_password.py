@@ -11,3 +11,8 @@
 Введите трёхзначное число: 789
 7.8.9
 """
+chislo=int(input('Введите трёхзначное число:'))
+sot=chislo//100
+des=(chislo//10)%10
+ed=(chislo%100)%10
+print(f'{sot}.{des}.{ed}')
