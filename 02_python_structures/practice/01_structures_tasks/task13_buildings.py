@@ -20,11 +20,16 @@ buildings = (
     {"id": 5, "площадь": 900, "этажи": 5, "тип": "жилой"},
 )
 
-duild = (
-    [buildings[0]['id']] * (buildings[0]['площадь'] >= 1000 and buildings[0]['этажи'] >= 4 and buildings[0]['тип'] == 'жилой') +
-    [buildings[1]['id']] * (buildings[1]['площадь'] >= 1000 and buildings[1]['этажи'] >= 4 and buildings[1]['тип'] == 'жилой') +
-    [buildings[2]['id']] * (buildings[2]['площадь'] >= 1000 and buildings[2]['этажи'] >= 4 and buildings[2]['тип'] == 'жилой') +
-    [buildings[3]['id']] * (buildings[3]['площадь'] >= 1000 and buildings[3]['этажи'] >= 4 and buildings[3]['тип'] == 'жилой') +
-    [buildings[4]['id']] * (buildings[4]['площадь'] >= 1000 and buildings[4]['этажи'] >= 4 and buildings[4]['тип'] == 'жилой')   
+a, b, c, d, e = buildings[:5]
+
+duild = sum(
+    (
+        [a["id"]] * (a["площадь"] >= 1000 and a["этажи"] >= 4 and a["тип"] == "жилой"),
+        [b["id"]] * (b["площадь"] >= 1000 and b["этажи"] >= 4 and b["тип"] == "жилой"),
+        [c["id"]] * (c["площадь"] >= 1000 and c["этажи"] >= 4 and c["тип"] == "жилой"),
+        [d["id"]] * (d["площадь"] >= 1000 and d["этажи"] >= 4 and d["тип"] == "жилой"),
+        [e["id"]] * (e["площадь"] >= 1000 and e["этажи"] >= 4 and e["тип"] == "жилой"),
+    ),
+    [],
 )
 print(duild)
