@@ -29,3 +29,9 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+answer = []
+for district in districts:
+    density = (district[2] * 1000) / district[1]
+    if density > 5000:
+        answer.append(district[0])
+print('Плотно заселённые районы:', answer)
