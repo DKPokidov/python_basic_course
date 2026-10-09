@@ -13,3 +13,10 @@
 
 Внимание: оператор If использовать запрещается.
 """
+color = input('введите цвет флага: ')
+img = input('что нарисовано? ')
+cherni = (color == 'черный') or (color == 'чёрный')
+cherep = (img == 'череп') or (img == '')
+pirat = cherni and cherep
+alarm = "Осторожно пираты!" * pirat + "Корабль не опасен!" * (not pirat)
+print(alarm)

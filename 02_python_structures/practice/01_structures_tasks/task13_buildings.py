@@ -19,3 +19,12 @@ buildings = (
     {"id": 4, "площадь": 1000, "этажи": 4, "тип": "жилой"},
     {"id": 5, "площадь": 900, "этажи": 5, "тип": "жилой"},
 )
+
+duild = (
+    [buildings[0]['id']] * (buildings[0]['площадь'] >= 1000 and buildings[0]['этажи'] >= 4 and buildings[0]['тип'] == 'жилой') +
+    [buildings[1]['id']] * (buildings[1]['площадь'] >= 1000 and buildings[1]['этажи'] >= 4 and buildings[1]['тип'] == 'жилой') +
+    [buildings[2]['id']] * (buildings[2]['площадь'] >= 1000 and buildings[2]['этажи'] >= 4 and buildings[2]['тип'] == 'жилой') +
+    [buildings[3]['id']] * (buildings[3]['площадь'] >= 1000 and buildings[3]['этажи'] >= 4 and buildings[3]['тип'] == 'жилой') +
+    [buildings[4]['id']] * (buildings[4]['площадь'] >= 1000 and buildings[4]['этажи'] >= 4 and buildings[4]['тип'] == 'жилой')   
+)
+print(duild)
