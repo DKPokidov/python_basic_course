@@ -26,9 +26,13 @@
 * специальный символ не может стоять на первой или последней позиции.
 """
 code = input('Введите код: ')
-print(len(code) == 8 and any(dig in code for dig in 'QWERTYUIOPLKJHGFDSAZXCVBNM')
-       and any(dig in code for dig in 'qwertyuioplkjhgfdsazxcvbnm')
-         and any(dig in code for dig in '0123456789')
-           and sum(code.count(dig) for dig in '#@$%^&*') == 1
-             and code[0] not in '#@$%^&*' and code[-1] not in '#@$%^&*')
-     
+cap_letters = set('QWERTYUIOPASDFGHJKLZXCVBNM')
+low_letters = set('qwertyuiopasdfghjklzxcvbnm')
+special_symbols = set('#@#$%^&*;')
+numbers = set('123456789')
+
+print(
+    len(code) == 8 and bool(set(code) & cap_letters) and bool(set(code) & low_letters) and bool(set(code) & numbers) and len(set(code) & special_symbols) == 1
+    and code[0] not in special_symbols and code[-1] not in special_symbols
+    )
+
