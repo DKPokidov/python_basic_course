@@ -27,4 +27,3 @@ is_balcony_ok = balcony == 'да'
 condition = is_district_ok and is_kitchen_ok and is_balcony_ok
 
 print(is_apart_good[condition])
-
