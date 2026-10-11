@@ -9,3 +9,10 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+
+num_house = int(input("Номер дома"))
+street_name = input("Название улицы")
+indx_house = input("Индекс дома")
+print(
+    num_house > 0 and all(char not in "0123456789" for char in street_name) and len(indx_house) == 6 and indx_house.isdigit()
+)

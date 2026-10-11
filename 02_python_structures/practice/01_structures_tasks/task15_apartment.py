@@ -13,3 +13,13 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+
+surf_apart = int(input("Площадь квартиры"))
+district = input("Район")
+surf_kitchen = int(input("Площадь кухни"))
+balcony = input("Балкон")
+
+result = (
+    (surf_apart >= 120 or (surf_apart >= 70 and district == "Центральный")) and surf_kitchen >= 20 and balcony == "да")
+
+print({True: "Квартира подходит", False: "Квартира не подходит"}[result])

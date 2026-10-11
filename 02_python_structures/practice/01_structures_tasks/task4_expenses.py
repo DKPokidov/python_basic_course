@@ -23,3 +23,11 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+producti = float(input("Введите сумму траты 1:"))
+transport = float(input("Введите сумму траты 2:"))
+razvlekuha = float(input("Введите сумму траты 3:"))
+svyaz = float(input("Введите сумму траты 4:"))
+trati = (producti, transport, razvlekuha, svyaz)
+biggest = trati.index(max(trati))
+print(f"Общая сумма: {sum(trati)}")
+print(f"Самая большая трата: {max(trati)} {categories[biggest]}")

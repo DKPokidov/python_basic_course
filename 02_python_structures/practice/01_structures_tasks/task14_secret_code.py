@@ -13,3 +13,13 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+
+# проверяем условия через сравнения множеств, вроде именно такую реализацию тут и ожидают:)
+code = input()
+upper = set("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+lower = set("abcdefghijklmnopqrstuvwxyz")
+digits = set("0123456789")
+special = set("#@#$%^&*")
+print(
+    len(code) == 8 and bool(set(code) & upper) and bool(set(code) & lower) and bool(set(code) & digits) and len(set(code) & special) == 1 and code[0] not in special and code[-1] not in special
+)
