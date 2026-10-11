@@ -13,3 +13,12 @@
 
 Внимание: оператор If использовать запрещается.
 """
+pirate_ships = {
+    True : 'Осторожно пираты!',
+    False : 'Корабль не опасен!'
+}
+color = str(input('Введите цвет флага: '))
+art = str(input('Введите рисунок на флаге: '))
+
+danger = (color == 'черный' and (art == '' or art == 'череп'))
+print(pirate_ships.get(danger))
