@@ -16,7 +16,7 @@
 flag_color = input('Введите цвет флага: ')
 flag_picture = input('Введите рисунок на флаге: ')
 
-pirate = (flag_color =='черный') and (flag_picture == 'череп' or '')
+pirate = (flag_color == 'черный') and (flag_picture == 'череп' or flag_picture == '')
 
-answer = ['Корабль не опасен!', 'Осторожно, пираты!']
+answer = ['Корабль не опасен!', 'Осторожно пираты!']
 print(answer[pirate])

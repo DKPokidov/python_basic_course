@@ -13,8 +13,11 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
-square, district, kitchen, balcony = int(input('Введите площадь квартиры: ')), input('Введите район: ').lower(), int(input('Введите площадь кухни: ')), input('Есть ли балкон: ')
-lst = ['Квартира не подходит', 'Квартира подходит']
-ind = (((square > 120 and district != 'центральный') or (square > 70 and district == 'центральный'))
-        and kitchen >= 20 and balcony == 'да')
-print(lst[ind])
+square = int(input('Введите площадь квартиры: '))
+district = input('Введите район: ')
+kitchen = int(input('Введите площадь кухни: '))
+balcony = input('Есть ли балкон? ')
+is_apart_good = ['Квартира не подходит', 'Квартира подходит']
+condition = (((square > 120 and district != 'центральный') or (square > 70 and district == 'центральный')) and
+               kitchen >= 20 and balcony == 'да')
+print(is_apart_good[condition])

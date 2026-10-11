@@ -17,4 +17,3 @@ benches.append('Банка просветления у Кронверка')
 bench = ', '.join(benches)
 print(bench)
 print(len(benches))
-

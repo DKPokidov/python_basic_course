@@ -32,6 +32,6 @@ sum = products + transport + entertainment + connection
 categories_dict = {
    'продукты': products, 'транспорт': transport, 'развлечения': entertainment, 'связь': connection 
 }
-max_expense = max(categories_dict, key = categories_dict.get)
+max_expense = max(categories_dict, key=categories_dict.get)
 print(f'Общая сумма: {sum}')
 print(f'Самая большая трата: {categories_dict.get(max_expense)} {max_expense}')

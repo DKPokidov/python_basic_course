@@ -20,4 +20,3 @@ only_today_finds = today.difference(yesterday)
 print(f'Находили оба дня: {both_days_finds}')
 print(f'Только сегодня: {only_today_finds}')
 print(f'Всего уникальных моделей: {len(unique_models)}')
-
