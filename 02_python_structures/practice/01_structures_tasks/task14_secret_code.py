@@ -29,14 +29,9 @@ code = input('Введите код: ')
 cap_letters = set('QWERTYUIOPASDFGHJKLZXCVBNM')
 low_letters = set('qwertyuiopasdfghjklzxcvbnm')
 special_symbols = set('#@#$%^&*;')
-numbers = set('123456789')
+numbers = set('1234567890')
 
-print(
-    len(code) == 8 and
-    bool(set(code) & cap_letters) and
-    bool(set(code) & low_letters) and
-    bool(set(code) & numbers) and
-    len(set(code) & special_symbols) == 1 and
-    code[0] not in special_symbols and
-    code[-1] not in special_symbols
-)
+condition = len(code) == 8 and bool(set(code) & cap_letters) and bool(set(code) & low_letters) and bool(set(code) & numbers) and len(set(code) & special_symbols) == 1 and code[0] not in special_symbols and code[-1] not in special_symbols
+
+print(condition)
+

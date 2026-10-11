@@ -40,4 +40,3 @@ categories_dict = {
 max_expense = max(categories_dict, key=categories_dict.get)
 print(f'Общая сумма: {total_sum}')
 print(f'Самая большая трата: {categories_dict.get(max_expense)} {max_expense}')
-
