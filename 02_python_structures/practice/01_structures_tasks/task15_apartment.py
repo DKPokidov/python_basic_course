@@ -18,6 +18,8 @@ district = input('Введите район: ')
 kitchen = int(input('Введите площадь кухни: '))
 balcony = input('Есть ли балкон? ')
 is_apart_good = ['Квартира не подходит', 'Квартира подходит']
-condition = (((square > 120 and district != 'центральный') or (square > 70 and district == 'центральный')) and
-               kitchen >= 20 and balcony == 'да')
+condition = (((square > 120 and district != 'центральный')
+              or (square > 70 and district == 'центральный'))
+              and kitchen >= 20
+              and balcony == 'да')
 print(is_apart_good[condition])
