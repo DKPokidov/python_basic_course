@@ -30,6 +30,7 @@
 place_a = int(input('Введите координату дома A: '))
 place_b = int(input('Введите координату дома B: '))
 dist = abs(place_a-place_b)
+print(f'Расстояние: {dist}')
 if dist%3==0:
     print('да')
 else: 
