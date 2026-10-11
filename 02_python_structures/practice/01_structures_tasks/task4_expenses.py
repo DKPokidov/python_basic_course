@@ -23,3 +23,12 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+spend = tuple(categories)
+spend1 = float(input('Введите сумму траты 1: '))
+spend2 = float(input('Введите сумму траты 2: '))
+spend3 = float(input('Введите сумму траты 3: '))
+spend4 = float(input('Введите сумму траты 4: '))
+spends = (spend1, spend2, spend3, spend4)
+
+print(f'Общая сумма: {sum(spends)}')
+print(f"Самая большая трата: {max(spends)} {categories[spends.index(max(spends))]}")

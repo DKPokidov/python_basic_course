@@ -12,3 +12,9 @@
 
 yesterday = {"беспроводные Sony", "AirPods", "JBL"}
 today = {"беспроводные Sony", "Samsung Buds", "старые советские"}
+whole = yesterday | today
+both = yesterday & today
+only = today - yesterday
+print(f"Находили оба дня: {', '.join(both)}")
+print(f'Только сегодня: {", ".join(only)}')
+print(f'Всего уникальных моделей: {len(whole)}')

@@ -13,3 +13,19 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+cod = input('введите код ')
+
+cifru = '0' in cod or '1' in cod or '2' in cod or '3' in cod or '4' in cod or '5' in cod or '6' in cod or '7' in cod or '8' in cod or '9' in cod
+zaglav = cod != cod.lower()
+stroch = cod != cod.upper()
+
+specc = cod.count('#') + cod.count('@') + cod.count('%') + cod.count('^') + cod.count('$') + cod.count('&') + cod.count('*')
+
+special = ('#', '@', '$', '%', '^', '&', '*')
+posiciya = not cod.startswith(special) and not cod.endswith(special)
+
+ost = cod.replace('#', '').replace('@', '').replace('$', '').replace('%', '').replace('^', '').replace('&', '').replace('*', '')
+
+pravilno = len(cod) == 8 and cifru and zaglav and stroch and specc == 1 and posiciya and ost.isalnum() and cod.isascii()
+
+print(pravilno)
