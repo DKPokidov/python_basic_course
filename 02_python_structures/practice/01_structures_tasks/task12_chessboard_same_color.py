@@ -15,4 +15,4 @@ y1 = int(input('Введите целое число y1 от 1 до 8: '))
 y2 = int(input('Введите целое число y2 от 1 до 8: '))
 
 is_same_color = (x1 + y1) % 2 == (x2 + y2) % 2
-print(is_same_color)
+print(f'Клетки одинакового цвета: {is_same_color}')

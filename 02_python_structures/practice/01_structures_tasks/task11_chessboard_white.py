@@ -12,4 +12,4 @@ x = int(input('Введите целое число x от 1 до 8: '))
 y = int(input('Введите целое число y от 1 до 8: '))
 
 is_white = (x + y) % 2 != 0
-print(is_white)
+print(f'Поле белое: {is_white}')
