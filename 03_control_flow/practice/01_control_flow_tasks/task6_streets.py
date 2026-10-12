@@ -28,4 +28,4 @@ count = 0
 for i in city_streets:
     if city_streets[i] > 400:
         count += 1
-print(f'Количество городов: {count}')
+print(f"Количество городов: {count}")

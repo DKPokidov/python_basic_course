@@ -18,5 +18,5 @@ floors = int(input('Введите количество этажей '))
 otvet = (
     (zona == 'историческая' and floors <= 5) or (zona == 'новая' and floors <= 20)
 )
-result = ['Превышение нормы!', 'Допустимо']
+result = ['Превышение нормы!', "Допустимо"]
 print(result[otvet])

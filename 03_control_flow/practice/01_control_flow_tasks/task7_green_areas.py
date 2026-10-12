@@ -32,4 +32,4 @@ for i in district_green_areas:
     count = 0
     for j in range(len(district_green_areas[i])):
         count += district_green_areas[i][j]
-    print(f'{i}: {count} га')
+    print(f"{i}: {count} га")

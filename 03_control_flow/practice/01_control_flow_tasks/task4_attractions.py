@@ -28,4 +28,4 @@ if name in attractions:
     shirota, dolgota = attractions[name]
     print(f'Координаты: широта {shirota}, долгота {dolgota}')
 else:
-    print('Достопримечательность не найдена')
+    print("Достопримечательность не найдена")
