@@ -26,7 +26,7 @@ attractions = {
 
 attr = input("Введите название: ")
 coord = attractions.get(attr)
-if coord != None:
+if coord is not None:
     print(f"Координаты: широта {coord[0]}, долгота {coord[1]}")
 else:
     print("Достопримечательность не найдена")
