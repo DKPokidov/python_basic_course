@@ -13,3 +13,16 @@
 
 Внимание: оператор If использовать запрещается.
 """
+
+flagColor, flagSymbol = input("Введите цвет флага: "), input("Введите рисунок на флаге: ")
+
+matchColor = flagColor == "черный"
+matchSymbol = flagSymbol == "" or flagSymbol == "череп"
+
+isPirate = matchColor & matchSymbol
+
+match isPirate:
+    case True:
+        print("Осторожно пираты!")
+    case False:
+        print("Корабль не опасен!")
