@@ -25,10 +25,12 @@
 categories = ("продукты", "транспорт", "развлечения", "связь")
 expenses = ()
 
-for i in range(4):
-    expense = float(input(f"Введите сумму траты {i + 1}: "))
-    expenses += (expense,)
+exp1 = float(input("Введите сумму траты 1: "))
+exp2 = float(input("Введите сумму траты 2: "))
+exp3 = float(input("Введите сумму траты 3: "))
+exp4 = float(input("Введите сумму траты 4: "))
 
+expenses = (exp1, exp2, exp3, exp4)
 total = sum(expenses)
 print(f"Общая сумма: {total}")
 

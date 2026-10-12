@@ -13,17 +13,12 @@ house = input("Введите номер дома: ")
 street = input("Введите название улицы: ")
 index = input("Введите индекс: ")
 
-house_ok = house.isdigit() and int(house) > 0
+num = input("Введите номер дома: ")
+name = input("Введите название улицы: ")
+ind = input("Введите индекс: ")
 
-street_ok = True
-for symbol in street:
-    if symbol.isdigit():
-        street_ok = False
-
-index_ok = len(index) == 6 and index.isdigit()
-
-
-if house_ok and street_ok and index_ok:
-    print("Адрес корректный")
+if int(num) > 0 and  len(ind) == 6 and '0123456789' not in name: 
+    print('True')
 else:
-    print("Адрес некорректный")
+    print('False')
+
