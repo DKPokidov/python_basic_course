@@ -27,3 +27,13 @@
 
 Примечание: расстояние всегда положительное.
 """
+
+import math
+
+aDistance = int(input("координата А: "))
+bDistance = int(input("координата В: "))
+
+a = "да" if (math.fabs(bDistance - aDistance) % 3 == 0) else "нет"
+
+print(f"Расстояние: {(math.fabs(bDistance - aDistance)):01.0f}\n{a}")
+

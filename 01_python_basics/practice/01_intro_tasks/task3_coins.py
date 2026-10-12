@@ -17,3 +17,10 @@
 Сколько монет по 1 копейке? 4
 0 руб. 89 коп.
 """
+
+cent50 = int(input("сколько по 50? "))
+cent10 = int(input("сколько по 10? "))
+cent5 = int(input("сколько по 5? "))
+cent1 = int(input("сколько по 1? "))
+weightedNet = 50 * cent50 + 10 * cent10 + 5 * cent5 + cent1
+print(f"{weightedNet // 100} руб. {weightedNet % 100} коп.") 
