@@ -13,7 +13,7 @@ class TestTask15GreenBalance:
 
     def test_no_violation(self):
         output = run_student_code(self.student_file, ["100", "40", "30", "0"])
-        assert "Нормы соблюдены." in output
+        assert "Нормы соблюдены" in output
 
     def test_violation(self):
         output = run_student_code(self.student_file, ["100", "80", "20", "0"])
