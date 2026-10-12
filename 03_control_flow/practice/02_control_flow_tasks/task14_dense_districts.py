@@ -29,3 +29,8 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+plotno = []
+for i in range(len(districts)):
+    if districts[i][2] / districts[i][1] > 5:
+        plotno.append(districts[i][0])
+print("Плотно заселённые районы:", plotno)
