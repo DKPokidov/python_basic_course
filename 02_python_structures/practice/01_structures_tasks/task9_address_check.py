@@ -9,3 +9,12 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+number = int(input('Введите номер дома: '))
+name = input("Введите название улицы: ")
+ind = input('Введите индекс: ')
+if ((number > 0) and ('0123456789' not in name ) and (len(ind)==6) and ind.isdigit()):
+    print('True')
+else:
+    print('False')
+
+
