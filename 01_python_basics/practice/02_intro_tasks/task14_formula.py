@@ -20,3 +20,7 @@
 
 Примечание: используйте float() для ввода чисел
 """
+znachenie_m =float(input('Введите значение m:'))
+znachenie_n =float(input('Введите значение n:'))
+resultat = (znachenie_m * znachenie_n) / (znachenie_m + znachenie_n) + (znachenie_m - znachenie_n) / (znachenie_m * znachenie_n)
+print(f'Ответ: {resultat}')
