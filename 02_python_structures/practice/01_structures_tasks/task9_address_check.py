@@ -9,3 +9,11 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+number = int(input('Введите номер дома: '))
+street = input('Введите название улицы: ')
+index = input('Введите индекс: ')
+digits = set("0123456789")
+home = number > 0 and not (set(street) & digits) and len(index) == 6
+
+final = {True: "Адрес правильный", False: "Адрес не правильный"}
+print(final[home])
