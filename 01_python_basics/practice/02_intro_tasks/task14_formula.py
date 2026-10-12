@@ -20,3 +20,8 @@
 
 Примечание: используйте float() для ввода чисел
 """
+m = float(input('Введите m: '))
+n = float(input('Введите n: '))
+result = (m * n) / (m + n) + (m - n) / (m * n)
+result = int(result * 1000) / 1000
+print(f'{result:.3f}')

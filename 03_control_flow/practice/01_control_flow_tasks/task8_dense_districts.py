@@ -29,3 +29,10 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+plotno_zaselyonnye = []
+for district, area, population in districts:
+    plotnost = population / area
+    if plotnost > 5:
+        plotno_zaselyonnye.append(district)
+
+print(f'Плотно заселённые районы: {plotno_zaselyonnye}')

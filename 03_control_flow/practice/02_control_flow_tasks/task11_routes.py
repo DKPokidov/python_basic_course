@@ -22,3 +22,13 @@ routes = {
     2: ("Беговая", "Новокрестовская"),
     3: ("Сенная площадь", "Московская"),
 }
+
+route_number = int(input('Введите номер маршрута:'))
+
+if route_number in routes:
+    start, end = routes[route_number]
+    start = f'«{start}»'
+    end = f'«{end}»'
+    print(f'Маршрут {route_number}: от Станция метро {start} до Станция метро {end}')
+else:
+    print('Маршрут не найден')

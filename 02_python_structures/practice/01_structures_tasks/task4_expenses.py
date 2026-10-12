@@ -23,3 +23,17 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+
+pay_1 = float(input())
+pay_2 = float(input())
+pay_3 = float(input())
+pay_4 = float(input())
+
+pays = pay_1, pay_2, pay_3, pay_4
+total = sum(pays)
+max_pay = max(pays)
+index_maxpay = pays.index(max_pay)
+category = categories[index_maxpay]
+
+print(f'Общая сумма: {total}')
+print(f'Самая большая трата: {max_pay} {category}')

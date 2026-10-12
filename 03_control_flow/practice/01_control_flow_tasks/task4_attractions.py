@@ -23,3 +23,11 @@ attractions = {
     "Исаакиевский собор": (59.9339, 30.3138),
     "Казанский собор": (59.9346, 30.3247),
 }
+
+attraction_name = input('Введите название достопримечательности: ')
+
+if attraction_name in attractions:
+    width, length = attractions[attraction_name]
+    print(f'Координаты: широта {width}, долгота {length}')
+else:
+    print('Достопримечательность не найдена')
