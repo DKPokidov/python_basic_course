@@ -31,3 +31,12 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+for name, pass_in, pass_out in stops:
+    flow = pass_in - pass_out
+    if flow > 50:
+        load = "Высокая"
+    elif  flow >= 10 and flow <= 50:
+        load = "Средняя"
+    else:
+        load = "Низкая"
+    print(f"{name}: {flow}, {load} загруженность")

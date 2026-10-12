@@ -13,3 +13,18 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+construct_area = 0 
+
+area = float(input("Введите общую площадь района (в га): "))
+new_construct = float(input("Введите площадь застройки (в га): "))
+while new_construct != 0:
+   construct_area += new_construct
+   green_zone = (area - construct_area) / area * 100
+
+   if green_zone < 30:
+      print("Нарушение нормы зелёных зон!")
+      break 
+   new_construct = float(input("Введите площадь застройки (в га): "))
+else:
+      print("Нормы соблюдены")
+ 

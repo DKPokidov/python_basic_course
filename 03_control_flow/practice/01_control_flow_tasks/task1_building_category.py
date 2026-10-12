@@ -18,3 +18,13 @@
 
 Например: «Категория: Образовательное учреждение», «Категория: Иное сооружение».
 """
+type_building = input("Введите тип здания: ").lower()
+if type_building == "школа" or type_building == "детский сад" or type_building == "университет":
+    category = "Образовательное учреждение"
+elif type_building == "торговый центр" or type_building == "магазин":
+    category = "Торговое помещение"
+elif type_building == "жилой дом" or type_building == "апартаменты":
+    category = "Жилое здание"
+else:
+    category = "Иное сооружение"
+print(f" Категория: {category}")
