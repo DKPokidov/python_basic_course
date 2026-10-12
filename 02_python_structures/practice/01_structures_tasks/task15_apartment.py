@@ -13,3 +13,17 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+flat_info = []
+list_bul = []
+flat_info.append(input('Площадь в кв: '))
+flat_info.append(input('Район: '))
+flat_info.append(input('Площадь кухни в кв: '))
+flat_info.append(input('Есть балкон: '))
+flat_proverka1 = [120, '_', 20, 'да']
+flat_proverka2 = [70, 'Центральный', 20, 'да']
+list_bul.append(int(flat_info[0]) >= 120 or (int(flat_info[0]) >= 70 and flat_info[1] == 'Центральный'))
+list_bul.append(int(flat_info[2]) >= 20)
+list_bul.append(flat_info[3] == 'да')
+itog = list_bul[0] * list_bul[1] * list_bul[2]
+otvet = ['Квартира не подходит', 'Квартира подходит']
+print(otvet[itog])
