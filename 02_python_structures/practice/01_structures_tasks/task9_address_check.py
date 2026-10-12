@@ -13,8 +13,8 @@ dom = int(input())
 street = str(input())
 index = int(input())
 flag = True
-for char in street:
-    if char in "1234567890":
+for letter in street:
+    if letter in "1234567890":
         flag = False
 if dom > 0 and flag and len(str(index)) == 6:
     print(True)
