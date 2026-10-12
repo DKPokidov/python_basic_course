@@ -46,4 +46,4 @@ for quarter in quarters:
     green = quarter['green_area_ha']*100/quarter['area_ha']
     lst = ['Не соответствует', 'Соответствует']
     ind = density <= 8 and green >= 20 and quarter['school_dist_m'] <= 800
-    print(f'{quarter['district']}: {lst[ind]}')
+    print(f'{quarter["district"]}: {lst[ind]}')
