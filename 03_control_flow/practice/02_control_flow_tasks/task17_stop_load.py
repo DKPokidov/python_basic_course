@@ -31,3 +31,11 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+for name, estr, exit in stops:
+    passg = estr - exit
+    if passg > 50:
+        print(f'{name}: {passg}, Высокая загруженность')
+    elif 10 <= passg <= 50:
+        print(f'{name}: {passg}, Средняя загруженность')
+    else:
+        print(f'{name}: {passg}, Низкая загруженность')

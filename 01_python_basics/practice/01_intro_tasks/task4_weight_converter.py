@@ -19,3 +19,18 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+
+ves = input('Введите вес и единицу измерения (например, 10 кг): ')
+znach, ed = ves.split()
+if ed == 'кг':
+    print(f'{int(znach):.1f} {ed} = {float(znach):.6f} {ed}')
+if ed == 'г':
+    print(f'{int(znach):.1f} {ed} = {float(znach)/1000:.6f} кг')
+if ed == 'фунт':
+    print(f'{int(znach):.1f} {ed} = {float(znach)*0.40951241:.6f} кг')
+if ed == 'пуд':
+    print(f'{int(znach):.1f} {ed} = {float(znach)*16:.6f} кг')
+if ed == 'ц':
+    print(f'{int(znach):.1f} {ed} = {float(znach)*100:.6f} кг')
+if ed == 'т':
+    print(f'{int(znach):.1f} {ed} = {float(znach)*1000:.6f} кг')
