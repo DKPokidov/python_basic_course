@@ -14,3 +14,13 @@
 """
 
 students = {"Иван": 15000, "Мария": 18000, "Петр": 12000, "Анна": 12000, "Ольга": 15000}
+max_scholarship = max(students.values())
+min_scholarship = min(students.values())
+total_scholarship = sum(students.values())
+unique_scholarships = set(students.values())
+sorted_students = sorted(students.keys())
+print(f"Максимальная стипендия: {max_scholarship}")
+print(f"Минимальная стипендия: {min_scholarship}")
+print(f"Общая сумма стипендий: {total_scholarship}")
+print(f"Уникальные размеры стипендий: {unique_scholarships}")
+print(f"Студенты в алфавитном порядке: {sorted_students}")

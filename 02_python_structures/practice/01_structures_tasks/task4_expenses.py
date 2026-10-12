@@ -23,3 +23,15 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+expenses = ()
+
+for i in range(4):
+    expense = float(input(f"Введите сумму траты {i + 1}: "))
+    expenses += (expense,)
+
+total = sum(expenses)
+print(f"Общая сумма: {total}")
+
+max_expense = max(expenses)
+max_index = expenses.index(max_expense)
+print(f"Самая большая трата: {max_expense} {categories[max_index]}")
