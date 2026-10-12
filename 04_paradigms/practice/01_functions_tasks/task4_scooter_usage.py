@@ -19,4 +19,10 @@
 
 
 def analyze_scooter_usage(data):
-    pass
+    newList = data
+    for ride in data:
+        if ride["duration_min"] != 0:
+            ride.__setitem__("speed_kmh", round(ride["distance_km"] / ride["duration_min"] * 60, 1))
+        else:
+            ride.__setitem__("speed_kmh", 0.0)
+    return newList
