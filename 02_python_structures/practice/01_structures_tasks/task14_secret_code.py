@@ -22,7 +22,7 @@ special = set("#@#$%^&*")
 
 is_approved = (
     len(code) == 8 
-    and len(set(code) &cap_letters) >0
+    and len(set(code) & cap_letters) >0
     and len(set(code) & sm_letters) > 0
     and len(set(code) & num) > 0 
     and len(set(code) & special) == 1 #только один спец символ 

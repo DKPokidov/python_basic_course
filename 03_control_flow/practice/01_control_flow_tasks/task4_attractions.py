@@ -23,3 +23,10 @@ attractions = {
     "Исаакиевский собор": (59.9339, 30.3138),
     "Казанский собор": (59.9346, 30.3247),
 }
+chosen_attractions = input("Введите название достопримечательности: ")
+if chosen_attractions == "Эрмитаж" or chosen_attractions == "Исаакиевский собор" or chosen_attractions == "Казанский собор":
+    latitude = attractions.get(chosen_attractions)[0]
+    longtitude = attractions.get(chosen_attractions)[1]
+    print(f"Координаты: широта {latitude}, долгота {longtitude}")
+else:
+    print("Достопримечательность не найдена")
