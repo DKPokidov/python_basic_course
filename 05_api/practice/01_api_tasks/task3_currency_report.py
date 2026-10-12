@@ -14,6 +14,20 @@
     }
 
 Напишите функции для анализа и конвертации.
+
+highest_rate(rates) -> str
+    Возвращает код валюты с самым высоким курсом.
+
+lowest_rate(rates) -> str
+    Возвращает код валюты с самым низким курсом.
+
+convert(rates, amount, from_code, to_code) -> float
+    Переводит amount из валюты from_code в to_code через рубли:
+        amount * rates[from_code] / rates[to_code]
+
+top_expensive(rates, n) -> list
+    Возвращает список из n кодов самых дорогих валют,
+    отсортированных по убыванию курса (самая дорогая первая).
 """
 
 

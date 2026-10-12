@@ -40,7 +40,7 @@ class TestTask3ParkAnalysis:
         data = {"Парк Лесного": {"visitors_day": 3000, "area_ha": 100, "entrances": 2}}
         result = mod.analyze_park(data, threshold=30)
         assert result["Парк Лесного"]["density"] == 30.0
-        assert result["Парк Лесного"]["status"] == "в норме"
+        assert result["Парк Лесного"]["status"] == "перегружен"
 
     def test_multiple_parks(self):
         mod = load_student_code(self.student_file)
