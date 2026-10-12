@@ -24,3 +24,5 @@ city_streets = {
     "Нижний Новгород": 480,
     "Екатеринбург": 310,
 }
+print(
+    f'Количество городов: {len([city for city in city_streets.values() if city >= 400])}')

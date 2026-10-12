@@ -13,3 +13,9 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+code = input('Введите код: ')
+print(len(code) == 8 and any(dig in code for dig in 'QWERTYUIOPLKJHGFDSAZXCVBNM')
+      and any(dig in code for dig in 'qwertyuioplkjhgfdsazxcvbnm')
+      and any(dig in code for dig in '0123456789')
+      and sum(code.count(dig) for dig in '#@$%^&*') == 1
+      and code[0] not in '#@$%^&*' and code[-1] not in '#@$%^&*')
