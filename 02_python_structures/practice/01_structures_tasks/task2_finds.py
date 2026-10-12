@@ -12,3 +12,10 @@
 
 yesterday = {"беспроводные Sony", "AirPods", "JBL"}
 today = {"беспроводные Sony", "Samsung Buds", "старые советские"}
+
+both = set(sorted(yesterday.intersection(today)))
+only_today = set(sorted(today.difference(yesterday)))
+unique = yesterday.union(today)
+print("Находили оба дня:", both)
+print("Только сегодня:", only_today)
+print("Всего уникальных моделей:", len(unique))

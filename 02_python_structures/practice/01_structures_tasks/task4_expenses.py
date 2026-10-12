@@ -23,3 +23,8 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+expendetures = (float(input(i)) for i in ["Введите сумму траты 1: ", "Введите сумму траты 2: ", "Введите сумму траты 3: ", "Введите сумму траты 4: "])
+expendetures = list(expendetures)
+print("Общая сумма:", sum(expendetures))
+temp = max(expendetures)
+print("Самая большая трата:", max(expendetures), categories[expendetures.index(temp)])
