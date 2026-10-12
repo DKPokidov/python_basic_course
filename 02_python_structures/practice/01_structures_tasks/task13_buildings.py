@@ -20,6 +20,6 @@ buildings = (
     {"id": 5, "площадь": 900, "этажи": 5, "тип": "жилой"},
 )
 
-result = [ b["id"] for b in buildings if b["площадь"] >= 1000 and b["этажи"] >= 4 and b["тип"] == "жилой" ]
+result = [b["id"] for b in buildings if b["площадь"] >= 1000 and b["этажи"] >= 4 and b["тип"] == "жилой"]
 
 print(result)

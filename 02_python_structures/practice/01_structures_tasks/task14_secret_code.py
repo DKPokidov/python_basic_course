@@ -15,9 +15,9 @@
 """
 password = input("Введите код доступа: ")
 
-length_valid = len(password) == 8                   #1
-uppercase_valid = password.lower() != password      #2
-lowercase_valid = password.upper() != password      #3
+length_valid = len(password) == 8
+uppercase_valid = password.lower() != password
+lowercase_valid = password.upper() != password
 digit = (password.count("0") + password.count("1") + password.count("2") + password.count("3") + password.count("4") + password.count("5") + password.count("6") + password.count("7") + password.count("8") + password.count("9")) >= 1
 simb = password.count("#") + password.count("@") + password.count("$") + password.count("%") + password.count("^") + password.count("&") + password.count("*") == 1
 simb_position = (len(password) == 8) and (password[0] not in "#@$%^&*") and (password[-1] not in "#@$%^&*")
