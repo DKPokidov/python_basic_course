@@ -23,3 +23,15 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+
+exp_1 = float(input("Введите сумму траты 1: "))
+exp_2 = float(input("Введите сумму траты 2: "))
+exp_3 = float(input("Введите сумму траты 3: "))
+exp_4 = float(input("Введите сумму траты 4: "))
+
+exp_tuple = (exp_1, exp_2, exp_3, exp_4)
+sum_exp = sum(exp_tuple)
+exp_max = max(exp_tuple)
+ind = exp_tuple.index(max(exp_tuple))
+print(f"Общая сумма: {sum_exp}")
+print(f"Самая большая трата: {max(exp_tuple)} {categories[ind]}")

@@ -13,3 +13,20 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+code = input()
+
+cap_letters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}
+sm_letters = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+num = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+special = set("#@#$%^&*")
+
+is_approved = (
+    len(code) == 8 
+    and len(set(code) &cap_letters) >0
+    and len(set(code) & sm_letters) > 0
+    and len(set(code) & num) > 0 
+    and len(set(code) & special) == 1 #только один спец символ 
+    and code[0] not in special
+    and code[-1] not in special
+)
+print(is_approved)
