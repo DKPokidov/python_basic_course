@@ -8,3 +8,12 @@
 Программа получает на вход целые числа x, y в диапазоне от 1 до 8 и проверяет
 истинность высказывания «это поле белое».
 """
+
+
+x = int(input("Номер столбика (1–8): "))
+y = int(input("Номер строчки (1–8): "))
+is_white = (x + y) % 2 == 1
+print(f'Поле белое: {is_white}')
+
+#cd python_basic_course
+# py -m pytest tests/test_02_python_structures/test_task11_chessboard_white.py -v 

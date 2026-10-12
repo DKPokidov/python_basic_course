@@ -13,3 +13,11 @@
 
 Внимание: оператор If использовать запрещается.
 """
+
+flag_color = input("Цвет флага: ")
+flag_design = input("Рисунок на флаге: ")
+is_pirate = (flag_color == "черный") and (flag_design == "череп" or flag_design == "")
+sms = ["Корабль не опасен!", "Осторожно пираты!"]
+print(sms[int(is_pirate)])
+
+#py -m pytest tests/test_02_python_structures/test_task10_pirate_ship.py -v 
