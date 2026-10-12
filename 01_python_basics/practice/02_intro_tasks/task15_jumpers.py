@@ -34,6 +34,6 @@ distance = abs(koord_A - koord_B)
 print(f'Расстояние: {distance}')
 
 if distance % 3 == 0:
-        print('да')
+    print('да')
 else:
-        print('нет')
+    print('нет')

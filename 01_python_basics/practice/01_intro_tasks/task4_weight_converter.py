@@ -47,8 +47,7 @@ conversion_factors = {
     "т": 1000,
     "пуд": 16,
     "г": 0.001,
-    "фунт": 0.40951241,
-    
+    "фунт": 0.40951241 
 }
 
 kilograms = value * conversion_factors[unit]
