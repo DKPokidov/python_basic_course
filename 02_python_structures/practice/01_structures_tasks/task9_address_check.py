@@ -9,3 +9,10 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+house = input("Введите номер дома: ")
+name = input("Введите название улицы: ")
+index = input("Введите индекс: ")
+
+result = house.isdigit() and int(house) > 0 and name.isalpha() and index.isdigit() and len(index) == 6
+
+print(result)

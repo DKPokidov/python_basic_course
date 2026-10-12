@@ -13,3 +13,16 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+
+s_area = float(input("Площадь квартиры: "))
+s_district = input("Район: ")
+s_kitchen = float(input("Площадь кухни: "))
+s_balcony = input("Есть балкон? (да/нет): ")
+
+area_valid = s_area >= 120 or (s_area >= 70 and s_district == "Центральный")
+kitchen_valid = s_kitchen >= 20
+balcony_valid = s_balcony == "да"
+
+result = area_valid and kitchen_valid and balcony_valid
+
+print(("Квартира не подходит", "Квартира подходит")[result])
