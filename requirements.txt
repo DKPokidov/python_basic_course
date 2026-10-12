@@ -6,6 +6,7 @@ matplotlib
 seaborn
 osmnx
 requests
+xmltodict
 pytest
 pytest-json-report
 flake8

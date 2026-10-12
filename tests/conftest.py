@@ -20,7 +20,8 @@ def run_student_code(student_file, inputs):
         try:
             with open(student_file, 'r', encoding='utf-8') as f:
                 code = f.read()
-                exec(code)
+                namespace = dict(__builtins__=__builtins__)
+                exec(code, namespace)
         except Exception as e:
             sys.stdout = sys.__stdout__
             raise e
