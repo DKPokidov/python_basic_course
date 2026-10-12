@@ -13,3 +13,17 @@
 
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
+
+sqwr = int(input('Введите площадь: ')) 
+district = str(input('Введите район: '))
+sqwr_kitchen = int(input('Введите площадь кухни: '))
+balcon = str(input('Есть ли балкон (да/нет): '))
+
+flat ={
+    True : 'Квартира подходит',
+    False : 'Квартира не подходит'
+}
+
+okey = (sqwr >= 120 or (sqwr >= 70 and district == 'Центральный'))\
+    and sqwr_kitchen >= 20 and (balcon == 'да' or balcon == 'Да')
+print(flat[okey])
