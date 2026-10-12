@@ -8,3 +8,6 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+street = input('Введите название улицы: ')
+compliance = len(street) <= 30 and street != ''
+print (compliance)

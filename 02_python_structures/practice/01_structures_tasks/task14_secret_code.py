@@ -13,3 +13,12 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+code = (input('Введите код: '))
+capital = set('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+lowercase = set('abcdefghijklmnopqrstuvwxyz')
+digits = set("0123456789")
+special = set('#@#$%^&*')
+correct = (len(code) == 8 and bool(set(code) & capital) and bool(set(code) & lowercase) and bool(set(code) & digits) and sum(map(code.count, special)) == 1 and code[0] not in special and code[-1] not in special)
+
+final = {True: "Код корректный", False: "Код не корректный"}
+print(final[correct])
