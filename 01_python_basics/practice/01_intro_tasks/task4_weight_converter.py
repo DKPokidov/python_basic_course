@@ -19,3 +19,16 @@
 Введите вес и единицу измерения (например, '10 кг'): 1 т
 1.0 т = 1000.000000 кг
 """
+
+into = input("Введите вес и единицу измерения (например, '10 кг'): ").strip()
+parts = into.split()
+weight = float(parts[0])
+measure = parts[1]
+factors = {'кг': 1.0, 'г': 0.001, 'фунт': 0.40951241, 'пуд': 16.0, 'ц': 100.0, 'т': 1000.0}
+if measure in factors:
+    res = weight * factors[measure]
+    print(f"{weight:.1f} {measure} = {res:.6f} кг")
+    
+
+
+
