@@ -39,6 +39,6 @@ quarters = [
 ]
 for normal in quarters:
     if normal['houses'] / normal['area_ha'] <= 8 and (normal['green_area_ha'] / normal['area_ha']) * 100 >= 20 and normal['school_dist_m'] <= 800:
-        print(f'{normal['district']}: Соответствует')
+        print(f'{normal["district"]}: Соответствует')
     else:
-        print(f'{normal['district']}: Не соответствует')
+        print(f'{normal["district"]}: Не соответствует')
