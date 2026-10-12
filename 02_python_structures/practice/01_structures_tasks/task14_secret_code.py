@@ -13,3 +13,9 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+code = input()
+symbols = '#@#$%^&*;'
+result = (
+    len(code) == 8 and any(i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' for i in code) and any(i in "abcdefghijklmnopqrstuvwxyz" for i in code) and any(i in '0123456789' for i in code) and sum(i in symbols for i in code) == 1 and any(i not in symbols for i in code[0]) and any(i not in symbols for i in code[-1])
+)
+print(result)

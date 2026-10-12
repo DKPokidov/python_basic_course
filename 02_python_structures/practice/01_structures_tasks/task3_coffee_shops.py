@@ -12,3 +12,12 @@
 """
 
 shops = {"Цифербург": 9, "Итальянская": 7, "Пятая линия": 5}
+shops["Бессонный урбанист"] = 8
+shops["Цифербург"] += 1
+flag = 0
+
+for i in shops:
+    if shops[i] > flag:
+        flag = shops[i]
+        key = i
+print(f'Лучшая кофейня: {key} с рейтингом {flag}')
