@@ -37,3 +37,8 @@ quarters = [
     {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
     {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
 ]
+for normal in quarters:
+    if normal['houses'] / normal['area_ha'] <= 8 and (normal['green_area_ha'] / normal['area_ha']) * 100 >= 20 and normal['school_dist_m'] <= 800:
+        print(f'{normal['district']}: Соответствует')
+    else:
+        print(f'{normal['district']}: Не соответствует')

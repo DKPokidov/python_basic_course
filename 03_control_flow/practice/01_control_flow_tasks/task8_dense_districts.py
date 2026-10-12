@@ -29,3 +29,9 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+pl_dist = []
+for district, s, people in districts:
+    pl = people / s
+    if pl > 5:
+        pl_dist.append(district)
+print(f'Плотно заселённые районы: {pl_dist}')
