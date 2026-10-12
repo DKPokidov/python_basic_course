@@ -8,3 +8,8 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+n = str(input()).strip()
+if n != '' and len(n) <= 30:
+    print(True)
+else:
+    print(False)
