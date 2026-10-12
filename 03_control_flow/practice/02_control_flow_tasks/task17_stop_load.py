@@ -31,3 +31,15 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+
+
+def load(flow):
+    if flow > 50:
+        return 'Высокая загруженность'
+    elif 10 <= flow <= 50:
+        return 'Средняя загруженность'
+    else:
+        return 'Низкая загруженность'
+
+
+print(*[f'{stop[0]}: {stop[1]-stop[2]}, {load(stop[1]-stop[2])}' for stop in stops], sep='\n')
