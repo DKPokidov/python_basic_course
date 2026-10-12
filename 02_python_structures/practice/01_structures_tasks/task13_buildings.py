@@ -22,8 +22,8 @@ buildings = (
 otvet = [
     i['id']
     for i in buildings
-    if i['площадь'] >= 1000
-    and i["этажи"] >= 4
-    and i['тип'] == 'жилой'
+    if i['площадь'] >= 1000 and
+    i["этажи"] >= 4 and
+    i['тип'] == 'жилой'
 ]
 print(otvet)
