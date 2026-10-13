@@ -24,9 +24,9 @@ condition_area = (area >= 120) or (area >= 70 and district == "Централь�
 
 condition_kitchen = kitchen_area >= 20
 
-condition_balcony = has_balcony
+#condition_balcony = has_balcony
 
-is_suitable = condition_area and condition_kitchen and condition_balcony
+is_suitable = condition_area and condition_kitchen and has_balcony
 
 messages = ["Квартира не подходит", "Квартира подходит"]
 print(messages[int(is_suitable)])
