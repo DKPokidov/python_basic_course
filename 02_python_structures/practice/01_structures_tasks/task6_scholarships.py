@@ -14,3 +14,15 @@
 """
 
 students = {"Иван": 15000, "Мария": 18000, "Петр": 12000, "Анна": 12000, "Ольга": 15000}
+max_stup = max(students.values())
+print(f'Максимальная стипендия: {max_stup}')
+min_stup = min(students.values())
+print(f'Минимальная стипендия: {min_stup}')
+ob_sum = sum(students.values())
+print(f'Общая сумма стипендий: {ob_sum}')
+unikym = set(students.values())
+print(unikym)
+alf = sorted(students.keys())
+print(f'Студенты в алфавитном порядке: {alf}')
+
+#py -m pytest tests/test_02_python_structures/test_task6_scholarships.py -v 

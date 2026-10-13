@@ -8,3 +8,9 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+
+name = input('напишите название улицы:')
+if 0 < len(name) <= 30:
+    print(True)
+else:
+    print(False)

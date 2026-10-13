@@ -13,3 +13,13 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+
+code = input('Введите код: ')
+cap_letters = set('QWERTYUIOPASDFGHJKLZXCVBNM')
+low_letters = set('qwertyuiopasdfghjklzxcvbnm')
+special_symbols = set('#@#$%^&*;')
+numbers = set('1234567890')
+
+condition = len(code) == 8 and bool(set(code) & cap_letters) and bool(set(code) & low_letters) and bool(set(code) & numbers) and len(set(code) & special_symbols) == 1 and code[0] not in special_symbols and code[-1] not in special_symbols
+
+print(condition)
