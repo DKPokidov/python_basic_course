@@ -47,4 +47,4 @@ def logic(element: dict[str, any]) -> bool:
     return (buildDensity <= 8) and (greenDensity >= 20) and (element['school_dist_m'] <= 800)
 
 for each in quarters:
-    print(f'{each['district']}: {"Соответствует" if logic(each) else "Не соответствует"}')
+    print(f'{each["district"]}: {"Соответствует" if logic(each) else "Не соответствует"}')
