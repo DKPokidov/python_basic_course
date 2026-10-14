@@ -19,3 +19,32 @@
 
 Например: «Район A: Высокий уровень озеленения», «Район B: Средний уровень».
 """
+
+
+def _measureGreen(area: int):
+
+    if area >= 150:
+        return 'Высокий уровень озеленения'
+    elif 50 <= area < 150:
+        return 'Средний уровень'
+    else:
+        return 'Низкий уровень'
+    
+
+
+regions: dict[str, int] = {
+    'A': 150,
+    'B': 80,
+    'C': 200,
+}
+
+
+
+for each in regions.items():
+    print(
+        f'Район {each[0]}: {_measureGreen(each[1])}' 
+    )
+
+
+
+

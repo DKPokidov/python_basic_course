@@ -23,3 +23,24 @@ attractions = {
     "Исаакиевский собор": (59.9339, 30.3138),
     "Казанский собор": (59.9346, 30.3247),
 }
+
+def _findAttraction(_input: str) -> tuple[float, float]:
+    return attractions[_input]
+
+def main():
+
+    _foundAttraction: tuple
+    try:
+        _foundAttraction = _findAttraction(str(input()))
+    except KeyError:
+        print(
+            'Достопримечательность не найдена'
+        )
+        return None
+
+    print(
+        f'Координаты: широта {_foundAttraction[0]}, долгота {_foundAttraction[1]}'
+    )
+
+
+main()
