@@ -22,3 +22,12 @@ routes = {
     2: ("Беговая", "Новокрестовская"),
     3: ("Сенная площадь", "Московская"),
 }
+
+_routeNum = int(input())
+
+try: 
+    print(
+        f'Маршрут {_routeNum}: от Станция метро "{routes[_routeNum][0]}" до Станция метро "{routes[_routeNum][1]}"'
+    )
+except KeyError:
+    print('Маршрут не найден')

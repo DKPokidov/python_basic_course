@@ -13,3 +13,24 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+
+_netArea = float(input())
+_netTaken = 0
+_restrict = False
+_last = None
+
+
+
+while _last != 0:
+   current = float(input())
+   _netTaken += current
+
+   warnGreen = ((_netArea - _netTaken) / _netArea < 0.3)
+   if warnGreen:
+      print('Нарушение нормы зелёных зон!')
+      _restrict = True
+
+   _last = current
+
+
+if not _restrict: print('Нормы соблюдены')

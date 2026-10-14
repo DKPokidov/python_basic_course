@@ -31,3 +31,17 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+
+def logic(element: tuple[str, int, int]):
+
+    net_through = element[1] - element[2]
+    return (
+        element[0],
+        net_through,
+        'Высокая загруженность' if net_through > 50 else ('Средняя загруженность' if (net_through >= 10) else 'Низкая загруженность')
+    )
+
+for each in stops:
+    print(
+        f'{logic(each)[0]}: {logic(each)[1]}, {logic(each)[2]}'
+    )
