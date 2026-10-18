@@ -27,6 +27,6 @@ search_name = input('Введите название достопримечат�
 
 if search_name in attractions:
     koord = attractions[search_name]
+    print(f'Координаты: широта {koord[0]}, долгота {koord[1]}')
 else:
     print('Достопримечательность не найдена')
-print(f'Координаты: широта {koord[0]}, долгота {koord[1]}')

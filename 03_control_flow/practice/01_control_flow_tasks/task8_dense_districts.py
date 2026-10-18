@@ -36,4 +36,4 @@ for district, area, population in districts:
     density = population / area
     if density > 5:
         full_districts.append(district)
-print(f'Плотно заселенные районы: {full_districts}')
+print(f'Плотно заселённые районы: {full_districts}')
