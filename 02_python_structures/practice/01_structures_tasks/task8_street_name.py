@@ -8,3 +8,6 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+street_name = input('Название улицы:')
+result = len(street_name) <= 30 and street_name != ''
+print(result)
