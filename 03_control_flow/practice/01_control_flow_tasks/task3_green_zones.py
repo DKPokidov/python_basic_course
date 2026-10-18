@@ -19,3 +19,15 @@
 
 Например: «Район A: Высокий уровень озеленения», «Район B: Средний уровень».
 """
+green_levels = ['Высокий уровень озеленения', 'Средний уровень озеленения', 'Низкий уровень озеленения']
+
+districts = {'A': 150, 'B': 80, 'C': 200}
+
+for name, area in districts.items():
+    if area >= 150:
+        level = green_levels[0]
+    elif area >= 50 and area < 150:
+        level = green_levels[1]
+    else:
+        level = green_levels[2]
+    print(f'Район {name}: {level}')
