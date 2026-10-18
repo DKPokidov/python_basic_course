@@ -30,11 +30,11 @@ if population >= 1000:
     earn = True
 else:
     for year in range(2025, 2055, 1):
-       population = int(population * 1.05)
-       print(f'Год {year}: население {population} тыс. чел.')
-       if population >= 1000:
-          print(f'Город достиг миллиона жителей в {year} году!')
-          earn = True
-          break
+        population = int(population * 1.05)
+        print(f'Год {year}: население {population} тыс. чел.')
+        if population >= 1000:
+            print(f'Город достиг миллиона жителей в {year} году!')
+            earn = True
+            break
 if not earn:
     print('За 30 лет город так и не достиг миллиона жителей.')
