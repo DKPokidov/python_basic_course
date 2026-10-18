@@ -26,15 +26,15 @@
 population = int(input('Введите начальное население (в тыс. чел.): '))
 earn = False
 if population >= 1000:
-   print('Город достиг миллиона жителей в 2024 году!')
-   earn = True
+    print('Город достиг миллиона жителей в 2024 году!')
+    earn = True
 else:
-   for year in range(2025, 2055, 1):
-      population = int(population * 1.05)
-      print(f'Год {year}: население {population} тыс. чел.')
-      if population >= 1000:
-         print(f'Город достиг миллиона жителей в {year} году!')
-         earn = True
-         break
+    for year in range(2025, 2055, 1):
+       population = int(population * 1.05)
+       print(f'Год {year}: население {population} тыс. чел.')
+       if population >= 1000:
+          print(f'Город достиг миллиона жителей в {year} году!')
+          earn = True
+          break
 if not earn:
-   print('За 30 лет город так и не достиг миллиона жителей.')
+    print('За 30 лет город так и не достиг миллиона жителей.')
