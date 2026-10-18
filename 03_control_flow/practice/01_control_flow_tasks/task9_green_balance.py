@@ -25,7 +25,6 @@ while True:
     green_zone = (area - total_built) / area
     if green_zone < 0.3:
         print('Нарушение нормы зелёных зон!')
-        problem = True
-        
+        problem = True    
 if not problem:
     print('Нормы соблюдены')

@@ -28,5 +28,4 @@ count = 0
 for length in city_streets.values():
     if length > 400:
         count += 1
-    
 print(f'Количество городов: {count}')
