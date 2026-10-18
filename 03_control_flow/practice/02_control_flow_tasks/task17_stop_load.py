@@ -31,3 +31,13 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+
+for district, go_in, go_out in stops:
+    flow = abs(go_in - go_out)
+    if flow > 50:
+        trafic = 'Высокая загруженность'
+    if flow >= 10 and flow <= 50:
+        trafic = 'Средняя загруженность'
+    if flow < 10:
+        trafic = 'Низкая загргуженность'
+    print(f'{district}: {flow}, {trafic} ')
