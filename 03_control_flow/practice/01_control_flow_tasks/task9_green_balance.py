@@ -13,3 +13,16 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+
+total_square = int(input("Введите общую площадь района (в га): "))
+now_development = int(input("Введите площадь очередной застройки (в га): "))
+all_development = 0
+flag = 0
+while now_development != 0:
+    all_development += now_development
+    if ((total_square - all_development) / total_square) < 0.3:
+        print("Нарушение нормы зелёных зон!")
+        flag = 1
+    now_development = int(input("Введите площадь очередной застройки (в га): "))
+if flag == 0:
+    print("Нормы соблюдены")

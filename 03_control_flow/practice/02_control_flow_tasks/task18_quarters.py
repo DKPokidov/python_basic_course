@@ -32,8 +32,42 @@
 """
 
 quarters = [
-    {"district": "Северный", "area_ha": 50, "houses": 300, "green_area_ha": 12.0, "school_dist_m": 600},
-    {"district": "Южный", "area_ha": 25, "houses": 250, "green_area_ha": 4.0, "school_dist_m": 500},
-    {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
-    {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
+    {
+        "district": "Северный",
+        "area_ha": 50,
+        "houses": 300,
+        "green_area_ha": 12.0,
+        "school_dist_m": 600,
+    },
+    {
+        "district": "Южный",
+        "area_ha": 25,
+        "houses": 250,
+        "green_area_ha": 4.0,
+        "school_dist_m": 500,
+    },
+    {
+        "district": "Центральный",
+        "area_ha": 30,
+        "houses": 210,
+        "green_area_ha": 7.0,
+        "school_dist_m": 700,
+    },
+    {
+        "district": "Западный",
+        "area_ha": 40,
+        "houses": 240,
+        "green_area_ha": 6.0,
+        "school_dist_m": 1200,
+    },
 ]
+for block in quarters:
+    conditions = [
+        block["houses"] / block["area_ha"] <= 8,
+        block["green_area_ha"] / block["area_ha"] >= 0.2,
+        block["school_dist_m"] <= 800,
+    ]
+    if all(conditions):
+        print(f"{block['district']}: Соответствует")
+    else:
+        print(f"{block['district']}: Не соответствует")

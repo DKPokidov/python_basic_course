@@ -31,3 +31,11 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+for station in stops:
+    flow = int(station[1]) - int(station[2])
+    if flow > 50:
+        print(f"{station[0]}: {flow}, Высокая загруженность")
+    elif flow >= 10:
+        print(f"{station[0]}: {flow}, Средняя загруженность")
+    else:
+        print(f"{station[0]}: {flow}, Низкая загруженность")
