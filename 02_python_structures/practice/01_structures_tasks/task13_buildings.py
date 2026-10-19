@@ -22,6 +22,10 @@ buildings = (
 
 from re import *
 
-usable = list(map(int, map(lambda x: (int(str(x).split()[5][:-1]) > 3) and ("жилой" in str(x).split()[-1]) and (int(str(x).split()[3][:-1]) >= 1000) * int(str(x).split()[1][:-1]), buildings)))
+usable = list(map(int, map(lambda x: (int(str(x).split()[5][:-1]) > 3) \
+                and ("жилой" in str(x).split()[-1]) \
+                and (int(str(x).split()[3][:-1]) >= 1000) * int(str(x).split()[1][:-1]), buildings)))
 temp = sorted(usable, key=lambda x: not x)
 print(temp[:temp.index(0)])
+
+print(list(map(int, input().split())))
