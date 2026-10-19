@@ -37,3 +37,20 @@ quarters = [
     {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
     {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
 ]
+for quarter in quarters:
+    name = quarter["district"]
+    area = quarter["area_ha"]
+    houses = quarter["houses"]
+    green_area = quarter["green_area_ha"]
+    school_dist = quarter["school_dist_m"]
+    
+    density = houses / area  
+    green_percent = (green_area / area) * 100  
+    
+    if density <= 8 and green_percent >= 20 and school_dist <= 800:
+        result = "Соответствует"
+    else:
+        result = "Не соответствует"
+        
+    print(f"{name}: {result}")
+    

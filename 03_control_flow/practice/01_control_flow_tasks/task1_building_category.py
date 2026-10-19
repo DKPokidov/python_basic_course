@@ -18,3 +18,17 @@
 
 Например: «Категория: Образовательное учреждение», «Категория: Иное сооружение».
 """
+
+building = input('Тип здания: ')
+building = building.lower()
+education = ['школа', 'детский сад', 'университет']
+shops = ['торговый центр', 'магазин']
+houses = ['жилой дом', 'апартаменты']
+if building in education:
+    print('Категория: Образовательное учреждение')
+elif building in shops:
+    print('Категория: Торговое помещение')
+elif building in houses:
+    print('Категория: Жилое здание')
+elif building not in education or shops or houses:
+    print('Категория: Иное сооружение')
