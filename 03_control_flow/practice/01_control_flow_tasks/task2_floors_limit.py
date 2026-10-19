@@ -15,7 +15,7 @@
 """
 
 zone = input()
-if zone in ["историческая", "новая"]
+if zone in ["историческая", "новая"]:
     floors = int(input())
     if ((zone == "историческая") and (floors <= 5)) or ((zone == "новая") and (floors <= 20)):
         print("Допустимо")
