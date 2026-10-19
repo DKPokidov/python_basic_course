@@ -24,3 +24,8 @@ city_streets = {
     "Нижний Новгород": 480,
     "Екатеринбург": 310,
 }
+mane = 0
+for length in city_streets.values():
+    if length > 400:
+        mane += 1
+print(f'Количество городов: {mane}')
