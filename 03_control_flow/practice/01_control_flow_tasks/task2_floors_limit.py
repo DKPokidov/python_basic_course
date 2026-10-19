@@ -15,8 +15,11 @@
 """
 
 zone = input()
-floors = int(input())
-if ((zone == "историческая") and (floors <= 5)) or ((zone == "новая") and (floors <= 20)):
-    print("Допустимо")
+if zone in ["историческая", "новая"]
+    floors = int(input())
+    if ((zone == "историческая") and (floors <= 5)) or ((zone == "новая") and (floors <= 20)):
+        print("Допустимо")
+    else:
+        print("Превышение нормы!")
 else:
-    print("Превышение нормы!")
+    print("Депопустимое название зоны")
