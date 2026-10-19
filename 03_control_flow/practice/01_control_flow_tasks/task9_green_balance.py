@@ -13,3 +13,16 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+rayon = int(input('введите площадь района: '))
+square = 0
+zastroy = None
+eror = False
+while zastroy != 0:
+    zastroy = int(input('введите площадь застройки: '))
+    square += zastroy
+    procent = (rayon - square) / rayon
+    if procent < 0.3:
+        print('Нарушение нормы зелёных зон!')
+        eror = True
+if not eror:
+    print('Нормы соблюдены')
