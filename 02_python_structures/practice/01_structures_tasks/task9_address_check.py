@@ -9,3 +9,11 @@
 
 Проверьте данные и верните сообщение о правильности или неправильности адреса в зависимости от них.
 """
+
+address = [input() for _ in range(3)]
+try:
+    first = int(address[0])
+    last = int(address[2])
+    print((first > 0) and all([i not in address[1] for i in "0123456789"]) and (len(address[2]) == 6))
+except:
+    print(False)
