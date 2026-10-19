@@ -20,7 +20,6 @@
 
 Например: «Центральный: 5.0 га», «Северный: 7.300000000000001 га».
 """
-
 district_green_areas = {
     "Центральный": [2.0, 3.0],
     "Северный": [2.1, 2.2, 3.0],
@@ -28,3 +27,5 @@ district_green_areas = {
     "Западный": [1.5, 1.5],
     "Южный": [0.5, 1.0, 1.5],
 }
+for district, areas in district_green_areas.items():
+    print(f"{district}: {sum(areas)} га")

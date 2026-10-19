@@ -13,3 +13,22 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+total_area = float(input("Введите общую площадь района: "))
+built_area = 0
+violation = False
+
+while True:
+    area = float(input("Введите площадь застройки: "))
+
+    if area == 0:
+        break
+
+    built_area += area
+    green_share = (total_area - built_area) / total_area
+
+    if green_share < 0.3:
+        print("Нарушение нормы зелёных зон!")
+        violation = True
+
+if not violation:
+    print("Нормы соблюдены")
