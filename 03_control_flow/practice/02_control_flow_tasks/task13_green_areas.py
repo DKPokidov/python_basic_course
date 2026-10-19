@@ -28,3 +28,5 @@ district_green_areas = {
     "Западный": [1.5, 1.5],
     "Южный": [0.5, 1.0, 1.5],
 }
+for district, lst_area in district_green_areas.items():
+    print(f"{district}: {sum(lst_area)} га")

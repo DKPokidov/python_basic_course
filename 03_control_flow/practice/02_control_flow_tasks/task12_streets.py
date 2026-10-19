@@ -24,3 +24,8 @@ city_streets = {
     "Нижний Новгород": 480,
     "Екатеринбург": 310,
 }
+cnt = 0
+for city, lenght in city_streets.items():
+    if lenght > 400:
+        cnt += 1
+print(f"Количество городов: {cnt}")
