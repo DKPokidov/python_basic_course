@@ -20,4 +20,11 @@
 
 
 def accessibility_analysis(data):
-    pass
+    districts = {}
+    for object in data['objects']:
+        district = object['district']
+        if districts.get(district) is None:
+            districts[district] = 0
+        if object['accessibility']['ramp']:
+            districts[district] += 1
+    return districts

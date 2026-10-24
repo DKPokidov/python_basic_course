@@ -12,4 +12,7 @@
 
 
 def count_up_to(n):
-    yield
+    count = 1
+    for _ in range(n):
+        yield count
+        count += 1

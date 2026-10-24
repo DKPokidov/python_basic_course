@@ -22,4 +22,4 @@
 
 
 def filter_by_type(data, obj_type):
-    pass
+    return list(map(lambda x: x['name'], filter(lambda x: x['type'] == obj_type, data['objects'])))
