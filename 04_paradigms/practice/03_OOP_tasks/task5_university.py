@@ -26,21 +26,38 @@
 
 class Student:
     def __init__(self, name, group, average_grade):
-        pass
+        self.name = name
+        self.group = group
+        if average_grade > 5:
+            self.average_grade = 5.0
+        else:
+            self.average_grade = average_grade
 
     def improve_grade(self, points):
-        pass
+        new_grade = self.average_grade + points
+        if new_grade > 5:
+            self.average_grade = 5.0
+        else:
+            self.average_grade = new_grade
 
 
 class University:
     def __init__(self, name):
-        pass
+        self.name = name
+        self.students = []
 
     def enroll_student(self, student):
-        pass
+        self.students.append(student)
 
     def get_top_students(self, n):
-        pass
+        top_students = self.students.copy()
+        n = len(top_students)
+        for i in range(n - 1):
+            for j in range(n - 1 - i):
+                if top_students[j] > top_students[j + 1]:
+                    top_students[j], top_students[j + 1] = top_students[j + 1], top_students[j]
+        top_students.reverse()
+        return top_students[:n]
 
     def get_students_by_group(self, group_name):
-        pass
+        return [student for student in self.students if student.group == group_name]
