@@ -13,3 +13,19 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+
+d_area = float(input("Общая площадь района "))
+summ = 0
+new_area = float(input("Площадь застройки "))
+is_okay = True
+while new_area != 0:
+    summ += new_area
+    if (d_area - summ) / d_area < 0.3:
+        is_okay = False
+        break
+    new_area = float(input("Площадь застройки "))
+
+if is_okay:
+    print("Нормы соблюдены")
+else:
+    print("Нарушение нормы зелёных зон!")

@@ -20,4 +20,12 @@
 
 
 def services_stats(data):
-    pass
+    serv = {}
+    for object in data['objects']:
+        type = object['type']
+        if serv.get(type) is None:
+            serv[type] = []
+        for service in object['services']:
+            if service not in serv[type]:
+                serv[type].append(service)
+    return serv
