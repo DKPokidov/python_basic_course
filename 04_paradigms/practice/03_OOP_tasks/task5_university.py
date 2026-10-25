@@ -33,6 +33,9 @@ class Student:
         else:
             self.average_grade = average_grade
 
+    def __repr__(self):
+        return f'{self.name} {self.group} {self.average_grade}'
+
     def improve_grade(self, points):
         new_grade = self.average_grade + points
         if new_grade > 5:
@@ -51,10 +54,10 @@ class University:
 
     def get_top_students(self, n):
         top_students = self.students.copy()
-        n = len(top_students)
-        for i in range(n - 1):
-            for j in range(n - 1 - i):
-                if top_students[j] > top_students[j + 1]:
+        n1 = len(top_students)
+        for i in range(n1 - 1):
+            for j in range(n1 - 1 - i):
+                if top_students[j].average_grade > top_students[j + 1].average_grade:
                     top_students[j], top_students[j + 1] = top_students[j + 1], top_students[j]
         top_students.reverse()
         return top_students[:n]

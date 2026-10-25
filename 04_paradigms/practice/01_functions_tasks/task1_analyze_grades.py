@@ -38,12 +38,12 @@ def analyze_grades(data):
             courses[course] = [grade]
         else:
             courses[course].append(grade)
-    for student, grades in students:
+    for student, grades in students.items():
         result['students_avg'][student] = round(sum(grades) / len(grades), 1)
-    for course, grades in courses:
+    for course, grades in courses.items():
         courses_avg[course] = round(sum(grades) / len(grades), 1)
-    for course, aver in courses_avg:
-        if aver == max(courses.values()):
+    for course, aver in courses_avg.items():
+        if aver == max(courses_avg.values()):
             result['best_course'] = course
             break
     return result

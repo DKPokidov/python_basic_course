@@ -20,12 +20,14 @@
 
 import os
 
-original = open('original.txt', 'w')
-original.write("Это оригинальный файл.")
-copy = open('copy.txt', 'w')
-copy.writelines(original.readlines())
-original.close()
-copy.close()
+
+with open('original.txt', 'w+', encoding='utf-8') as original:
+    original.write("Это оригинальный файл.")
+with open('copy.txt', 'w+', encoding='utf-8') as copy:
+    text = []
+    with open('original.txt', 'r', encoding='utf-8') as original:
+        text.extend(original.readlines())
+    copy.writelines(text)
 if os.path.exists('copy.txt'):
     os.rename('copy.txt', 'renamed_copy.txt')
 if os.path.exists('original.txt'):

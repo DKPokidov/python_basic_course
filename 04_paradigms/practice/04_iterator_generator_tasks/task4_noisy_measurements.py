@@ -17,6 +17,7 @@
 
 import random
 
+
 def noisy_measurements(base_values, noise_level=0.1):
     for value in base_values:
         for _ in range(3):

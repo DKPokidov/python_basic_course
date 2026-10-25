@@ -23,22 +23,17 @@ class CityDistrict:
         self.name = name
         self.area_ha = area_ha
         self.population = population
-        self.building_types = building_types
+        self.building_types = building_types if building_types is not None else []
 
     def add_building_type(self, type_name):
-        if self.building_types is None:
-            self.building_types = [type_name]
-        else:
+        if type_name not in self.building_types:
             self.building_types.append(type_name)
 
     def get_density(self):
         return self.population / self.area_ha
 
     def has_green_space(self):
-        if self.building_types is None:
-            return False
         return 'green' in self.building_types
 
     def __str__(self):
         return f"Район: {self.name}, площадь: {self.area_ha} га, население: {self.population} чел."
-    

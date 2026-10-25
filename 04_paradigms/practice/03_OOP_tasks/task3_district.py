@@ -27,5 +27,4 @@ class District:
         return sum([x.height for x in self.buildings]) if self.buildings != [] else 0
 
     def get_buildings_by_type(self, building_type):
-        return [b for b in self.buildings if b.type == building_type]
-    
+        return [b.name for b in self.buildings if b.type == building_type]

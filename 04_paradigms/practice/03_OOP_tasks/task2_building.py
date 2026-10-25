@@ -21,4 +21,3 @@ class Building:
 
     def get_info(self):
         return f"Здание {self.name}, {self.type}, построено в {self.year_built}, высота {self.height} м"
-    

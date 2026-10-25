@@ -21,13 +21,13 @@
    * заголовок записывается всегда, даже если подходящих парковок нет.
 """
 
-high_load = open('high_load_parkings.txt', 'w')
+high_load = open('high_load_parkings.txt', 'w', encoding='utf-8')
 high_load.write('название_парковки;вместимость;занято;занятость_%\n')
-with open('parkings.txt', 'r') as parkings:
-    data = parkings.readlines()
+with open('parkings.txt', 'r', encoding='utf-8') as parkings:
+    data = parkings.readlines()[1:]
     for row in data:
-        name, cap, occ = row.split(';')
+        name, cap, occ = row.strip().split(';')
         load = int(occ) / int(cap) * 100
         if load > 80:
-         high_load.write(f'{name};{cap};{occ};{load}\n')
+            high_load.write(f'{name};{cap};{occ};{load}\n')
 high_load.close()

@@ -52,7 +52,7 @@ class OfficeBuilding(Building):
         self.number_of_floors = number_of_floors
 
     def get_info(self):
-            return super().get_info() + f", этажей: {self.number_of_floors}"
+        return super().get_info() + f", этажей: {self.number_of_floors}"
 
 
 class ShoppingCenter(Building):
@@ -61,4 +61,4 @@ class ShoppingCenter(Building):
         self.number_of_shops = number_of_shops
 
     def get_info(self):
-            return super().get_info() + f", магазинов: {self.number_of_shops}"
+        return super().get_info() + f", магазинов: {self.number_of_shops}"

@@ -24,5 +24,5 @@ def find_overloaded(data, threshold):
     result = []
     for object in data['objects']:
         if object['capacity'] > threshold:
-            result.append(f'{object['name']} ({object['capacity']} мест)')
+            result.append(f'{object["name"]} ({object["capacity"]} мест)')
     return result

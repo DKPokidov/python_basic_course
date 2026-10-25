@@ -24,10 +24,10 @@ class PrimeIterator:
         return self
 
     def __next__(self):
-        if self.current == self.end:
-            raise StopIteration
-        while not self.is_prime():
+        while not self.is_prime() or self.current == 1:
             self.current += 1
+        if self.current >= self.end:
+            raise StopIteration
         result = self.current
         self.current += 1
         return result
