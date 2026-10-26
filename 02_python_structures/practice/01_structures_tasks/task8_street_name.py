@@ -8,3 +8,8 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+street_name = input("Введите название улицы: ")
+if len(street_name) <= 30 and len(street_name) > 0:
+    print(True)
+else:
+    print(False)
