@@ -15,8 +15,11 @@
 """
 
 area = str(input('Введите зону: '))
-levels = int(input('Введите количество этажей: '))
-if area == 'историческая' and levels <= 5 or area == 'новая' and levels <= 20:
-    print('Допустимо')
+if area != 'историческая' and area != 'новая':
+    print('Неверная зона')
 else:
-    print('Превышение нормы!')
+    levels = int(input('Введите количество этажей: '))
+    if area == 'историческая' and levels <= 5 or area == 'новая' and levels <= 20:
+        print('Допустимо')
+    else:
+        print('Превышение нормы!')
