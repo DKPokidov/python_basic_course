@@ -13,3 +13,10 @@
 
 Внимание: оператор If использовать запрещается.
 """
+colour = input("Введите цвет флага: ")
+pattern = input("Введите рисунок на флаге: ")
+
+is_pirate = colour == "черный" and (pattern == "череп" or pattern == "")
+
+answers = ["Корабль не опасен!", "Осторожно пираты!"]
+print(answers[is_pirate])

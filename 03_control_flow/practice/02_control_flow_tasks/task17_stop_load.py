@@ -31,3 +31,23 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+
+
+stops = [
+    ("Центральная", 80, 20),
+    ("Университет", 65, 15),
+    ("Заводская", 20, 15),
+    ("Парк", 10, 15),
+]
+
+for name, entering, leaving in stops:
+    flow = entering - leaving
+
+    if flow > 50:
+        category = "Высокая загруженность"
+    elif flow >= 10:
+        category = "Средняя загруженность"
+    else:
+        category = "Низкая загруженность"
+
+    print(f"{name}: {flow}, {category}")
