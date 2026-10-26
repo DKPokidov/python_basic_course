@@ -20,6 +20,37 @@
     {'students_avg': {имя: средний_балл}, 'best_course': название_курса}
 """
 
+def analyze_grades(data: list[tuple[str, str, float]]) -> dict:
 
-def analyze_grades(data):
-    pass
+    dict_byCourse: dict = {}
+    dict_studentAverages: dict = {}
+
+    for each in data:
+        if dict_byCourse.get(each[1]) == None:
+            dict_byCourse[each[1]] = [[], 0]
+
+        dict_byCourse[each[1]][0] += [each]
+
+    for each in dict_byCourse.items():
+        each[1][1] = sum(
+            map((lambda x: float(x[2])), each[1][0])
+        ) / len(each[1][0])
+
+    for each in data:
+        if (dict_studentAverages.get(each[0]) == None):
+            dict_studentAverages[each[0]] = [[], 0]
+
+        dict_studentAverages[each[0]][0] += [each]
+
+    for each in dict_studentAverages.items():
+        each[1][1] = sum(
+            map((lambda x: float(x[2])), each[1][0])
+        ) / len(each[1][0])
+
+    return {
+        'students_avg': {each[0]:each[1][1] for each in dict_studentAverages.items()},
+        'best_course': (
+            max(dict_byCourse.items(), key=(lambda x: x[1][1]))[0]
+        )
+    }
+    

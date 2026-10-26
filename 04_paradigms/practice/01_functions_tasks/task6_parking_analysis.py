@@ -20,3 +20,28 @@
    * строки: «Парковка_1;100;90;90.0» (занятость_% — число с плавающей точкой);
    * заголовок записывается всегда, даже если подходящих парковок нет.
 """
+dict_parkings_example = {
+   'название': '',
+   'вместимость': 0,
+   'занято': 0,
+}
+dict_parkings_new_example = {
+   'название': '',
+   'вместимость': 0,
+   'занято': 0,
+   'занятость_%': 0,
+}
+
+
+
+with open('parkings.txt', 'r') as f1:
+   with open('high_load_parkings.txt', 'w') as f2:
+      f2.write('название_парковки;вместимость;занято;занятость_%\n')
+      for each in f1.readlines()[1:]:
+         usedup = round(float(each.split(';')[2]) / float(each.split(';')[1]) * 100, 1)
+         if (usedup > 80):
+            f2.write(
+               f'{each.strip()};{usedup}\n'
+            )
+
+

@@ -19,4 +19,10 @@
 
 
 def analyze_scooter_usage(data):
-    pass
+
+    _data = []
+    for each in data:
+        _data += [each]
+        _data[-1]['speed_kmh'] = (round(each['distance_km'] / each['duration_min'] * 60 if each['duration_min'] != 0 else 0, 1))
+
+    return _data

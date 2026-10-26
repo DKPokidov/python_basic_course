@@ -20,8 +20,8 @@
 
 
 def load_per_km(route):
-    pass
+    return float(f"{(route.get('passengers') / route.get('length')):.1f}")
 
 
 def needs_review(load):
-    pass
+    return load < 200

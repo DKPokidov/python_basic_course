@@ -18,5 +18,26 @@
 """
 
 
+def _analyze_park(data, threshold=50):
+
+  _density = round(
+      data.get('visitors_day') / data.get('area_ha') if data.get('visitors_day') != None and data.get('area_ha') != None else 0, 1
+    )
+
+  _entranceLoad = round(
+      data.get('visitors_day') / data.get('entrances') if data.get('visitors_day') != None and data.get('entrances') != None else 0
+    )
+  
+  return {
+
+    'density': _density,
+    'entrance_load': _entranceLoad,
+    'status': 'перегружен' if _density >= threshold else 'в норме',
+
+  } 
+
+
+
 def analyze_park(data, threshold=50):
-    pass
+
+  return {each[0]:_analyze_park(each[1], threshold) for each in data.items()}
