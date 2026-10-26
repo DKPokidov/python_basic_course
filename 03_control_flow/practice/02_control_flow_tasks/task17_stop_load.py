@@ -31,3 +31,14 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+
+for station in stops:
+    potok = station[1] - station[2]
+    if potok > 50:
+        category = 'Высокая загруженность'
+    elif potok >= 10:
+        category = 'Средняя загруженность'
+    else:
+        category = 'Низкая загруженность'
+
+    print(f'{station[0]}: {potok}, {category}')
