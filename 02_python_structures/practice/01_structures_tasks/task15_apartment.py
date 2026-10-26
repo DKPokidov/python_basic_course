@@ -14,16 +14,12 @@
 Программа должна выводить сообщение «Квартира подходит» или «Квартира не подходит».
 """
 
-answers = {
-    True : "Квартира подходит",
-    False : "Квартира не подходит"
-
-}
 area = int(input("Введите площадь квартиры (кв. метров): "))
 kitchen_area = int(input("Введите площадь кухни (кв. метров): "))
 district = input("Введите район: ")
 balcony = input("Есть ли балкон (да/нет): ")
 
-approved = ((area >= 120) or (area >=70 and district == 'Центральный')) and (kitchen_area >=20) and (balcony == 'да')
-
-print(answers[approved])
+if ((area >= 120) or (area >=70 and district == 'Центральный')) and (kitchen_area >=20) and (balcony == 'да'):
+    print("Квартира подходит")
+else:
+    print("Квартира не подходит")
