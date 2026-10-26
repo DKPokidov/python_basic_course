@@ -29,10 +29,3 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
-
-dense_districts = []
-for name, area, population in districts:
-    dencity = population / area
-    if dencity > 5:
-        dense_districts.append(name)
-print(f"Плотно заселённые районы: {dense_districts}")
