@@ -23,3 +23,10 @@ attractions = {
     "Исаакиевский собор": (59.9339, 30.3138),
     "Казанский собор": (59.9346, 30.3247),
 }
+sight = str(input('Введите название достопримечательности: '))
+if sight not in attractions:
+    print('Достопримечательность не найдена')
+else:
+    latitude = attractions.get(sight)[0]
+    longitude = attractions.get(sight)[1]
+    print(f'Координаты: широта {latitude}, долгота {longitude}')
