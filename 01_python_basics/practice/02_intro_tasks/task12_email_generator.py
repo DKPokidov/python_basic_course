@@ -16,3 +16,6 @@
 Введите год поступления: 2026
 Ваш email: Алексей2026@itmo.com
 """
+name = input("Введите ваше имя:")
+year_of_enrollment = input("Введите год поступления:")
+print(f"Ваш email: {name}{year_of_enrollment}@itmo.com")
