@@ -22,4 +22,33 @@
 
 
 def analyze_grades(data):
-    pass
+    students = {}
+    courses = {}
+    
+    for student, course, grade in data:
+        if student not in students:
+            students[student] = []
+        students[student].append(grade)
+        
+        if course not in courses:
+            courses[course] = []
+        courses[course].append(grade)
+    
+    students_avg = {
+        student: round(sum(grades) / len(grades), 1) 
+        for student, grades in students.items()
+    }
+    
+    best_course = None
+    best_avg = -1
+    
+    for course, grades in courses.items():
+        avg_grade = sum(grades) / len(grades)
+        if avg_grade > best_avg:
+            best_avg = avg_grade
+            best_course = course
+            
+    return {
+        "students_avg": students_avg,
+        "best_course": best_course
+    }

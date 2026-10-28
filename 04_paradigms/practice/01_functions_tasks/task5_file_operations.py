@@ -17,3 +17,10 @@
 с сохранённым содержимым, а файлы original.txt и copy.txt не должны
 существовать.
 """
+import os
+import shutil
+with open('original.txt', 'w', encoding='utf-8') as fi:
+    fi.write('Это оригинальный файл.')
+shutil.copy('original.txt', 'copy.txt')
+os.rename('copy.txt', 'renamed_copy.txt')
+os.remove('original.txt')

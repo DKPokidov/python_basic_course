@@ -14,9 +14,18 @@
 - Парк считается перегруженным (status = "перегружен"), если
   density >= threshold, иначе — "в норме".
 - Функция возвращает dict {название: {"density": ..., "entrance_load": ...,
-                                       "status": ...}}.
+                                           "status": ...}}.
 """
 
 
 def analyze_park(data, threshold=50):
-    pass
+  keys=[]
+  values=[]
+  for name, info in data.items():
+    density=info['visitors_day']/info['area_ha']
+    entrance_load=info['visitors_day']/info['entrances']
+    stat=lambda den: 'в норме' if den<threshold else 'перегружен'
+    status=stat(density)
+    keys.append(name)
+    values.append({'density': round(density,1), 'entrance_load': round(entrance_load,0),'status':status})
+  return dict(zip(keys,values))
