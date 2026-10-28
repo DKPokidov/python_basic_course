@@ -20,4 +20,12 @@
 
 
 def accessibility_analysis(data):
-    pass
+    res={}
+    for i in data['objects']:
+        d=i['district']
+        if i['accessibility']['ramp']==True:
+            if d in res:
+                res[d]=res[d]+1
+            else:
+                res[d]=1
+    return res
