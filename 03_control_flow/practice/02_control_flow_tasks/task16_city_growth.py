@@ -23,3 +23,17 @@
 5. Если за 30 лет миллион так и не набран — вывести
    «За 30 лет город не достиг миллиона жителей.».
 """
+
+population = int(input("Введите начальное население (в тыс. чел.): "))
+flag = False
+for year in range(2025, 2055):
+    population = int(population * 1.05)
+    print(f'Год {year}: население {population} тыс. чел.')
+    if population >= 1000:
+        print(f"Город достиг миллиона жителей в {year} году!")
+        flag = True
+        break
+
+if not flag:
+    print("За 30 лет город не достиг миллиона жителей.")
+    

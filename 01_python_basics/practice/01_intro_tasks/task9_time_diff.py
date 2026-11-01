@@ -17,3 +17,11 @@
 Секунда ухода: 0
 3:30:00
 """
+into_hour = int(input('Час прихода: '))
+into_min = int(input('Минута прихода: '))
+into_sec = int(input('Секунда прихода: '))
+out_hour = int(input('Час ухода: '))
+out_min = int(input('Минута ухода: '))
+out_sec = int(input('Секунда ухода: '))
+dif_hour, dif_min, dif_sec = (out_hour - into_hour), str((out_min - into_min)).zfill(2), str((out_sec - into_sec)).zfill(2)
+print(f'{dif_hour}:{dif_min}:{dif_sec}') 

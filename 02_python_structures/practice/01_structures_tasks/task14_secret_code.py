@@ -13,3 +13,19 @@
 * имеет ровно один специальный символ из набора: #@#$%^&*;
 * специальный символ не может стоять на первой или последней позиции.
 """
+from re import *
+code = str(input('Введите строку: '))
+normal_len = len(code) == 8
+big_letter = r'[A-Z]+'
+small_letter = r'[a-z]+'
+num = r'[0-9]+'
+
+
+special = set('#@#$%^&*')
+okey = normal_len and (bool(search(big_letter,code)))\
+    and (bool(search(small_letter,code))) and (bool(search(num,code)))\
+            and len(set(code) & special) == 1 and (code[0] not in special\
+            and (code[-1] not in special))
+    
+
+print(okey)

@@ -23,3 +23,15 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+pay = ()
+products = float(input('Введите сумму траты 1: '))
+transport = float(input('Введите сумму траты 2: '))
+joys = float(input('Введите сумму траты 3: '))
+connection = float(input('Введите сумму траты 4: '))
+pay += (products,)
+pay += (transport,) 
+pay += (joys,)
+pay += (connection,)
+index = pay.index(max(pay))
+print(f'Общая сумма: {sum(pay)}')
+print(f'Самая большая трата: {max(pay)} {categories[index]}')

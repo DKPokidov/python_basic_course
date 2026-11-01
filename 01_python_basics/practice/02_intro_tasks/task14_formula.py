@@ -20,3 +20,7 @@
 
 Примечание: используйте float() для ввода чисел
 """
+m = float(input('Введите m: '))
+n = float(input('Введите n: '))
+result = (m * n) / (m + n) + (m - n) / (m * n)
+print(f'Ответ: {(m * n) / (m + n)} + {(m - n) / (m * n)} = {result}')

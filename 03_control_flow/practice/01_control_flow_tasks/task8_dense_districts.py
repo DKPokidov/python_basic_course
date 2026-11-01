@@ -29,3 +29,11 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+
+tightly_populated = []
+for district in districts:
+    density_population = district[2] / district[1]
+    if density_population > 5:
+        tightly_populated.append(district[0])
+
+print(f'Плотно заселённые районы: {tightly_populated}')
