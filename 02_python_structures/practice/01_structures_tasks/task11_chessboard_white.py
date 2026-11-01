@@ -11,5 +11,5 @@
 x = int(input('Введите x: '))
 y = int(input('Введите y: '))
 
-is_white = abs(x + y) % 2 == 1
-print(f'Поле белое: {True if is_white else False}') 
+is_white = (x + y) % 2 == 1
+print(f'Поле белое: {is_white}') 
