@@ -17,4 +17,4 @@ shops["Цифербург"] += 1
 best_shop = max(shops)
 
 print (shops)
-print(f"Лучшая кофейня: {best_shop} с рейтингом {shops.get("Цифербург")}")
+print(f"Лучшая кофейня: {best_shop} с рейтингом {shops.get('Цифербург')}")
