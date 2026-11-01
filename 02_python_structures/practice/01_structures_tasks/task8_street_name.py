@@ -8,3 +8,6 @@
 
 Выведите True, если оба условия выполнены, иначе False.
 """
+
+name = str(input('Введите назывние улицы: '))
+print(len(name) <=30 and len(name) > 0)
