@@ -19,3 +19,26 @@
 
 Например: «Район A: Высокий уровень озеленения», «Район B: Средний уровень».
 """
+
+districts = { 
+    'Район A': 150 ,
+    'Район B': 80 ,
+    'Район C': 200 
+}
+result = []
+for dits in districts:
+    if districts[dits] >= 150:
+        level = 'Высокий уровень озеленения' 
+        result.append((f'{dits}: {level}'))
+    elif 50 <= districts[dits] < 150:
+        level = 'Средний уровень'
+        result.append((f'{dits}: {level}'))
+    else:
+        level = 'Низкий уровень'
+        result.append((f'{dits}: {level}'))
+print(*result, sep=', ')
+
+
+
+
+    
