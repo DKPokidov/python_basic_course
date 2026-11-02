@@ -19,5 +19,17 @@
 """
 
 
-def accessibility_analysis(data):
-    pass
+def accessibility_analysis(data: dict):
+    byDistrict = {}
+    finalDistricts = {}
+    for each in data['objects']:
+
+        if byDistrict.get(each['district']) == None:
+            byDistrict[each['district']] = []
+
+        byDistrict[each['district']] += [each]
+
+    for each in byDistrict.items():
+        finalDistricts[each[0]] = len(list(filter((lambda x: x['accessibility']), each[1])))
+
+    return finalDistricts
