@@ -24,3 +24,13 @@ city_streets = {
     "Нижний Новгород": 480,
     "Екатеринбург": 310,
 }
+
+
+print(
+    'Количество городов: ' +
+    (
+        str(len(
+            list(filter((lambda x: x[1] > 400), city_streets.items()))
+        ))
+    )
+)

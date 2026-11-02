@@ -23,3 +23,31 @@
 5. Если за 30 лет миллион так и не набран — вывести
    «За 30 лет город не достиг миллиона жителей.».
 """
+
+
+
+def estimate(initPopulation: int, initYear: int, growthRate: float):
+
+   _population = initPopulation
+
+   for i in range(initYear + 1, initYear + 31):
+      _population = int(_population * growthRate)
+      print(
+         f'Год {i}: население {_population} тыс. чел.'
+      )
+      if (_population >= 1000):
+         print(
+            f'Город достиг миллиона жителей в {i} году!'
+         )
+
+         return None
+
+   print(f'За 30 лет город не достиг миллиона жителей.')
+         
+
+
+estimate(
+   int(input()),
+   2024,
+   1.05
+)

@@ -29,3 +29,15 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+
+def _populationDensity(district: tuple[str, int, int]) -> float:
+    return float(district[2] / district[1]) > 5
+
+print('Плотно заселённые районы: ' + str(list(
+    map(
+        lambda x: x[0],
+        filter(
+        _populationDensity,
+        districts
+    ))
+    )))
