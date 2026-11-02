@@ -28,4 +28,3 @@ if trail in routes.keys():
     print(f'Маршрут {trail}: от Станция метро «{routes[trail][0]}» до Станция метро «{routes[trail][1]}»')
 else:
     print('Маршрут не найден')
-    

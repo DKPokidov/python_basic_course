@@ -39,7 +39,7 @@ quarters = [
 ]
 
 for quarter in quarters:
-    density =  quarter['houses'] / quarter ['area_ha']
+    density = quarter['houses'] / quarter['area_ha']
     green = quarter['green_area_ha'] / quarter['area_ha']
     if density <= 8 and quarter['school_dist_m'] <= 800 and green >= 0.2:        
         print(f"{quarter['district']}: Соответствует")    
