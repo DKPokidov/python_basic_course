@@ -24,3 +24,8 @@ city_streets = {
     "Нижний Новгород": 480,
     "Екатеринбург": 310,
 }
+number = 0
+for leng in city_streets.values():
+    if leng > 400:
+        number += 1
+print(f'Количество городов: {number}')

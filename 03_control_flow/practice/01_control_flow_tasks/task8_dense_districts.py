@@ -29,3 +29,8 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+plotnu = []
+for district in districts:
+    if district[2] / district[1] > 5:
+        plotnu.append(district[0])
+print(f"Плотно заселённые районы: {plotnu}")

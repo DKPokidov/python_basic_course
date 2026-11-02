@@ -28,3 +28,6 @@ district_green_areas = {
     "Западный": [1.5, 1.5],
     "Южный": [0.5, 1.0, 1.5],
 }
+for area in district_green_areas:
+    zelen = sum(district_green_areas[area])
+    print(f'{area}: {zelen} га')

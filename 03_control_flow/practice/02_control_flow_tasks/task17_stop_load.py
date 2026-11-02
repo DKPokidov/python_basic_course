@@ -31,3 +31,12 @@ stops = [
     ("Заводская", 20, 15),
     ("Парк", 10, 15),
 ]
+for stop in stops:
+    potok = stop[1] - stop[2]
+    if potok > 50:
+        categ = 'Высокая загруженность'
+    elif 10 <= potok <= 50:
+        categ = 'Средняя загруженность'
+    else:
+        categ = 'Низкая загруженность'
+    print(f'{stop[0]}: {potok}, {categ}')
