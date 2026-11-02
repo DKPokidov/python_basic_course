@@ -29,3 +29,10 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+
+count_districts = []
+for name_districts in districts:
+    density = name_districts[2] / name_districts[1]
+    if density > 5:
+        count_districts.append(name_districts[0])
+print(f'Плотно заселённые районы: {count_districts}')
