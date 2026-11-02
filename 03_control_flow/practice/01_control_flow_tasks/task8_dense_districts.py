@@ -29,3 +29,12 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+o = []
+i = 0
+while i < len(districts):
+    a, b, c = districts[i]
+    density = c / b
+    if density > 5:
+        o.append(a)
+    i += 1
+print(f"Плотно заселённые районы: {o}")
