@@ -39,7 +39,7 @@ quarters = [
 ]
 for quarter in quarters:
     plotnost = quarter['houses'] / quarter['area_ha']
-    zelen = 1 - (quarter['area_ha'] - quarter['green_area_ha']) / quarter['area_ha']
+    zelen = quarter['green_area_ha'] / quarter['area_ha']
     if plotnost <= 8 and quarter['school_dist_m'] <= 800 and zelen >= 0.2:
         print(f"{quarter['district']}: Соответствует")
     else:
