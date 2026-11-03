@@ -21,4 +21,20 @@ capacity > threshold. Возвращает список строк "{name} ({cap
 
 
 def find_overloaded(data, threshold):
-    pass
+
+    pairsSatisfying: list[tuple[str, int]] = list(
+        map(
+            (lambda _obj: (_obj['name'], _obj['capacity'])),
+            filter(
+                (lambda _obj: _obj['capacity'] > threshold),
+                data['objects']
+            )
+        )
+    )
+
+    return list(
+        map(
+            (lambda pair: f"{pair[0]} ({pair[1]} мест)"),
+            pairsSatisfying
+        )
+    )

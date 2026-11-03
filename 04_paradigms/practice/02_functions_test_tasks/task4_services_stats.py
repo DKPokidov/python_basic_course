@@ -20,4 +20,20 @@
 
 
 def services_stats(data):
-    pass
+
+    returnDict: dict[str, list] = {}
+
+    for dataObject in data['objects']:
+
+        if returnDict.get(dataObject['type']) == None:
+            returnDict[dataObject['type']] = []
+
+        returnDict[dataObject['type']] += dataObject['services']
+
+
+    print(returnDict.items())
+
+    return {key: value for (key, value) in tuple(map(
+        (lambda x: (x[0], set(x[1]))),
+        returnDict.items()
+    ))}
