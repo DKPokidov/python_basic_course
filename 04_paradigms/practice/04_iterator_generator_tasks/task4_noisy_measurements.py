@@ -15,6 +15,10 @@
 Используйте yield для каждого измерения.
 """
 
+import random as r
 
 def noisy_measurements(base_values, noise_level=0.1):
-    yield
+    for each_value in base_values:
+        yield each_value * (1 + r.uniform(-noise_level, noise_level))
+        yield each_value * (1 + r.uniform(-noise_level, noise_level))
+        yield each_value * (1 + r.uniform(-noise_level, noise_level))

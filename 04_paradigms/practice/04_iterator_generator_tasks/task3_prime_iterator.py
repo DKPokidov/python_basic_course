@@ -15,12 +15,31 @@ __next__() и __init__(self, start, end).
 """
 
 
+def checkPrime(num: int):
+    for divisor in range(2, num):
+        if (num % divisor == 0):
+            return False
+    return True
+
 class PrimeIterator:
+
+    
+
+
     def __init__(self, start, end):
-        pass
+        self.current = start if start > 2 else 2
+        self.end = end
 
     def __iter__(self):
-        pass
+        return self
 
     def __next__(self):
-        pass
+        while self.current < self.end:
+            if (checkPrime(self.current)):
+                self.current += 1
+                return self.current - 1
+            self.current += 1
+        raise StopIteration
+
+for x in PrimeIterator(0, 10):
+    print(x)

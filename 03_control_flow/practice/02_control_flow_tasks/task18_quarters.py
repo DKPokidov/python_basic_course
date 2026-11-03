@@ -37,3 +37,14 @@ quarters = [
     {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
     {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
 ]
+
+
+def logic(element: dict[str, any]) -> bool:
+
+    buildDensity = element['houses'] / element['area_ha']
+    greenDensity = element['green_area_ha'] / element['area_ha'] * 100
+
+    return (buildDensity <= 8) and (greenDensity >= 20) and (element['school_dist_m'] <= 800)
+
+for each in quarters:
+    print(f'{each["district"]}: {"Соответствует" if logic(each) else "Не соответствует"}')

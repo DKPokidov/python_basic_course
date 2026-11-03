@@ -21,4 +21,27 @@
 
 
 def find_least_served_districts(data, n=3):
-    pass
+
+    byDistrict: dict = {}
+
+    for each in data['objects']:
+    
+        if byDistrict.get(each['district']) == None:
+            byDistrict[each['district']] = []
+
+        byDistrict[each['district']] += [each]
+
+
+
+
+    bdSorted = list(
+        sorted(
+            map(
+                (lambda x: (x[0], len(x[1]))),
+                byDistrict.items()
+            ),
+            key=(lambda x: x[1])
+        )
+    )
+
+    return bdSorted[:n]
