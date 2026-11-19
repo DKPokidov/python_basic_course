@@ -22,9 +22,9 @@
 
 
 def filter_by_type(data, obj_type):
-    y=data['objects']
-    names=[]
+    y = data["objects"]
+    names = []
     for i in y:
-        if i['type']==obj_type:
-            names.append(i['name'])
+        if i["type"] == obj_type:
+            names.append(i["name"])
     return names

@@ -19,13 +19,35 @@
 
 
 def analyze_scooter_usage(data):
-    final=[]
+    final = []
     for i in range(len(data)):
-      data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern=data[i].copy()
-      if data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern['duration_min']==0:
-        speed_kmh=0.0
-      else:
-        speed_kmh = round((data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern['distance_km'] / data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern['duration_min']) * 60, 1)
-      data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern.update({'speed_kmh': speed_kmh})
-      final.append(data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern)
+        data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern = data[
+            i
+        ].copy()
+        if (
+            data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern[
+                "duration_min"
+            ]
+            == 0
+        ):
+            speed_kmh = 0.0
+        else:
+            speed_kmh = round(
+                (
+                    data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern[
+                        "distance_km"
+                    ]
+                    / data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern[
+                        "duration_min"
+                    ]
+                )
+                * 60,
+                1,
+            )
+        data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern.update(
+            {"speed_kmh": speed_kmh}
+        )
+        final.append(
+            data_copy_renamed_because_of_lowering_the_grade_and_attempting_to_break_away_from_the_ninth_grader_pattern
+        )
     return final

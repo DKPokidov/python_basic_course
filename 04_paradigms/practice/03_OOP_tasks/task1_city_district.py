@@ -19,21 +19,21 @@ name, area_ha, population, building_types (список строк, по умо�
 
 
 class CityDistrict:
-    def __init__(self, name, area_ha, population:int, building_types=None):
-        self.name=name
-        self.area_ha=area_ha
-        self.population=population
-        self.building_types=building_types if building_types != None else []
+    def __init__(self, name, area_ha, population: int, building_types=None):
+        self.name = name
+        self.area_ha = area_ha
+        self.population = population
+        self.building_types = building_types if building_types != None else []
 
     def add_building_type(self, type_name):
         if type_name not in self.building_types:
             self.building_types.append(type_name)
 
     def get_density(self):
-        return self.population / self.area_ha 
+        return self.population / self.area_ha
 
     def has_green_space(self):
-        return 'green' in self.building_types
+        return "green" in self.building_types
 
     def __str__(self):
-        return f"Район: {self.name}, площадь: {self.area_ha} га, население: {self.population} чел." 
+        return f"Район: {self.name}, площадь: {self.area_ha} га, население: {self.population} чел."

@@ -28,13 +28,16 @@ class Student:
     def __init__(self, name, group, average_grade):
         self.name = name
         self.group = group
-        self.average_grade=average_grade if average_grade <= 5.0 else 5.0
+        self.average_grade = average_grade if average_grade <= 5.0 else 5.0
 
     def improve_grade(self, points):
-        self.average_grade = self.average_grade + points if self.average_grade + points <= 5.0 else 5.0
+        self.average_grade = (
+            self.average_grade + points if self.average_grade + points <= 5.0 else 5.0
+        )
 
     def __repr__(self):
         return f"(name='{self.name}', group='{self.group}', average_grade={self.average_grade})"
+
 
 class University:
     def __init__(self, name):
@@ -48,4 +51,4 @@ class University:
         return sorted(self.students, key=lambda s: s.average_grade, reverse=True)[:n]
 
     def get_students_by_group(self, group_name):
-        return [student for student in self.students if student.group == group_name]    
+        return [student for student in self.students if student.group == group_name]
