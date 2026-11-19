@@ -34,4 +34,3 @@ class PrimeIterator:
                 self.start = num + 1
                 return num
         raise StopIteration
-

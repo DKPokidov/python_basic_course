@@ -23,7 +23,7 @@ def accessibility_analysis(data):
     res = {}
     for i in data["objects"]:
         d = i["district"]
-        if i["accessibility"]["ramp"] == True:
+        if i["accessibility"]["ramp"]:
             if d in res:
                 res[d] = res[d] + 1
             else:
