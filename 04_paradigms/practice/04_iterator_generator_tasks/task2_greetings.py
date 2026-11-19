@@ -13,4 +13,5 @@
 
 
 def greetings(names):
-    yield
+    for name in names:
+        yield f"Привет, {name}!"

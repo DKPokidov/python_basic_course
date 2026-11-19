@@ -17,10 +17,20 @@ __next__() и __init__(self, start, end).
 
 class PrimeIterator:
     def __init__(self, start, end):
-        pass
+        self.start = start
+        self.end = end
 
     def __iter__(self):
-        pass
+        return self
 
     def __next__(self):
-        pass
+        for num in range(self.start, self.end):
+            if num < 2:
+                continue
+            for i in range(2, int(num**0.5) + 1):
+                if num % i == 0:
+                    break
+            else:
+                self.start = num + 1
+                return num
+        raise StopIteration

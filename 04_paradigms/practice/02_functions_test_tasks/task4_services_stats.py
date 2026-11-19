@@ -20,4 +20,12 @@
 
 
 def services_stats(data):
-    pass
+    res = {}
+    for o in data["objects"]:
+        typ = o["type"]
+        if typ not in res:
+            res[typ] = []
+        for usl in o["services"]:
+            if usl not in res[typ]:
+                res[typ].append(usl)
+    return res
