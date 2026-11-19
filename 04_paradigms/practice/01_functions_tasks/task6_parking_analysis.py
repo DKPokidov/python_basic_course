@@ -29,6 +29,6 @@ with open('high_load_parkings.txt', 'w', encoding='utf-8') as fi2:
       u=r[i].strip()
       us=r[i].split(';')
       zanyatost=round(float(us[2])/float(us[1])*100,1)
-      stroka_new=u+(f';{zan}\n')
+      stroka_new=u+(f';{zanyatost}\n')
       if zanyatost>80:
-         fi2.write(sn)
+         fi2.write(stroka_new)
