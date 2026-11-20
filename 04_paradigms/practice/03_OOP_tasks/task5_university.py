@@ -33,7 +33,7 @@ class Student:
     def improve_grade(self, points):
         self.average_grade = min(self.average_grade + points, 5.0)
         return self.average_grade
-    
+
     def __repr__(self):
         return f'Student({self.name!r}, {self.group!r}, {self.average_grade})'
 
@@ -48,7 +48,7 @@ class University:
         print('Студент добавлен')
 
     def get_top_students(self, n):
-        students_list = sorted(self.students, key=lambda student: student.average_grade,reverse=True)
+        students_list = sorted(self.students, key=lambda student: student.average_grade, reverse=True)
         return students_list[:n]
 
     def get_students_by_group(self, group_name):
