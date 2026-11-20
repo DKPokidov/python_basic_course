@@ -20,4 +20,12 @@
 
 
 def accessibility_analysis(data):
-    pass
+    answer = {}
+    for i in range(len(data["objects"])):
+        if data["objects"][i]["accessibility"]["ramp"] == True:
+            district = data["objects"][i]["district"]
+            if district not in answer:
+                answer[district] = 0
+            answer[district] += 1
+            
+    return answer
