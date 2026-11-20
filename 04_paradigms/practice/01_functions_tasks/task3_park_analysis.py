@@ -33,7 +33,7 @@ def analyze_park(data, threshold=50):
                     "density": density,
                     "entrance_load": entrance_load,
                     "status": status,
-                      }
+                }
             }
         )
     return dict

@@ -43,5 +43,5 @@ def analyze_grades(data):
     result = {
         'students_avg': students,
         'best_course': best_course,
-        }
+    }
     return result
