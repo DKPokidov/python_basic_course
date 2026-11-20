@@ -20,4 +20,12 @@
 
 
 def services_stats(data):
-    pass
+    answer = {}
+    for object in data["objects"]:
+        if object["type"] not in answer:
+            answer[object["type"]] = set()
+        for st_service in object["services"]:
+            answer[object["type"]].add(st_service)
+    for type in answer.values():
+        type = list(type)
+    return answer

@@ -22,4 +22,26 @@
 
 
 def analyze_grades(data):
-    pass
+    students = {}
+    disciplines = {}
+    for student in data:
+        name, discipline, grade = student
+        if name not in students:
+            students[name] = grade
+        else:
+            students[name] = (students[name] + grade) / 2
+        if discipline not in disciplines:
+            disciplines[discipline] = grade
+        else:
+            disciplines[discipline] = (disciplines[discipline] + grade) / 2
+    best_course = None
+    best_grade = 0
+    for discipline in disciplines.items():
+        if discipline[1] > best_grade:
+            best_course = discipline[0]
+            best_grade = discipline[1]
+    result = {
+        'students_avg': students,
+        'best_course': best_course,
+    }
+    return result

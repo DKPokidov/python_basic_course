@@ -17,3 +17,13 @@
 с сохранённым содержимым, а файлы original.txt и copy.txt не должны
 существовать.
 """
+
+import shutil
+import os
+
+file = open('original.txt', 'x', encoding='utf-8')
+file.write('Это оригинальный файл.\n')
+file.close()
+shutil.copy('original.txt', 'copy.txt')
+os.rename('copy.txt', 'renamed_copy.txt')
+os.remove('original.txt')
