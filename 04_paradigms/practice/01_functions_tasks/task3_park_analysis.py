@@ -30,9 +30,9 @@ def analyze_park(data, threshold=50):
         dict.update(
             {
                 park: {
-          "density": density,
-          "entrance_load": entrance_load,
-          "status": status
+                    "density": density,
+                    "entrance_load": entrance_load,
+                    "status": status,
                       }
             }
         )

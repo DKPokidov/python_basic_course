@@ -38,7 +38,7 @@ class Car(Vehicle):
     def __init__(self, brand, model, year, doors):
         super().__init__(brand, model, year)
         self.doors = doors
-    
+
     def start_engine(self):
         return f'Автомобиль {self.brand} {self.model} завёлся с характерным звуком'
 
@@ -51,10 +51,10 @@ class Motorcycle(Vehicle):
     def __init__(self, brand, model, year, has_sidecar):
         super().__init__(brand, model, year)
         self.has_sidecar = has_sidecar
-    
+
     def start_engine(self):
         return f'Мотоцикл {self.brand} {self.model} рычит при запуске'
-    
+
     def info(self):
         base_info = super().info()
         add_info = ', с коляской' if self.has_sidecar else ', без коляски'

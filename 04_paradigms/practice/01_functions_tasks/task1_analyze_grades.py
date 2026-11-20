@@ -42,6 +42,6 @@ def analyze_grades(data):
             best_grade = discipline[1]
     result = {
         'students_avg': students,
-        'best_course': best_course
-            }
+        'best_course': best_course,
+        }
     return result
