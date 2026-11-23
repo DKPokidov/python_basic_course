@@ -19,6 +19,8 @@
 Функция ничего не печатает и возвращает словарь:
     {'students_avg': {имя: средний_балл}, 'best_course': название_курса}
 """
+
+
 def analyze_grades(data):
     student_stat = {}
     course_stat = {}
@@ -36,7 +38,7 @@ def analyze_grades(data):
     student_avg = {}
     for student, (grade, grade_number) in student_stat.items():
         student_avg[student] = round(grade / grade_number, 1)
-    
+
     best_course = None
     course_avg = {}
     for course, (grade, grade_quantity) in course_stat.items():
