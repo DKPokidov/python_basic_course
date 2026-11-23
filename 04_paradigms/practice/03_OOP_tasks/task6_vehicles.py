@@ -23,20 +23,42 @@
 
 class Vehicle:
     def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
         pass
 
     def start_engine(self):
+        return "Двигатель запущен"
         pass
 
     def info(self):
+        return f"{self.year} {self.brand} {self.model}"
         pass
 
 
 class Car(Vehicle):
     def __init__(self, brand, model, year, doors):
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.doors = doors
+    def start_engine(self):
+        return f"Автомобиль {self.brand} {self.model} завёлся с характерным звуком"
+    def info(self):
+        return Vehicle(self.brand, self.model, self.year).info() + f", дверей: {self.doors}"
         pass
 
 
 class Motorcycle(Vehicle):
     def __init__(self, brand, model, year, has_sidecar):
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.has_sidecar = has_sidecar
+        pass
+    def start_engine(self):
+            return f"Мотоцикл {self.brand} {self.model} рычит при запуске"
+    def info(self):
+        return Vehicle(self.brand, self.model, self.year).info() + [", без коляски", ", с коляской"][self.has_sidecar]
         pass

@@ -15,6 +15,12 @@
 Используйте yield для каждого измерения.
 """
 
+import random
 
 def noisy_measurements(base_values, noise_level=0.1):
-    yield
+    for value in base_values:
+        for _1 in range(3):
+            avg = 0
+            for _ in range(3):
+                avg += value * (1 + random.uniform(-noise_level, noise_level))
+            yield avg/3

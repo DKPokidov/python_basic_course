@@ -27,7 +27,7 @@ class CityFeaturing():
         '''Расчитывает и возвращает обеспечнность города школами
         child_index = 0.3  - дети составляюттреть населения, примерно
         school_index = 1000 - обеспеченность обычно счиатеся на 1000 населения '''
-        provision = (school_index  * self.schools) / (child_index * self.population)
+        provision = (child_index * self.population) / (school_index  * self.schools)
         return provision
     
     def is_green_city(self) -> bool:

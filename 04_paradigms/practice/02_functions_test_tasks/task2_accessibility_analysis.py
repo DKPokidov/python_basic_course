@@ -19,5 +19,14 @@
 """
 
 
-def accessibility_analysis(data):
+def accessibility_analysis(data) -> dict:
+    city = data["city"]
+    year = data["year"]
+    objects = data["objects"]
+    districts = set(i["district"] for i in objects)
+    accessible_objects = {district: 0 for district in districts}
+    for obj in objects:
+        district = obj["district"]
+        accessible_objects[district] += int(obj["accessibility"]["ramp"])
+    return accessible_objects
     pass

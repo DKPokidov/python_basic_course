@@ -18,5 +18,16 @@
 """
 
 
-def analyze_scooter_usage(data):
+def analyze_scooter_usage(data) -> list:
+    result = []
+    for cur in data:
+        distance_km = cur["distance_km"]
+        duration_min = cur["duration_min"]
+        if duration_min:
+            speed_kmh = round((distance_km / duration_min) * 60, 1)
+        else:
+            speed_kmh = 0.0
+        cur["speed_kmh"] = speed_kmh
+        result.append(cur)
+    return result
     pass

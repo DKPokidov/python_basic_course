@@ -20,3 +20,20 @@
    * строки: «Парковка_1;100;90;90.0» (занятость_% — число с плавающей точкой);
    * заголовок записывается всегда, даже если подходящих парковок нет.
 """
+
+# with open("parkings.txt", "x") as initialise:
+#     temp = "название_парковки;вместимость;занято Центр-1;50;38 Рынок;30;25 Университет;40;12 ЖД_вокзал;60;55 Парк_Победы;20;8"
+#     temp = temp.split()
+#     for i in temp:
+#         print(i, file=initialise)
+
+high_load_parkings = ["название_парковки;вместимость;занято;занятость_%"]
+with open("parkings.txt", "r") as parking_lots:
+    for parking in parking_lots.readlines()[1:]:
+        name, capacity, taken = parking.split(";")
+        occupied = round(int(taken)/int(capacity) * 100, 1)
+        if occupied > 80:
+            high_load_parkings.append(f"{parking[:-1]};{occupied}")
+with open("high_load_parkings.txt", "x") as result:
+    for item in high_load_parkings:
+        print(item, file=result)

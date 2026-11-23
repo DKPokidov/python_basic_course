@@ -20,5 +20,18 @@
 """
 
 
-def find_least_served_districts(data, n=3):
+def find_least_served_districts(data, n=3) -> list:
+    result = []
+    districts = {}
+    city = data["city"]
+    year = data["year"]
+    objects = data["objects"]
+    for obj in objects:
+        try:
+            districts[obj["district"]] += 1
+        except:
+            districts[obj["district"]] = 1
+    for i in districts:
+        result.append((i, districts[i]))
+    return sorted(result)[:n]
     pass

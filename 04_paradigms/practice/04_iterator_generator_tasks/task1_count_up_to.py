@@ -12,4 +12,9 @@
 
 
 def count_up_to(n):
-    yield
+    cur = 1
+    while cur != (n + 1):
+        yield cur
+        cur += 1
+
+print(*count_up_to(5))
