@@ -19,5 +19,19 @@
 """
 
 
-def services_stats(data):
+def services_stats(data) -> dict:
+    result = {}
+    city = data["city"]
+    year = data["year"]
+    objects = data["objects"]
+    for obj in objects:
+        type = obj["type"]
+        try:
+            for service in obj["services"]:
+                result[type].add(service)
+        except:
+            result[type] = set()
+            for service in obj["services"]:
+                result[type].add(service)
+    return result
     pass

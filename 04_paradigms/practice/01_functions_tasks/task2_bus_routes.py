@@ -19,9 +19,12 @@
 """
 
 
-def load_per_km(route):
+def load_per_km(route) -> float:
+    length, passangers = route["length"], route["passengers"]
+    return round(passangers/length, 1)
     pass
 
 
-def needs_review(load):
+def needs_review(load) -> bool:
+    return load < 200
     pass

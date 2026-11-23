@@ -21,5 +21,13 @@
 """
 
 
-def filter_by_type(data, obj_type):
+def filter_by_type(data, obj_type) -> list:
+    result = []
+    city = data["city"]
+    year = data["year"]
+    objects = data["objects"]
+    for object in objects:
+        if object["type"] == obj_type:
+            result.append(object["name"])
+    return result
     pass

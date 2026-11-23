@@ -14,7 +14,16 @@
 
 class Building:
     def __init__(self, name, height, year_built, type):
+        self.name = name
+        self.height = height
+        self.year_built = year_built
+        self.type = type
         pass
 
     def get_info(self):
-        pass
+        return f"Здание {self.name}, {self.type}, построено в {self.year_built}, высота {self.height} м"
+
+
+    # def __str__(self):
+    #     return f"Здание {self.name}, {self.type}, построено в {self.year_built}, высота {self.height} м"
+        # pass

@@ -28,22 +28,51 @@
 
 class Building:
     def __init__(self, name, height, year_built, type):
+        self.name = name
+        self.height = height
+        self.year_built = year_built
+        self.type = type
         pass
 
     def get_info(self):
+        return f"Здание {self.name}, {self.type}, построено в {self.year_built}, высота {self.height} м"
         pass
 
 
 class ResidentialBuilding(Building):
     def __init__(self, name, height, year_built, number_of_apartments):
+        self.name = name
+        self.height = height
+        self.year_built = year_built
+        self.number_of_apartments = number_of_apartments
+        self.type = "жилой"
         pass
+
+    def get_info(self):
+        return Building(self.name, self.height, self.year_built, self.type).get_info() + f", квартир: {self.number_of_apartments}"
 
 
 class OfficeBuilding(Building):
     def __init__(self, name, height, year_built, number_of_floors):
+        self.name = name
+        self.height = height
+        self.year_built = year_built
+        self.number_of_floors = number_of_floors
+        self.type = "офисный"
         pass
+
+    def get_info(self):
+        return Building(self.name, self.height, self.year_built, self.type).get_info() + f", этажей: {self.number_of_floors}"
 
 
 class ShoppingCenter(Building):
     def __init__(self, name, height, year_built, number_of_shops):
-        pass
+        self.name = name
+        self.height = height
+        self.year_built = year_built
+        self.number_of_shops = number_of_shops
+        self.type = "торговый"
+
+    def get_info(self):
+        return Building(self.name, self.height, self.year_built, self.type).get_info() + f", магазинов: {self.number_of_shops}"
+   

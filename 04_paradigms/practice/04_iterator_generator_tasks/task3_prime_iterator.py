@@ -14,13 +14,33 @@
 __next__() и __init__(self, start, end).
 """
 
+def prime(x):
+    f = 1
+    for i in range(2, int(x**.5) + 1):
+        if x % i == 0:
+            f = 0
+    return f and (x != 1)
+
 
 class PrimeIterator:
     def __init__(self, start, end):
+        self.cur = start
+        self.end = end
         pass
 
     def __iter__(self):
+        return self
         pass
 
     def __next__(self):
+        while self.cur < self.end:
+            if prime(self.cur):
+                result = self.cur
+                self.cur += 1
+                return result
+            self.cur += 1 
+        raise StopIteration
         pass
+
+
+print(*PrimeIterator(1, 20))

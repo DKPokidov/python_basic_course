@@ -17,3 +17,15 @@
 с сохранённым содержимым, а файлы original.txt и copy.txt не должны
 существовать.
 """
+
+import os
+
+
+with open("original.txt", "x") as original:
+    print("Это оригинальный файл.", file=original)
+with open("original.txt", "r") as original, open("copy.txt", "x") as copy:
+    for line in original.readlines():
+        print(line, file=copy)
+original.close()
+os.rename("copy.txt", "renamed_copy.txt")
+os.remove("original.txt")
