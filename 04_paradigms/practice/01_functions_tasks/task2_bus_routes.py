@@ -20,8 +20,9 @@
 
 
 def load_per_km(route):
-    pass
+    load = route['passengers'] / route['length'] 
+    return round(load, 1)
 
 
 def needs_review(load):
-    pass
+    return load < 200

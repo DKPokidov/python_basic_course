@@ -20,4 +20,14 @@
 
 
 def services_stats(data):
-    pass
+    service_dict = {}
+    for items in data['objects']:
+        type = items['type']
+        services = items['services']
+        if type not in service_dict:
+            service_dict[type] = list(services)
+        elif type in service_dict:
+            for service in services:
+                if service not in service_dict[type]:
+                    service_dict[type].append(service)
+    return service_dict

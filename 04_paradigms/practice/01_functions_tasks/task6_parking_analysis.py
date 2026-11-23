@@ -20,3 +20,16 @@
    * строки: «Парковка_1;100;90;90.0» (занятость_% — число с плавающей точкой);
    * заголовок записывается всегда, даже если подходящих парковок нет.
 """
+
+with open('parkings.txt', 'r') as parkings_file, open('high_load_parkings.txt', 'w') as high_load_file:
+    high_load_file.write('название_парковки;вместимость;занято;занятость_%\n')
+    lines = parkings_file.readlines()
+    for line in lines[1:]:
+        parts = line.strip().split(';')
+        parking = parts[0]
+        capacity = parts[1]
+        busy = parts[2]
+        busyness = round(int(busy) / int(capacity) * 100, 1)
+        if busyness > 80:
+            new_line = f'{parking};{capacity};{busy};{busyness}%\n'
+            high_load_file.write(new_line)

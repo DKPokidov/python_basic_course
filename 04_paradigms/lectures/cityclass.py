@@ -1,35 +1,33 @@
 class CityFeaturing():
-    def get_name(self, name: str) -> str:
-        '''Получает название города и записывает его в переменную'''
-        return name
+
+    def __init__(self, name: str, area: float, population: int, schools: int, green_area: float, threshold: float = 50):
+        self.name = name
+        self.area = area
+        self.population = population
+        self.schools = schools
+        self.green_area = green_area
+        self.threshold = threshold
     
-    def get_features(self, _area: float, _population: int) -> float:
-        '''Получает площадь города и население и записывает в переменную'''
-        return _area, _population
-    
-    def density_calc(self, _area: float, _population: int) -> float:
-        '''Получает площадь города и население и записывает в переменную'''
-        density =  _population / _area
+    def density_calc(self) -> float:
+        density = self.population / self.area
         return density
-    
-    def provision_calc(self, _schools: int, _population: int) -> float:
-        '''Расчитывает и возвращает плотность город'''
-        CHILD_INDEAX = 0.3 # дети составляюттреть населения, примерно
-        SCHOOL_INDEX = 1000 # обеспеченность обычно счиатеся на 1000 населения
-        provision = (SCHOOL_INDEX  * _schools) / (CHILD_INDEAX * _population)
+
+    def provision_calc(self, child_index: float = 0.3) -> float:
+        provision = (child_index * self.population) / self.schools
         return provision
     
-    def is_green_city(self, _green_zone_area: float, _area: float) -> bool:
-        '''Определение статуса "Зеленый город" - 
-        считаем процент зеленый город и присваимвам True, 
-        если процент больше 50. '''
-        is_green = True if _green_zone_area / _area > 0.5 else False
+    def is_green_city(self) -> bool:
+        '''Возвращает True, если город зеленый, и возвращает False в противном случае'''
+        green_percentage = (self.green_area / self.area) * 100
+        is_green = green_percentage > self.threshold
         return is_green
     
-    def print_report(self, name, _area, _population, _density, _provision, _is_green):
-        '''Метод с выводом отчета в виде словаря.'''
-        keys_list = ['Название города', 'Площадь города', 'Население города', 
-                     'Плотность население', 'Обеспеченность школами', 'Зеленый город']
-        values_list = [name, _area, _population, _density, _provision, _is_green]
-        report = dict(zip(keys_list, values_list))
+    def create_report(self) -> dict:
+        list_key = ["name", "area", "population", "density", "provision", "is_green_city"]
+        self.density = self.density_calc()
+        self.provision = self.provision_calc()
+        self.is_green = self.is_green_city()
+        list_value = [self.name, self.area, self.population, self.density, self.provision, self.is_green]
+        report = dict(zip(list_key, list_value))
         return report
+

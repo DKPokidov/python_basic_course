@@ -19,4 +19,14 @@
 
 
 def analyze_scooter_usage(data):
-    pass
+    new_data = []
+    speed_kmh = None
+    for info in data:
+        trip_copy = info.copy()
+        if info['duration_min'] == 0:
+            speed_kmh = 0.0
+        else:
+            speed_kmh = round(info['distance_km'] / info['duration_min'] * 60, 1)
+        trip_copy['speed_kmh'] = speed_kmh
+        new_data.append(trip_copy)
+    return new_data
