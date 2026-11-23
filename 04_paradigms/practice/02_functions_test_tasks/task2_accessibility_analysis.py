@@ -23,7 +23,7 @@ def accessibility_analysis(data):
     access = {}
     for items in data['objects']:
         district = items['district']
-        if items['accessibility']['ramp'] == True:
+        if items['accessibility']['ramp']:
             if district not in access:
                 access[district] = 1
             else:
