@@ -39,16 +39,16 @@ class Building:
 
 class ResidentialBuilding(Building):
     def __init__(self, name, height, year_built, number_of_apartments):
-        super().__init__(name, height, year_built, type='Жилой')
+        super().__init__(name, height, year_built, type='жилой')
         self.number_of_apartments = number_of_apartments
 
     def get_info(self):
-        return f'{super().get_info()} квартир: {self.number_of_apartments}'
+        return f'{super().get_info()}, квартир: {self.number_of_apartments}'
 
 
 class OfficeBuilding(Building):
     def __init__(self, name, height, year_built, number_of_floors):
-        super().__init__(name, height, year_built, type='Офисный')
+        super().__init__(name, height, year_built, type='офисный')
         self.number_of_floors = number_of_floors
 
     def get_info(self):
@@ -57,7 +57,7 @@ class OfficeBuilding(Building):
 
 class ShoppingCenter(Building):
     def __init__(self, name, height, year_built, number_of_shops):
-        super().__init__(name, height, year_built, type='Тороговый')
+        super().__init__(name, height, year_built, type='торговый')
         self.number_of_shops = number_of_shops
 
     def get_info(self):
