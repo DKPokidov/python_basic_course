@@ -29,7 +29,7 @@ class CityDistrict:
         if type_name not in self.building_types:
             self.building_types.append(type_name)
         return self.building_types
-    
+
     def get_density(self):
         return self.population / self.area_ha if self.area_ha > 0 else 0
 

@@ -26,7 +26,7 @@ class District:
 
     def get_total_height(self):
         return sum(building.height for building in self.buildings)
-    
+
     def get_buildings_by_type(self, building_type):
         building_type_list = []
         for building in self.buildings:

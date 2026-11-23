@@ -37,8 +37,9 @@ class Student:
     def __repr__(self):
         return f'Имя: {self.name}, группа: {self.group}, оценка: {self.average_grade}.'
 
+
 class University:
-    def __init__(self, name, students = None):
+    def __init__(self, name, students=None):
         self.name = name
         self.students = list(students) if students is not None else []
 
@@ -50,11 +51,10 @@ class University:
             return []
         sorted_list = sorted(self.students, key=lambda student: student.average_grade, reverse=True)
         return sorted_list[:n]
-        
+
     def get_students_by_group(self, group_name):
         group_list = []
         for student in self.students:
             if student.group == group_name:
                 group_list.append(student)
         return group_list
-    
