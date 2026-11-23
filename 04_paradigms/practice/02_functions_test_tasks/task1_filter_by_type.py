@@ -22,4 +22,8 @@
 
 
 def filter_by_type(data, obj_type):
-    pass
+    result = []
+    for obj in data['objects']:
+        if obj['type'] == obj_type:
+            result.append(obj['name'])
+    return result

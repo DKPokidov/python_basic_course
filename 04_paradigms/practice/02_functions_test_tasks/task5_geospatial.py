@@ -21,4 +21,10 @@
 
 
 def find_least_served_districts(data, n=3):
-    pass
+    counter = {}
+    for object in data['objects']:
+        if object['district'] not in counter:
+            counter[object['district']] = int(1)
+        else:
+            counter[object['district']] += 1
+    return sorted(counter.items(), key = lambda x: x[1])[:n]
