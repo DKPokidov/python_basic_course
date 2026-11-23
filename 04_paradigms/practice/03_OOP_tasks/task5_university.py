@@ -28,10 +28,10 @@ class Student:
     def __init__(self, name, group, average_grade):
         self.name = name
         self.group = group
-        self.average_grade = min(float(average_grade, 5.0))
+        self.average_grade = min(float(average_grade), 5.0)
 
     def improve_grade(self, points):
-        self.average_grade = min(float(self.average_grade + points, 5.0))
+        self.average_grade = min(float(self.average_grade + points), 5.0)
         return self.average_grade
 
     def __repr__(self):
@@ -40,7 +40,7 @@ class Student:
 class University:
     def __init__(self, name, students = None):
         self.name = name
-        self.students = list(students) if students is None else []
+        self.students = list(students) if students is not None else []
 
     def enroll_student(self, student):
         self.students.append(student)

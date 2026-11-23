@@ -32,4 +32,4 @@ class District:
         for building in self.buildings:
             if building.type == building_type:
                 building_type_list.append(building.name)
-            return building_type_list
+        return building_type_list

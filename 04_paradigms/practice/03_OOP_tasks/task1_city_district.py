@@ -27,7 +27,7 @@ class CityDistrict:
 
     def add_building_type(self, type_name):
         if type_name not in self.building_types:
-            self.building_types.append(self.type_name)
+            self.building_types.append(type_name)
         return self.building_types
     
     def get_density(self):
@@ -37,4 +37,4 @@ class CityDistrict:
         return 'green' in self.building_types
 
     def __str__(self):
-        return f'Район {self.name}, площадь: {self.area_ha} га, население: {self.population} чел.'
+        return f'Район: {self.name}, площадь: {self.area_ha} га, население: {self.population} чел.'

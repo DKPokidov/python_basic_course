@@ -22,7 +22,7 @@
 """
 
 with open('parkings.txt', 'r') as parkings_file, open('high_load_parkings.txt', 'w') as high_load_file:
-    high_load_file.write('название парковки;вместимость;занято;занятость\n')
+    high_load_file.write('название_парковки;вместимость;занято;занятость_%\n')
     lines = parkings_file.readlines()
     for line in lines[1:]:
         parts = line.strip().split(';')
@@ -31,5 +31,5 @@ with open('parkings.txt', 'r') as parkings_file, open('high_load_parkings.txt', 
         busy = parts[2]
         busyness = round(int(busy) / int(capacity) * 100, 1)
         if busyness > 80:
-            new_line = f'{parking};{capacity};{busy};{busyness}_%\n'
+            new_line = f'{parking};{capacity};{busy};{busyness}%\n'
             high_load_file.write(new_line)
