@@ -18,6 +18,16 @@
 в поле "services".
 """
 
-
 def services_stats(data):
-    pass
+    result = {}
+    for obj in data["objects"]:
+        type = obj["type"]
+        if type not in result:
+            result[type] = []
+        for servisce in obj["services"]:
+            if obj["services"] not in result[type]:
+                result[type].append(servisce)
+    return result
+    
+        
+    

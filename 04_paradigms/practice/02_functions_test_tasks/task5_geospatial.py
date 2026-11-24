@@ -19,6 +19,17 @@
 "coordinates", "accessibility", "services".
 """
 
-
 def find_least_served_districts(data, n=3):
-    pass
+    amount = {}
+    for obj in data["objects"]:
+        district = obj["district"]
+
+        if district not in amount:
+            amount[district] = 1
+        else:
+            amount[district] += 1
+    sorted_obj = sorted(amount.items(), key=lambda item: item[1])
+    return sorted_obj[:n]
+
+        
+        

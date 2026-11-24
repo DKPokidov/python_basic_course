@@ -20,8 +20,10 @@
 
 
 def load_per_km(route):
-    pass
-
-
+    zagruz = round((route["passengers"] / route["length"]), 1)
+    return zagruz
+    
 def needs_review(load):
-    pass
+    if load < 200:
+        return True
+    return False
