@@ -21,4 +21,13 @@
 
 
 def find_least_served_districts(data, n=3):
-    pass
+    density_list = []
+    for elem in data["objects"]:
+        if elem["district"] not in density_list:
+            density_list.append([elem["district"], 0])
+        for neighbour in density_list:
+            if neighbour[0] == elem["district"]:
+                neighbour[1] += 1
+    density_list = [tuple(elem) for elem in density_list]
+    density_list.sort(key=lambda x: x[1])
+    return density_list[:n]
