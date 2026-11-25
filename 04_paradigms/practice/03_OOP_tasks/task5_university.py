@@ -26,21 +26,33 @@
 
 class Student:
     def __init__(self, name, group, average_grade):
-        pass
+        self.name = name
+        self.group = group
+        self.average_grade = average_grade
+        if average_grade > 5.0:
+            self.average_grade = 5.0
+
 
     def improve_grade(self, points):
-        pass
+        self.average_grade += points
+        if self.average_grade > 5.0:
+            self.average_grade = 5.0
 
+
+    def __repr__(self):
+        return f'Имя: {self.name}, группа: {self.group}, оценка: {self.average_grade}'
 
 class University:
     def __init__(self, name):
-        pass
+        self.name = name
+        self.students = []
+
 
     def enroll_student(self, student):
-        pass
+        self.students.append(student)
 
     def get_top_students(self, n):
-        pass
+        return sorted(self.students, key=lambda x: x.average_grade, reverse=True)[:n]
 
     def get_students_by_group(self, group_name):
-        pass
+        return [student for student in self.students if student.group == group_name]
