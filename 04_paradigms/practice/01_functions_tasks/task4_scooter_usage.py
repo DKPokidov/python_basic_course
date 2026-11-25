@@ -19,4 +19,13 @@
 
 
 def analyze_scooter_usage(data):
-    pass
+    new_data = []
+    for elem in data:
+        if elem["duration_min"] != 0:
+            speed_kmh = round((elem["distance_km"] / elem["duration_min"]) * 60, 1)
+        else:
+            speed_kmh = 0.0
+        new_elem = elem
+        new_elem.update({"speed_kmh": speed_kmh})
+        new_data.append(new_elem)
+    return new_data

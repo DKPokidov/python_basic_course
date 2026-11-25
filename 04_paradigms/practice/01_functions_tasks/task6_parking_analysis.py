@@ -20,3 +20,13 @@
    * строки: «Парковка_1;100;90;90.0» (занятость_% — число с плавающей точкой);
    * заголовок записывается всегда, даже если подходящих парковок нет.
 """
+
+with open("parkings.txt", "r", encoding="utf-8") as f:
+    heading = f.readline()
+    with open("high_load_parkings.txt", "w", encoding="utf-8") as file:
+        file.write(heading.strip() + ";занятость_%\n")
+        for line in f:
+            inf = list(line.split(";"))
+            occupancy = int(inf[2]) / int(inf[1]) * 100
+            if occupancy > 80:
+                file.write(line.strip() + ";" + str(occupancy) + "\n")

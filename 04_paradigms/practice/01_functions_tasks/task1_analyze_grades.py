@@ -22,4 +22,28 @@
 
 
 def analyze_grades(data):
-    pass
+    all_courses = {}
+    all_students = {}
+    for elem in data:
+        if elem[0] in all_students:
+            all_students[elem[0]][0] += elem[2]
+            all_students[elem[0]][1] += 1
+        else:
+            all_students.update({elem[0]: [elem[2], 1]})
+        if elem[1] in all_courses:
+            all_courses[elem[1]][0] += elem[2]
+            all_courses[elem[1]][1] += 1
+        else:
+            all_courses.update({elem[1]: [elem[2], 1]})
+    for person, grades in all_students.items():
+        average = round(grades[0] / grades[1], 1)
+        all_students[person] = average
+    for course, meaning in all_courses.items():
+        average_course = round(meaning[0] / meaning[1], 1)
+        all_courses[course] = average_course
+    max_score = max(all_courses.values())
+    for course, meaning in all_courses.items():
+        if meaning == max_score:
+            best_course = course
+            break
+    return {"students_avg": all_students, "best_course": best_course}

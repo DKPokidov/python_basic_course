@@ -29,3 +29,8 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+tight = []
+for elem in districts:
+    if elem[2] / elem[1] > 5:
+        tight.append(elem[0])
+print(f"Плотно заселённые районы: {tight}")

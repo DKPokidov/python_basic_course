@@ -20,4 +20,11 @@
 
 
 def services_stats(data):
-    pass
+    ans = {}
+    for elem in data["objects"]:
+        if elem["type"] not in ans:
+            ans[elem["type"]] = []
+        for acts in elem["services"]:
+            if acts not in ans[elem["type"]]:
+                ans[elem["type"]].append(acts)
+    return ans
