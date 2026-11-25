@@ -36,6 +36,7 @@ class Building:
     def get_info(self):
         return f'Здание {self.name}, {self.type}, построено в {self.year_built}, высота {self.height} м'
 
+
 class ResidentialBuilding(Building):
     def __init__(self, name, height, year_built, number_of_apartments):
         super().__init__(name, height, year_built, "жилой")

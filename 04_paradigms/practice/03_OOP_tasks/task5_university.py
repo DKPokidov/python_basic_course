@@ -32,21 +32,19 @@ class Student:
         if average_grade > 5.0:
             self.average_grade = 5.0
 
-
     def improve_grade(self, points):
         self.average_grade += points
         if self.average_grade > 5.0:
             self.average_grade = 5.0
 
-
     def __repr__(self):
         return f'Имя: {self.name}, группа: {self.group}, оценка: {self.average_grade}'
+
 
 class University:
     def __init__(self, name):
         self.name = name
         self.students = []
-
 
     def enroll_student(self, student):
         self.students.append(student)
