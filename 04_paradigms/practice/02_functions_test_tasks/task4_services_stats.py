@@ -20,4 +20,17 @@
 
 
 def services_stats(data):
-    pass
+    result = {}
+
+    for object in data['objects']:
+        if object['type'] not in result:
+            services_list = []
+            for service in object['services']:
+                if service not in services_list:
+                    services_list.append(service)
+            result[object['type']] = services_list
+        else:
+            for service in object['services']:
+                if service not in result[object['type']]:
+                    result[object['type']].append(service)
+    return result

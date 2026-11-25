@@ -20,4 +20,13 @@
 
 
 def accessibility_analysis(data):
-    pass
+    result = {}
+    for object in data['objects']:
+        if object['district'] in result:
+            if object['accessibility']["ramp"]:
+                result[object['district']] += 1
+        elif object['accessibility']["ramp"]:
+            result[object['district']] = 1
+        else:
+            result[object['district']] = 0
+    return result

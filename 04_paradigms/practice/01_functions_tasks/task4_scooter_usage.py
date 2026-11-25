@@ -14,9 +14,18 @@
     speed_kmh = round((distance_km / duration_min) * 60, 1)
   Если duration_min == 0 (поездку «забыли» закрыть приложением) —
   считайте speed_kmh = 0.0.
-- Возвращает list of новых dicts с добавленным полем speed_kmh.
+- Возвращает list of новых dicts с добавленным полем spe`ed_kmh.
 """
 
 
 def analyze_scooter_usage(data):
-    pass
+    result = []
+    for ride in data:
+        copied_ride = ride.copy()
+        if copied_ride['duration_min'] == 0:
+            speed_kmh = 0.0
+        else:
+            speed_kmh = round((copied_ride['distance_km'] / copied_ride['duration_min']) * 60, 1)
+        copied_ride['speed_kmh'] = speed_kmh
+        result.append(copied_ride)
+    return result
