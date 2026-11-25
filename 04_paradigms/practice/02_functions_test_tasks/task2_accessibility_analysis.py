@@ -24,6 +24,6 @@ def accessibility_analysis(data):
     for elem in data["objects"]:
         if elem["district"] not in ans:
             ans[elem["district"]] = 0
-        if elem["accessibility"]["ramp"] == True:
+        if elem["accessibility"]["ramp"]:
             ans[elem["district"]] += 1
     return ans
