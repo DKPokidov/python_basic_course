@@ -17,8 +17,8 @@
 
 import random
 
+
 def noisy_measurements(base_values, noise_level=0.1):
     for value in base_values:
         for i in range(3):
             yield value * (1 + random.uniform(-noise_level, noise_level)) 
-  
