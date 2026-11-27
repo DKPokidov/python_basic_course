@@ -21,4 +21,10 @@
 
 
 def find_least_served_districts(data, n=3):
-    pass
+    answer = {}
+    for object in data["objects"]:
+        if object["district"] not in answer:
+            answer[object["district"]] = 0
+        answer[object["district"]] += 1
+    answer = list(answer.items())
+    return sorted(answer)

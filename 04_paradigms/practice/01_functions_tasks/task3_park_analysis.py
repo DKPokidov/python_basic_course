@@ -19,4 +19,21 @@
 
 
 def analyze_park(data, threshold=50):
-    pass
+    dict = {}
+    for park, info in data.items():
+        density = round(info["visitors_day"] / info["area_ha"], 1)
+        entrance_load = round(info["visitors_day"] / info["entrances"])
+        if density >= threshold:
+            status = 'перегружен'
+        else:
+            status = 'в норме'
+        dict.update(
+            {
+                park: {
+                    "density": density,
+                    "entrance_load": entrance_load,
+                    "status": status,
+                }
+            }
+        )
+    return dict
