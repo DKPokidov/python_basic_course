@@ -25,5 +25,5 @@ while area_input != 0:
     if green_area < 0.3:
         flag = True
         print('Нарушение нормы зелёных зон!')
-if flag == False:
+if not flag:
     print('Нормы соблюдены')  
