@@ -13,3 +13,12 @@
 
 Внимание: оператор If использовать запрещается.
 """
+flag_info = []
+flag_info.append(input('Цвет флага: '))
+flag_info.append(input('Рисунок на флаге: '))
+list_bul = []
+list_bul.append(flag_info[0] == 'черный')
+list_bul.append(flag_info[1] == 'череп' or flag_info[1] == '')
+itog = list_bul[0] * list_bul[1]
+otvet = ['Корабль не опасен!', 'Осторожно пираты!']
+print(otvet[itog])

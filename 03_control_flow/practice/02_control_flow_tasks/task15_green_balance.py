@@ -13,3 +13,14 @@
 
 4. Если цикл завершился без нарушений, выводит: «Нормы соблюдены».
 """
+SSS = int(input())
+sum_s = 0
+sss = int(input())
+while sss != 0:
+    sum_s += sss
+    sss = int(input())
+green = (SSS - sum_s) / SSS
+if green >= 0.3:
+    print('Нормы соблюдены')
+else:
+    print('Нарушение нормы зелёных зон!')

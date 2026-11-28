@@ -23,3 +23,12 @@
 """
 
 categories = ("продукты", "транспорт", "развлечения", "связь")
+my_tuple = []
+my_tuple.append(float(input("Введите сумму траты 1: ")))
+my_tuple.append(float(input("Введите сумму траты 2: ")))
+my_tuple.append(float(input("Введите сумму траты 3: ")))
+my_tuple.append(float(input("Введите сумму траты 4: ")))
+idx = my_tuple.index(max(my_tuple))
+my_tuple = tuple(my_tuple)
+print("Общая сумма:", sum(my_tuple))
+print("Самая большая трата:", max(my_tuple), categories[idx])

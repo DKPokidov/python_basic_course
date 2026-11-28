@@ -21,4 +21,20 @@
 
 
 def find_least_served_districts(data, n=3):
-    pass
+    districts = []
+    for object_ in data['objects']:
+        if object_['district'] not in districts:
+            districts.append(object_['district'])
+    counters = [0 for i in range(len(districts))]
+    for object_ in data['objects']:
+        counters[districts.index(object_['district'])] += 1
+    lists = []
+    for i in range(len(districts)):
+        lists.append((districts[i], counters[i]))
+    #for i in range(len(lists)):
+    #   lists[i] = tuple(lists[i])
+    for i in range(len(lists)):
+        for j in range(len(lists) - 1):
+            if lists[j][1] > lists[j + 1][1]:
+                lists[j], lists[j + 1] = lists[j + 1], lists[j]
+    return lists[:n]

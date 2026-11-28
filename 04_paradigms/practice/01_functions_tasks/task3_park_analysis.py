@@ -19,4 +19,15 @@
 
 
 def analyze_park(data, threshold=50):
-    pass
+    keys_list = []
+    value_list = []
+    for name, info in data.items():
+        density = round(info['visitors_day'] / info['area_ha'], 1)
+        entrance_load = round(info['visitors_day'] / info['entrances'])
+        stat = lambda x: 'перегружен' if x >= threshold else 'в норме'
+        status = stat(density)
+        keys_list.append(name)
+        value_list.append({'density' : round(density, 1), 'entrance_load' : entrance_load, 'status' : status})
+    return dict(zip(keys_list, value_list))
+
+print(analyze_park( {"Парк Победы": {"visitors_day": 6000, "area_ha": 100, "entrances": 4}}))

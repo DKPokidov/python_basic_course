@@ -29,3 +29,8 @@ districts = [
     ("Приморский", 50, 150),
     ("Южный", 40, 180),
 ]
+plotnie = []
+for tuple_ in districts:
+    if tuple_[2] / tuple_[1] > 5:
+        plotnie.append(tuple_[0])
+print('Плотно заселённые районы:', plotnie)

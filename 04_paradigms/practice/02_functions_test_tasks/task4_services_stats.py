@@ -20,4 +20,20 @@
 
 
 def services_stats(data):
-    pass
+    types = []
+    for dict_ in data['objects']:
+        if dict_['type'] not in types:
+            types.append(dict_['type'])
+    all_services = [[] for i in range(len(types))]
+    for dict_ in data['objects']:
+        all_services[types.index(dict_['type'])].extend(dict_['services'])
+    for list_ in all_services:
+        list_ = set(list_)
+        list_ = list(list_)
+    return dict(zip(types, all_services))
+ 
+
+ 
+        
+
+    

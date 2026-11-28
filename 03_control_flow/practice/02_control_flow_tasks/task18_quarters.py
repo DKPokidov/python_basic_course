@@ -37,3 +37,15 @@ quarters = [
     {"district": "Центральный", "area_ha": 30, "houses": 210, "green_area_ha": 7.0, "school_dist_m": 700},
     {"district": "Западный", "area_ha": 40, "houses": 240, "green_area_ha": 6.0, "school_dist_m": 1200},
 ]
+for dict_ in quarters:
+    flag = True
+    if dict_["houses"] / dict_["area_ha"] > 8:
+        flag = False
+    if dict_["green_area_ha"] / dict_["area_ha"] < 0.2:
+        flag = False
+    if dict_["school_dist_m"] > 800:
+        flag = False
+    if flag:
+        print(f'{dict_["district"]}: Соответствует')
+    else:
+        print(f'{dict_["district"]}: Не соответствует')

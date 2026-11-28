@@ -12,3 +12,6 @@
 
 yesterday = {"беспроводные Sony", "AirPods", "JBL"}
 today = {"беспроводные Sony", "Samsung Buds", "старые советские"}
+print(f'1. Находили оба дня: {yesterday.intersection(today)}')
+print(f'2. Только сегодня: {today - yesterday.intersection(today)}')
+print(f'3. Всего уникальных моделей: {len(yesterday.union(today))}')
