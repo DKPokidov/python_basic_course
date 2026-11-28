@@ -19,4 +19,7 @@
 
 
 def analyze_scooter_usage(data):
-    pass
+    check = lambda x: 0.0 if x['duration_min'] == 0 else round((x['distance_km'] / x['duration_min']) * 60, 1)
+    for dict_ in data:
+        dict_['speed_kmh'] = check(dict_)
+    return data

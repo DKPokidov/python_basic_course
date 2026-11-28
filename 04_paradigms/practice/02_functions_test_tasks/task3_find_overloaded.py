@@ -21,4 +21,14 @@ capacity > threshold. Возвращает список строк "{name} ({cap
 
 
 def find_overloaded(data, threshold):
-    pass
+    names = [dict_['name'] for dict_ in data['objects'] if dict_['capacity'] > threshold]
+    capacitys = [dict_['capacity'] for dict_ in data['objects'] if dict_['capacity'] > threshold]
+    #for dict_ in data['objects']:
+    #   if dict_['capacity'] > threshold:
+    #       names.append(dict_['name'])
+    #      capacitys.append(dict_['capacity'])
+    return [f'{names[i]} ({capacitys[i]} мест)' for i in range(len(names))]
+    #for i in range(len(names)):
+    #    answer.append(f'{names[i]} ({capacitys[i]} мест)')
+    # return answer
+

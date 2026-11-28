@@ -20,4 +20,13 @@
 
 
 def accessibility_analysis(data):
-    pass
+    districts = []
+    for dict_ in data['objects']:
+        if dict_['district'] not in districts:
+            districts.append(dict_['district'])
+    counters = [0 for i in range(len(districts))]
+    for dict_ in data['objects']:
+        if dict_['accessibility']['ramp'] == True:
+            counters[districts.index(dict_['district'])] += 1
+    return dict(zip(districts, counters))
+            

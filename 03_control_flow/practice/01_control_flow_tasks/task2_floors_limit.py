@@ -20,8 +20,10 @@ if zone == 'историческая':
         print('Превышение нормы!')
     else:
         print('Допустимо')
-if zone == 'новая':
+elif zone == 'новая':
     if floors > 20:
         print('Превышение нормы!')
     else:
         print('Допустимо')      
+else:
+    print('ошибка')
